@@ -1,0 +1,1449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.0 on win32)" generated="20240516 19:35:01.149" rpa="false" schemaversion="3">
+<suite id="s1" name="Tc Shopping Carts Scripts" source="C:\Users\GodBoss\Desktop\Demo_Automateion_Test\test-project-web-robotframework\testscripts\tc_shopping_carts_scripts.robot">
+<test id="s1-t1" name="SHP-0001 FE shopping car" line="6">
+<kw name="ดึงข้อมูลที่ใช้ทดสอบจาก Excel (Test data)" library="common">
+<var>${tc_id}</var>
+<var>${td_id}</var>
+<var>${bookname_1}</var>
+<var>${bookname_qty_1}</var>
+<var>${bookname_2}</var>
+<var>${bookname_qty_2}</var>
+<arg>row_index=5</arg>
+<kw name="Open Excel Document" library="ExcelLibrary">
+<arg>filename=${EXECDIR}\\Test-project-web-robotframework\\resouces\\testdata\\testdata_shp.xlsx</arg>
+<arg>doc_id=td_shopping_cart</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" starttime="20240516 19:35:02.783" endtime="20240516 19:35:02.810"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${tc_id}</var>
+<arg>row_num=${row_index}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240516 19:35:02.811" level="INFO">${tc_id} = SHP-0001
+
+FE
+shopping car</msg>
+<status status="PASS" starttime="20240516 19:35:02.810" endtime="20240516 19:35:02.811"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${td_id}</var>
+<arg>row_num=${row_index}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240516 19:35:02.812" level="INFO">${td_id} = SHP-0001-TD-001</msg>
+<status status="PASS" starttime="20240516 19:35:02.812" endtime="20240516 19:35:02.812"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${bookname_1}</var>
+<arg>row_num=${row_index}</arg>
+<arg>col_num=3</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240516 19:35:02.813" level="INFO">${bookname_1} = BLEACH เทพมรณะ เล่ม 20</msg>
+<status status="PASS" starttime="20240516 19:35:02.813" endtime="20240516 19:35:02.813"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${bookname_qty_1}</var>
+<arg>row_num=${row_index}</arg>
+<arg>col_num=4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240516 19:35:02.814" level="INFO">${bookname_qty_1} = 2</msg>
+<status status="PASS" starttime="20240516 19:35:02.814" endtime="20240516 19:35:02.814"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${bookname_2}</var>
+<arg>row_num=${row_index}</arg>
+<arg>col_num=5</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240516 19:35:02.815" level="INFO">${bookname_2} = BLEACH เทพมรณะ เล่ม 67</msg>
+<status status="PASS" starttime="20240516 19:35:02.815" endtime="20240516 19:35:02.815"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${bookname_qty_2}</var>
+<arg>row_num=${row_index}</arg>
+<arg>col_num=6</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240516 19:35:02.816" level="INFO">${bookname_qty_2} = 1</msg>
+<status status="PASS" starttime="20240516 19:35:02.816" endtime="20240516 19:35:02.816"/>
+</kw>
+<kw name="Close All Excel Documents" library="ExcelLibrary">
+<doc>Closes all opened documents.</doc>
+<status status="PASS" starttime="20240516 19:35:02.817" endtime="20240516 19:35:02.817"/>
+</kw>
+<msg timestamp="20240516 19:35:02.818" level="INFO">${tc_id} = SHP-0001
+
+FE
+shopping car</msg>
+<msg timestamp="20240516 19:35:02.818" level="INFO">${td_id} = SHP-0001-TD-001</msg>
+<msg timestamp="20240516 19:35:02.818" level="INFO">${bookname_1} = BLEACH เทพมรณะ เล่ม 20</msg>
+<msg timestamp="20240516 19:35:02.818" level="INFO">${bookname_qty_1} = 2</msg>
+<msg timestamp="20240516 19:35:02.818" level="INFO">${bookname_2} = BLEACH เทพมรณะ เล่ม 67</msg>
+<msg timestamp="20240516 19:35:02.818" level="INFO">${bookname_qty_2} = 1</msg>
+<status status="PASS" starttime="20240516 19:35:02.782" endtime="20240516 19:35:02.818"/>
+</kw>
+<kw name="Open website nejavu.com" library="common">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${url}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240516 19:35:02.821" level="INFO">Opening browser 'gc' to base url 'https://www.nejavu.com/'.</msg>
+<status status="PASS" starttime="20240516 19:35:02.819" endtime="20240516 19:35:11.403"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240516 19:35:11.403" endtime="20240516 19:35:11.539"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:02.819" endtime="20240516 19:35:11.540"/>
+</kw>
+<kw name="Display logo home page (ควรเข้ามายังหน้า website ได้สำเร็จและแสดงผลหน้าแรกอย่างถูกต้อง)" library="main_header_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${header.home_logo}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:11.541" endtime="20240516 19:35:11.845"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:11.540" endtime="20240516 19:35:11.845"/>
+</kw>
+<kw name="When opening web first close popup automatically" library="common">
+<arg>${pop_frist_open_web.locator}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:11.847" endtime="20240516 19:35:11.897"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:11.899" level="INFO">Clicking element 'xpath=//a[@class='close-modal']'.</msg>
+<status status="PASS" starttime="20240516 19:35:11.898" endtime="20240516 19:35:12.011"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20240516 19:35:12.011" endtime="20240516 19:35:12.046"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:11.846" endtime="20240516 19:35:12.046"/>
+</kw>
+<kw name="Accept cokkie" library="common">
+<arg>locator=${test_cookie}</arg>
+<arg>text_btn=${text_btn_box_cookie_01}</arg>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${pop_frist.locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20240516 19:35:12.048" endtime="20240516 19:35:12.836"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${btn_accept}</var>
+<arg>${btn_box_cookie}</arg>
+<arg>$text</arg>
+<arg>${text_btn}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20240516 19:35:12.837" level="INFO">${btn_accept} = xpath=//div[@class='p-2 df aic']/../..//a[text()='ยอมรับ']</msg>
+<status status="PASS" starttime="20240516 19:35:12.836" endtime="20240516 19:35:12.837"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_accept}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:12.838" level="INFO">Clicking element 'xpath=//div[@class='p-2 df aic']/../..//a[text()='ยอมรับ']'.</msg>
+<status status="PASS" starttime="20240516 19:35:12.837" endtime="20240516 19:35:12.949"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${test_cookie}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20240516 19:35:12.949" endtime="20240516 19:35:13.255"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:12.047" endtime="20240516 19:35:13.256"/>
+</kw>
+<kw name="Enter the name of the book and press search (กรอกชื่อหนังสือและกดค้นหา)" library="main_header_page">
+<arg>book_name=${set_text_search_01}</arg>
+<kw name="Input text element when read" library="common">
+<arg>${header.search_box}</arg>
+<arg>${book_name}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text_inpt}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:13.259" level="INFO">Typing text 'BLEACH เทพมรณะ' into text field 'id=search-dropdown'.</msg>
+<status status="PASS" starttime="20240516 19:35:13.258" endtime="20240516 19:35:13.475"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:13.257" endtime="20240516 19:35:13.475"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${header.search_box_button}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:13.476" endtime="20240516 19:35:13.513"/>
+</kw>
+<kw name="Click element when read" library="common">
+<arg>${header.search_box_button}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:13.514" endtime="20240516 19:35:13.547"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:13.549" level="INFO">Clicking element 'xpath=//div[@class='df']//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20240516 19:35:13.548" endtime="20240516 19:35:16.094"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:13.513" endtime="20240516 19:35:16.094"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:13.256" endtime="20240516 19:35:16.095"/>
+</kw>
+<kw name="Book results page should be displayed (ควรแสดงหน้าผลลัพธ์หนังสือ)" library="book_cartoon_page">
+<arg>book_name=${set_text_search_01}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//span[contains(text(),': ${book_name}')]</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:16.096" endtime="20240516 19:35:16.143"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>SeleniumLibrary.Page Should Contain Element</arg>
+<arg>xpath=//span[contains(text(),': ${book_name}')]</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//span[contains(text(),': ${book_name}')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240516 19:35:16.160" level="INFO">Current page contains element 'xpath=//span[contains(text(),': BLEACH เทพมรณะ')]'.</msg>
+<status status="PASS" starttime="20240516 19:35:16.144" endtime="20240516 19:35:16.160"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:16.143" endtime="20240516 19:35:16.160"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:16.095" endtime="20240516 19:35:16.160"/>
+</kw>
+<kw name="กดเพิ่มหนังสือใส่ตระกร้าจากหน้า (box card) โดยตรง" library="book_cartoon_page">
+<arg>book_name=${bookname_1}</arg>
+<kw name="Replace String" library="String">
+<var>${add_to_cart_btn}</var>
+<arg>${book_cartoon_locator.add_cart_btn}</arg>
+<arg>$book_name</arg>
+<arg>${book_name}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20240516 19:35:16.162" level="INFO">${add_to_cart_btn} = xpath=//img[@alt='BLEACH เทพมรณะ เล่ม 20']/../../../../..//button[@id='quick-cart-button']</msg>
+<status status="PASS" starttime="20240516 19:35:16.161" endtime="20240516 19:35:16.162"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${add_to_cart_btn}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:16.162" endtime="20240516 19:35:16.198"/>
+</kw>
+<kw name="Click element when read" library="common">
+<arg>${add_to_cart_btn}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:16.200" endtime="20240516 19:35:16.231"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:16.233" level="INFO">Clicking element 'xpath=//img[@alt='BLEACH เทพมรณะ เล่ม 20']/../../../../..//button[@id='quick-cart-button']'.</msg>
+<status status="PASS" starttime="20240516 19:35:16.232" endtime="20240516 19:35:16.410"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:16.199" endtime="20240516 19:35:16.410"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:16.160" endtime="20240516 19:35:16.411"/>
+</kw>
+<kw name="กดเพิ่มหนังสือใส่ตระกร้าจากหน้า (box card) โดยตรง" library="book_cartoon_page">
+<arg>book_name=${bookname_2}</arg>
+<kw name="Replace String" library="String">
+<var>${add_to_cart_btn}</var>
+<arg>${book_cartoon_locator.add_cart_btn}</arg>
+<arg>$book_name</arg>
+<arg>${book_name}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20240516 19:35:16.414" level="INFO">${add_to_cart_btn} = xpath=//img[@alt='BLEACH เทพมรณะ เล่ม 67']/../../../../..//button[@id='quick-cart-button']</msg>
+<status status="PASS" starttime="20240516 19:35:16.413" endtime="20240516 19:35:16.414"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${add_to_cart_btn}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:16.414" endtime="20240516 19:35:16.480"/>
+</kw>
+<kw name="Click element when read" library="common">
+<arg>${add_to_cart_btn}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:16.482" endtime="20240516 19:35:16.537"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:16.539" level="INFO">Clicking element 'xpath=//img[@alt='BLEACH เทพมรณะ เล่ม 67']/../../../../..//button[@id='quick-cart-button']'.</msg>
+<status status="PASS" starttime="20240516 19:35:16.538" endtime="20240516 19:35:16.723"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:16.481" endtime="20240516 19:35:16.724"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:16.411" endtime="20240516 19:35:16.724"/>
+</kw>
+<kw name="ตรวจสอบแสดง alert เมื่อเพิ่มสินค้าเข้าตะกร้าได้สำเร็จ" library="main_header_page">
+<arg>${header.text_alert_add_to_cart_sucess}</arg>
+<arg>${header.locator_alert_add_to_cart_sucess}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:16.726" endtime="20240516 19:35:16.762"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actual_result}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:16.838" level="INFO">${actual_result} = เพิ่มสินค้าในตระกร้าสำเร็จ</msg>
+<status status="PASS" starttime="20240516 19:35:16.762" endtime="20240516 19:35:16.838"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${actual_result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240516 19:35:16.839" level="INFO">เพิ่มสินค้าในตระกร้าสำเร็จ</msg>
+<status status="PASS" starttime="20240516 19:35:16.838" endtime="20240516 19:35:16.839"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${actual_result}</arg>
+<arg>${expec_text}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240516 19:35:16.839" endtime="20240516 19:35:16.840"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:16.724" endtime="20240516 19:35:16.840"/>
+</kw>
+<kw name="ตรวจสอบจำนวนหนังสือบนไอคอนรถเข็น" library="main_header_page">
+<arg>expec_qty=${header.expect_qty_to_cart}</arg>
+<arg>locator=${header.qty_on_cart}</arg>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${header.locator_alert_add_to_cart_sucess}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20240516 19:35:16.842" endtime="20240516 19:35:18.913"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240516 19:35:18.913" endtime="20240516 19:35:18.955"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actual_result}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:18.980" level="INFO">${actual_result} = 2</msg>
+<status status="PASS" starttime="20240516 19:35:18.955" endtime="20240516 19:35:18.980"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${actual_result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240516 19:35:18.981" level="INFO">2</msg>
+<status status="PASS" starttime="20240516 19:35:18.980" endtime="20240516 19:35:18.981"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${actual_result}</arg>
+<arg>${expec_qty}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240516 19:35:18.981" endtime="20240516 19:35:18.982"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:16.841" endtime="20240516 19:35:18.983"/>
+</kw>
+<kw name="กดไปยังหน้าตระกร้าสินค้าได้สำเร็จ" library="main_header_page">
+<arg>locator=${header.icon_cart_btn}</arg>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${header.locator_alert_add_to_cart_sucess}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20240516 19:35:18.984" endtime="20240516 19:35:18.997"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:18.997" endtime="20240516 19:35:19.029"/>
+</kw>
+<kw name="Click element when read" library="common">
+<arg>${locator}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:19.031" endtime="20240516 19:35:19.055"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:19.056" level="INFO">Clicking element 'xpath=//a[@href='https://www.nejavu.com/cart']//img[@class='lozad']'.</msg>
+<status status="PASS" starttime="20240516 19:35:19.055" endtime="20240516 19:35:21.458"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:19.030" endtime="20240516 19:35:21.458"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${shopping_cart_locator_page}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240516 19:35:21.505" level="INFO">Element 'xpath=//div[@class='mt-8 mb-4 df jcsb aic']//strong' is displayed.</msg>
+<status status="PASS" starttime="20240516 19:35:21.459" endtime="20240516 19:35:21.506"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text_page_cart}</var>
+<arg>${shopping_cart_locator_page}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:21.533" level="INFO">${text_page_cart} = ตะกร้าของฉัน</msg>
+<status status="PASS" starttime="20240516 19:35:21.506" endtime="20240516 19:35:21.533"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${text_page_cart}</arg>
+<arg>ตะกร้าของฉัน</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240516 19:35:21.534" endtime="20240516 19:35:21.534"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:18.983" endtime="20240516 19:35:21.535"/>
+</kw>
+<kw name="ตรวจสอบหน้าตระกร้าสินค้าว่าชื่อหนังสือถูกเพิ่มเข้ามาแล้ว" library="shopping_carts_page">
+<arg>book_name=${bookname_1}</arg>
+<kw name="Replace String" library="String">
+<var>${product_book_name}</var>
+<arg>${shopping_cart_locator.product_book_name}</arg>
+<arg>$book_name</arg>
+<arg>${book_name}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20240516 19:35:21.537" level="INFO">${product_book_name} = xpath=//*[contains(text(),'BLEACH เทพมรณะ เล่ม 20')]//ancestor::div[@class='cart-item-detail']//p//strong</msg>
+<status status="PASS" starttime="20240516 19:35:21.536" endtime="20240516 19:35:21.537"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${product_book_name}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:21.538" endtime="20240516 19:35:21.580"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>locator= ${product_book_name}</arg>
+<arg>expected=${book_name}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20240516 19:35:21.583" level="INFO">Verifying element ' xpath=//*[contains(text(),'BLEACH เทพมรณะ เล่ม 20')]//ancestor::div[@class='cart-item-detail']//p//strong' contains exact text 'BLEACH เทพมรณะ เล่ม 20'.</msg>
+<status status="PASS" starttime="20240516 19:35:21.581" endtime="20240516 19:35:21.613"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:21.535" endtime="20240516 19:35:21.613"/>
+</kw>
+<kw name="ตรวจสอบหน้าตระกร้าสินค้าว่าชื่อหนังสือถูกเพิ่มเข้ามาแล้ว" library="shopping_carts_page">
+<arg>book_name=${bookname_2}</arg>
+<kw name="Replace String" library="String">
+<var>${product_book_name}</var>
+<arg>${shopping_cart_locator.product_book_name}</arg>
+<arg>$book_name</arg>
+<arg>${book_name}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20240516 19:35:21.616" level="INFO">${product_book_name} = xpath=//*[contains(text(),'BLEACH เทพมรณะ เล่ม 67')]//ancestor::div[@class='cart-item-detail']//p//strong</msg>
+<status status="PASS" starttime="20240516 19:35:21.615" endtime="20240516 19:35:21.616"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${product_book_name}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:21.616" endtime="20240516 19:35:21.657"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>locator= ${product_book_name}</arg>
+<arg>expected=${book_name}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20240516 19:35:21.660" level="INFO">Verifying element ' xpath=//*[contains(text(),'BLEACH เทพมรณะ เล่ม 67')]//ancestor::div[@class='cart-item-detail']//p//strong' contains exact text 'BLEACH เทพมรณะ เล่ม 67'.</msg>
+<status status="PASS" starttime="20240516 19:35:21.658" endtime="20240516 19:35:21.693"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:21.614" endtime="20240516 19:35:21.693"/>
+</kw>
+<kw name="กดเพิ่มจำนวนหนังสือในตระกร้า" library="shopping_carts_page">
+<arg>book_name=${bookname_1}</arg>
+<kw name="Replace String" library="String">
+<var>${product_book_name_qty}</var>
+<arg>${shopping_cart_locator.product_add_qty_book}</arg>
+<arg>$book_name</arg>
+<arg>${book_name}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20240516 19:35:21.696" level="INFO">${product_book_name_qty} = xpath=//strong[text()='BLEACH เทพมรณะ เล่ม 20']/../../../../..//button[@id='add']</msg>
+<status status="PASS" starttime="20240516 19:35:21.695" endtime="20240516 19:35:21.696"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${product_book_name_qty}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:21.696" endtime="20240516 19:35:21.734"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${product_book_name_qty}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:21.736" level="INFO">Clicking element 'xpath=//strong[text()='BLEACH เทพมรณะ เล่ม 20']/../../../../..//button[@id='add']'.</msg>
+<status status="PASS" starttime="20240516 19:35:21.734" endtime="20240516 19:35:21.818"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:21.694" endtime="20240516 19:35:21.818"/>
+</kw>
+<kw name="ตรวจสอบ value จำนวนหนังสือ" library="shopping_carts_page">
+<arg>book_name=${bookname_1}</arg>
+<arg>qty=${bookname_qty_1}</arg>
+<kw name="Replace String" library="String">
+<var>${product_book_name_qty}</var>
+<arg>${shopping_cart_locator.get_value_qty_book}</arg>
+<arg>$book_name</arg>
+<arg>${book_name}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20240516 19:35:21.821" level="INFO">${product_book_name_qty} = xpath=//strong[text()='BLEACH เทพมรณะ เล่ม 20']/../../../../..//input[@name='product_quantity']</msg>
+<status status="PASS" starttime="20240516 19:35:21.820" endtime="20240516 19:35:21.821"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${get_value_qty_book_name}</var>
+<arg>${product_book_name_qty}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:21.855" level="INFO">${get_value_qty_book_name} = 2</msg>
+<status status="PASS" starttime="20240516 19:35:21.821" endtime="20240516 19:35:21.855"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${product_book_name_qty}</var>
+<arg>${get_value_qty_book_name}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20240516 19:35:21.856" level="INFO">${product_book_name_qty} = 2</msg>
+<status status="PASS" starttime="20240516 19:35:21.855" endtime="20240516 19:35:21.856"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${product_book_name_qty}</arg>
+<arg>${qty}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20240516 19:35:21.856" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20240516 19:35:21.856" endtime="20240516 19:35:21.857"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:21.819" endtime="20240516 19:35:21.857"/>
+</kw>
+<kw name="ตรวจสอบ value จำนวนหนังสือ" library="shopping_carts_page">
+<arg>book_name=${bookname_2}</arg>
+<arg>qty=${bookname_qty_2}</arg>
+<kw name="Replace String" library="String">
+<var>${product_book_name_qty}</var>
+<arg>${shopping_cart_locator.get_value_qty_book}</arg>
+<arg>$book_name</arg>
+<arg>${book_name}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20240516 19:35:21.859" level="INFO">${product_book_name_qty} = xpath=//strong[text()='BLEACH เทพมรณะ เล่ม 67']/../../../../..//input[@name='product_quantity']</msg>
+<status status="PASS" starttime="20240516 19:35:21.858" endtime="20240516 19:35:21.859"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${get_value_qty_book_name}</var>
+<arg>${product_book_name_qty}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:21.889" level="INFO">${get_value_qty_book_name} = 1</msg>
+<status status="PASS" starttime="20240516 19:35:21.859" endtime="20240516 19:35:21.889"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${product_book_name_qty}</var>
+<arg>${get_value_qty_book_name}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20240516 19:35:21.890" level="INFO">${product_book_name_qty} = 1</msg>
+<status status="PASS" starttime="20240516 19:35:21.889" endtime="20240516 19:35:21.890"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${product_book_name_qty}</arg>
+<arg>${qty}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20240516 19:35:21.891" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20240516 19:35:21.890" endtime="20240516 19:35:21.891"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:21.857" endtime="20240516 19:35:21.891"/>
+</kw>
+<kw name="ลบหนังสือทั้งหมดออกจากกระตร้าได้สำเร็จ" library="shopping_carts_page">
+<arg>locator=${shopping_cart_locator.icon_delete_all_book_incart}</arg>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count_btn_delete}</var>
+<arg>${locator}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20240516 19:35:21.913" level="INFO">${count_btn_delete} = 2</msg>
+<status status="PASS" starttime="20240516 19:35:21.892" endtime="20240516 19:35:21.913"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${count_btn_delete}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240516 19:35:21.914" level="INFO">2</msg>
+<status status="PASS" starttime="20240516 19:35:21.913" endtime="20240516 19:35:21.914"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${count_btn_delete}</var>
+<value>0</value>
+<value>${count_btn_delete}</value>
+<iter>
+<var name="${count_btn_delete}">0</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:21.916" level="INFO">Clicking element 'xpath=//div//a[@class='delete-item']'.</msg>
+<status status="PASS" starttime="20240516 19:35:21.915" endtime="20240516 19:35:22.004"/>
+</kw>
+<kw name="กดลบหนังสือออกจากตระกร้าโดยกดปุ่มยืนยันลบรายการ" library="shopping_carts_page">
+<arg>${shopping_cart_locator.delete_confirm_btn}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${shopping_cart_locator._pop_delete}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:22.005" endtime="20240516 19:35:22.278"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:22.280" level="INFO">Clicking element 'xpath=//button[contains(text(),'ใช่ ลบรายการ')]'.</msg>
+<status status="PASS" starttime="20240516 19:35:22.278" endtime="20240516 19:35:22.420"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:22.004" endtime="20240516 19:35:22.421"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>xpath=//div[@class='swal2-container swal2-center swal2-backdrop-show']</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20240516 19:35:22.421" endtime="20240516 19:35:24.542"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:21.915" endtime="20240516 19:35:24.542"/>
+</iter>
+<iter>
+<var name="${count_btn_delete}">1</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:24.544" level="INFO">Clicking element 'xpath=//div//a[@class='delete-item']'.</msg>
+<status status="PASS" starttime="20240516 19:35:24.543" endtime="20240516 19:35:24.638"/>
+</kw>
+<kw name="กดลบหนังสือออกจากตระกร้าโดยกดปุ่มยืนยันลบรายการ" library="shopping_carts_page">
+<arg>${shopping_cart_locator.delete_confirm_btn}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${shopping_cart_locator._pop_delete}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:24.640" endtime="20240516 19:35:24.895"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:24.897" level="INFO">Clicking element 'xpath=//button[contains(text(),'ใช่ ลบรายการ')]'.</msg>
+<status status="PASS" starttime="20240516 19:35:24.895" endtime="20240516 19:35:24.998"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:24.639" endtime="20240516 19:35:24.999"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>xpath=//div[@class='swal2-container swal2-center swal2-backdrop-show']</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20240516 19:35:24.999" endtime="20240516 19:35:26.721"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:24.542" endtime="20240516 19:35:26.721"/>
+</iter>
+<status status="PASS" starttime="20240516 19:35:21.914" endtime="20240516 19:35:26.722"/>
+</for>
+<kw name="ตรวจสอบว่าหนังสือถูกลบและหายไปจากตระกร้า" library="shopping_carts_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${shopping_cart_locator.cart_empty}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:26.723" endtime="20240516 19:35:26.763"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actual_text_empty_cart}</var>
+<arg>${shopping_cart_locator.cart_empty}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:26.794" level="INFO">${actual_text_empty_cart} = ยังไม่มีรายการสินค้าในตะกร้า โปรดสั่งซื้อสินค้า</msg>
+<status status="PASS" starttime="20240516 19:35:26.764" endtime="20240516 19:35:26.795"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${actual_text_empty_cart}</arg>
+<arg>${shopping_cart_text.cart_empty}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240516 19:35:26.795" endtime="20240516 19:35:26.796"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:26.722" endtime="20240516 19:35:26.796"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:21.891" endtime="20240516 19:35:26.796"/>
+</kw>
+<kw name="Close Browser nejavu.com" library="common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240516 19:35:26.798" endtime="20240516 19:35:29.037"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:26.797" endtime="20240516 19:35:29.038"/>
+</kw>
+<kw name="Close Browser nejavu.com" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240516 19:35:29.039" endtime="20240516 19:35:29.039"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:29.038" endtime="20240516 19:35:29.040"/>
+</kw>
+<tag>SHP-0001 FE shopping car</tag>
+<status status="PASS" starttime="20240516 19:35:02.780" endtime="20240516 19:35:29.040"/>
+</test>
+<test id="s1-t2" name="SHP-0002 FE shopping car" line="30">
+<kw name="ดึงข้อมูลที่ใช้ทดสอบจาก Excel (Test data)" library="common">
+<var>${tc_id}</var>
+<var>${td_id}</var>
+<var>${bookname_1}</var>
+<var>${bookname_qty_1}</var>
+<var>${bookname_2}</var>
+<var>${bookname_qty_2}</var>
+<arg>row_index=6</arg>
+<kw name="Open Excel Document" library="ExcelLibrary">
+<arg>filename=${EXECDIR}\\Test-project-web-robotframework\\resouces\\testdata\\testdata_shp.xlsx</arg>
+<arg>doc_id=td_shopping_cart</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" starttime="20240516 19:35:29.043" endtime="20240516 19:35:29.066"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${tc_id}</var>
+<arg>row_num=${row_index}</arg>
+<arg>col_num=1</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240516 19:35:29.067" level="INFO">${tc_id} = None</msg>
+<status status="PASS" starttime="20240516 19:35:29.066" endtime="20240516 19:35:29.067"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${td_id}</var>
+<arg>row_num=${row_index}</arg>
+<arg>col_num=2</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240516 19:35:29.069" level="INFO">${td_id} = SHP-0001-TD-002</msg>
+<status status="PASS" starttime="20240516 19:35:29.067" endtime="20240516 19:35:29.069"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${bookname_1}</var>
+<arg>row_num=${row_index}</arg>
+<arg>col_num=3</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240516 19:35:29.071" level="INFO">${bookname_1} = JOJO ล่าข้ามศตวรรษ เครซี่ ไดอมอนด์ ด้วยรักและใจสลาย เล่ม 2</msg>
+<status status="PASS" starttime="20240516 19:35:29.070" endtime="20240516 19:35:29.071"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${bookname_qty_1}</var>
+<arg>row_num=${row_index}</arg>
+<arg>col_num=4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240516 19:35:29.072" level="INFO">${bookname_qty_1} = 1</msg>
+<status status="PASS" starttime="20240516 19:35:29.071" endtime="20240516 19:35:29.072"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${bookname_2}</var>
+<arg>row_num=${row_index}</arg>
+<arg>col_num=5</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240516 19:35:29.073" level="INFO">${bookname_2} = Jojo ล่าข้ามศตวรรษ ภาค 4 เพชรแท้ไม่มีวันสลาย เล่ม 4</msg>
+<status status="PASS" starttime="20240516 19:35:29.072" endtime="20240516 19:35:29.074"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${bookname_qty_2}</var>
+<arg>row_num=${row_index}</arg>
+<arg>col_num=6</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20240516 19:35:29.075" level="INFO">${bookname_qty_2} = 1</msg>
+<status status="PASS" starttime="20240516 19:35:29.074" endtime="20240516 19:35:29.075"/>
+</kw>
+<kw name="Close All Excel Documents" library="ExcelLibrary">
+<doc>Closes all opened documents.</doc>
+<status status="PASS" starttime="20240516 19:35:29.075" endtime="20240516 19:35:29.076"/>
+</kw>
+<msg timestamp="20240516 19:35:29.077" level="INFO">${tc_id} = None</msg>
+<msg timestamp="20240516 19:35:29.077" level="INFO">${td_id} = SHP-0001-TD-002</msg>
+<msg timestamp="20240516 19:35:29.077" level="INFO">${bookname_1} = JOJO ล่าข้ามศตวรรษ เครซี่ ไดอมอนด์ ด้วยรักและใจสลาย เล่ม 2</msg>
+<msg timestamp="20240516 19:35:29.077" level="INFO">${bookname_qty_1} = 1</msg>
+<msg timestamp="20240516 19:35:29.077" level="INFO">${bookname_2} = Jojo ล่าข้ามศตวรรษ ภาค 4 เพชรแท้ไม่มีวันสลาย เล่ม 4</msg>
+<msg timestamp="20240516 19:35:29.077" level="INFO">${bookname_qty_2} = 1</msg>
+<status status="PASS" starttime="20240516 19:35:29.042" endtime="20240516 19:35:29.078"/>
+</kw>
+<kw name="Open website nejavu.com" library="common">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${url}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240516 19:35:29.080" level="INFO">Opening browser 'gc' to base url 'https://www.nejavu.com/'.</msg>
+<status status="PASS" starttime="20240516 19:35:29.078" endtime="20240516 19:35:36.975"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240516 19:35:36.975" endtime="20240516 19:35:37.359"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:29.078" endtime="20240516 19:35:37.359"/>
+</kw>
+<kw name="Display logo home page (ควรเข้ามายังหน้า website ได้สำเร็จและแสดงผลหน้าแรกอย่างถูกต้อง)" library="main_header_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${header.home_logo}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:37.361" endtime="20240516 19:35:37.456"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:37.360" endtime="20240516 19:35:37.456"/>
+</kw>
+<kw name="When opening web first close popup automatically" library="common">
+<arg>${pop_frist_open_web.locator}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:37.458" endtime="20240516 19:35:37.496"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:37.498" level="INFO">Clicking element 'xpath=//a[@class='close-modal']'.</msg>
+<status status="PASS" starttime="20240516 19:35:37.497" endtime="20240516 19:35:37.654"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20240516 19:35:37.655" endtime="20240516 19:35:37.686"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:37.457" endtime="20240516 19:35:37.687"/>
+</kw>
+<kw name="Accept cokkie" library="common">
+<arg>locator=${test_cookie}</arg>
+<arg>text_btn=${text_btn_box_cookie_01}</arg>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${pop_frist.locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20240516 19:35:37.688" endtime="20240516 19:35:38.265"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${btn_accept}</var>
+<arg>${btn_box_cookie}</arg>
+<arg>$text</arg>
+<arg>${text_btn}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20240516 19:35:38.266" level="INFO">${btn_accept} = xpath=//div[@class='p-2 df aic']/../..//a[text()='ยอมรับ']</msg>
+<status status="PASS" starttime="20240516 19:35:38.265" endtime="20240516 19:35:38.266"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_accept}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:38.267" level="INFO">Clicking element 'xpath=//div[@class='p-2 df aic']/../..//a[text()='ยอมรับ']'.</msg>
+<status status="PASS" starttime="20240516 19:35:38.266" endtime="20240516 19:35:38.423"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${test_cookie}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20240516 19:35:38.424" endtime="20240516 19:35:38.712"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:37.687" endtime="20240516 19:35:38.712"/>
+</kw>
+<kw name="Enter the name of the book and press search (กรอกชื่อหนังสือและกดค้นหา)" library="main_header_page">
+<arg>book_name=${set_text_search_02}</arg>
+<kw name="Input text element when read" library="common">
+<arg>${header.search_box}</arg>
+<arg>${book_name}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text_inpt}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:38.716" level="INFO">Typing text 'JOJO ล่าข้ามศตวรรษ' into text field 'id=search-dropdown'.</msg>
+<status status="PASS" starttime="20240516 19:35:38.715" endtime="20240516 19:35:38.949"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:38.714" endtime="20240516 19:35:38.950"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${header.search_box_button}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:38.950" endtime="20240516 19:35:38.987"/>
+</kw>
+<kw name="Click element when read" library="common">
+<arg>${header.search_box_button}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:38.989" endtime="20240516 19:35:39.022"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:39.024" level="INFO">Clicking element 'xpath=//div[@class='df']//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20240516 19:35:39.022" endtime="20240516 19:35:40.230"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:38.988" endtime="20240516 19:35:40.230"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:38.713" endtime="20240516 19:35:40.231"/>
+</kw>
+<kw name="Book results page should be displayed (ควรแสดงหน้าผลลัพธ์หนังสือ)" library="book_cartoon_page">
+<arg>book_name=${set_text_search_02}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//span[contains(text(),': ${book_name}')]</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:40.232" endtime="20240516 19:35:40.270"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>SeleniumLibrary.Page Should Contain Element</arg>
+<arg>xpath=//span[contains(text(),': ${book_name}')]</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//span[contains(text(),': ${book_name}')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240516 19:35:40.291" level="INFO">Current page contains element 'xpath=//span[contains(text(),': JOJO ล่าข้ามศตวรรษ')]'.</msg>
+<status status="PASS" starttime="20240516 19:35:40.272" endtime="20240516 19:35:40.291"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:40.271" endtime="20240516 19:35:40.292"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:40.231" endtime="20240516 19:35:40.292"/>
+</kw>
+<kw name="กดหนังสือมุมมองด่วนของ (box card)" library="book_cartoon_page">
+<arg>book_name=${bookname_1}</arg>
+<kw name="Replace String" library="String">
+<var>${Clicky_bookname_quick_view_btn}</var>
+<arg>${book_cartoon_locator.quick_view_btn_v2}</arg>
+<arg>$book_name</arg>
+<arg>${book_name}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20240516 19:35:40.294" level="INFO">${Clicky_bookname_quick_view_btn} = xpath=//h5[contains(text(),'JOJO ล่าข้ามศตวรรษ เครซี่ ไดอมอนด์ ด้วยรักและใจสลาย เล่ม 2')]/../../../..//button[@class='btn-bordered-1st round df aic jcc modal-trigger']</msg>
+<status status="PASS" starttime="20240516 19:35:40.293" endtime="20240516 19:35:40.294"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>time_=0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240516 19:35:40.801" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20240516 19:35:40.294" endtime="20240516 19:35:40.801"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Clicky_bookname_quick_view_btn}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:40.802" endtime="20240516 19:35:40.839"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>time_=1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240516 19:35:41.845" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240516 19:35:40.839" endtime="20240516 19:35:41.845"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Clicky_bookname_quick_view_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:41.847" level="INFO">Clicking element 'xpath=//h5[contains(text(),'JOJO ล่าข้ามศตวรรษ เครซี่ ไดอมอนด์ ด้วยรักและใจสลาย เล่ม 2')]/../../../..//button[@class='btn-bordered-1st round df aic jcc modal-trigger']'.</msg>
+<status status="PASS" starttime="20240516 19:35:41.846" endtime="20240516 19:35:41.951"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:40.292" endtime="20240516 19:35:41.952"/>
+</kw>
+<kw name="Quick_view action add book to cart" library="book_cartoon_page">
+<arg>book_name=${bookname_1}</arg>
+<kw name="Replace String" library="String">
+<var>${pop_quick_view_bookname_v2}</var>
+<arg>${book_cartoon_locator.popup_product_by_bookname}</arg>
+<arg>$book_name</arg>
+<arg>${book_name}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20240516 19:35:41.955" level="INFO">${pop_quick_view_bookname_v2} = xpath=//strong[contains(text(),'JOJO ล่าข้ามศตวรรษ เครซี่ ไดอมอนด์ ด้วยรักและใจสลาย เล่ม 2')]</msg>
+<status status="PASS" starttime="20240516 19:35:41.954" endtime="20240516 19:35:41.955"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${pop_quick_view_bookname_v2}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:41.955" endtime="20240516 19:35:42.684"/>
+</kw>
+<kw name="Click element when read" library="common">
+<arg>${book_cartoon_locator.quick_view_btn_add_cart}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:42.685" endtime="20240516 19:35:42.726"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:42.728" level="INFO">Clicking element 'xpath=//button[@id='add-to-cart-quickview-button']//small'.</msg>
+<status status="PASS" starttime="20240516 19:35:42.727" endtime="20240516 19:35:42.851"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:42.684" endtime="20240516 19:35:42.852"/>
+</kw>
+<kw name="Click element when read" library="common">
+<arg>${book_cartoon_locator.close_quick_view_btn}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:42.855" endtime="20240516 19:35:42.926"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:42.928" level="INFO">Clicking element 'xpath=//body[@id='top']/main/div[@class='modal-type1 modal-overlay active']/div[@id='modal-type1']/a[@class='close-modal']/*[1]'.</msg>
+<status status="PASS" starttime="20240516 19:35:42.926" endtime="20240516 19:35:43.016"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:42.852" endtime="20240516 19:35:43.017"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:41.952" endtime="20240516 19:35:43.017"/>
+</kw>
+<kw name="กดหนังสือมุมมองด่วนของ (box card)" library="book_cartoon_page">
+<arg>book_name=${bookname_2}</arg>
+<kw name="Replace String" library="String">
+<var>${Clicky_bookname_quick_view_btn}</var>
+<arg>${book_cartoon_locator.quick_view_btn_v2}</arg>
+<arg>$book_name</arg>
+<arg>${book_name}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20240516 19:35:43.019" level="INFO">${Clicky_bookname_quick_view_btn} = xpath=//h5[contains(text(),'Jojo ล่าข้ามศตวรรษ ภาค 4 เพชรแท้ไม่มีวันสลาย เล่ม 4')]/../../../..//button[@class='btn-bordered-1st round df aic jcc modal-trigger']</msg>
+<status status="PASS" starttime="20240516 19:35:43.018" endtime="20240516 19:35:43.019"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>time_=0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240516 19:35:43.534" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20240516 19:35:43.020" endtime="20240516 19:35:43.534"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Clicky_bookname_quick_view_btn}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:43.534" endtime="20240516 19:35:43.586"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>time_=1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240516 19:35:44.590" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240516 19:35:43.587" endtime="20240516 19:35:44.590"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Clicky_bookname_quick_view_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:44.592" level="INFO">Clicking element 'xpath=//h5[contains(text(),'Jojo ล่าข้ามศตวรรษ ภาค 4 เพชรแท้ไม่มีวันสลาย เล่ม 4')]/../../../..//button[@class='btn-bordered-1st round df aic jcc modal-trigger']'.</msg>
+<status status="PASS" starttime="20240516 19:35:44.591" endtime="20240516 19:35:44.690"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:43.017" endtime="20240516 19:35:44.690"/>
+</kw>
+<kw name="Quick_view action add book to cart" library="book_cartoon_page">
+<arg>book_name=${bookname_2}</arg>
+<kw name="Replace String" library="String">
+<var>${pop_quick_view_bookname_v2}</var>
+<arg>${book_cartoon_locator.popup_product_by_bookname}</arg>
+<arg>$book_name</arg>
+<arg>${book_name}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20240516 19:35:44.692" level="INFO">${pop_quick_view_bookname_v2} = xpath=//strong[contains(text(),'Jojo ล่าข้ามศตวรรษ ภาค 4 เพชรแท้ไม่มีวันสลาย เล่ม 4')]</msg>
+<status status="PASS" starttime="20240516 19:35:44.691" endtime="20240516 19:35:44.692"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${pop_quick_view_bookname_v2}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:44.692" endtime="20240516 19:35:44.977"/>
+</kw>
+<kw name="Click element when read" library="common">
+<arg>${book_cartoon_locator.quick_view_btn_add_cart}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:44.979" endtime="20240516 19:35:45.007"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:45.009" level="INFO">Clicking element 'xpath=//button[@id='add-to-cart-quickview-button']//small'.</msg>
+<status status="PASS" starttime="20240516 19:35:45.008" endtime="20240516 19:35:45.101"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:44.978" endtime="20240516 19:35:45.102"/>
+</kw>
+<kw name="Click element when read" library="common">
+<arg>${book_cartoon_locator.close_quick_view_btn}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:45.103" endtime="20240516 19:35:45.136"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:45.137" level="INFO">Clicking element 'xpath=//body[@id='top']/main/div[@class='modal-type1 modal-overlay active']/div[@id='modal-type1']/a[@class='close-modal']/*[1]'.</msg>
+<status status="PASS" starttime="20240516 19:35:45.136" endtime="20240516 19:35:45.212"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:45.102" endtime="20240516 19:35:45.212"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:44.690" endtime="20240516 19:35:45.212"/>
+</kw>
+<kw name="ตรวจสอบแสดง alert เมื่อเพิ่มสินค้าเข้าตะกร้าได้สำเร็จ" library="main_header_page">
+<arg>${header.text_alert_add_to_cart_sucess}</arg>
+<arg>${header.locator_alert_add_to_cart_sucess}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:45.214" endtime="20240516 19:35:45.492"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actual_result}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:45.561" level="INFO">${actual_result} = เพิ่มสินค้าในตระกร้าสำเร็จ</msg>
+<status status="PASS" starttime="20240516 19:35:45.492" endtime="20240516 19:35:45.561"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${actual_result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240516 19:35:45.563" level="INFO">เพิ่มสินค้าในตระกร้าสำเร็จ</msg>
+<status status="PASS" starttime="20240516 19:35:45.561" endtime="20240516 19:35:45.563"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${actual_result}</arg>
+<arg>${expec_text}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240516 19:35:45.564" endtime="20240516 19:35:45.565"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:45.213" endtime="20240516 19:35:45.565"/>
+</kw>
+<kw name="ตรวจสอบจำนวนหนังสือบนไอคอนรถเข็น" library="main_header_page">
+<arg>expec_qty=${header.expect_qty_to_cart}</arg>
+<arg>locator=${header.qty_on_cart}</arg>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${header.locator_alert_add_to_cart_sucess}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20240516 19:35:45.567" endtime="20240516 19:35:47.301"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240516 19:35:47.302" endtime="20240516 19:35:47.352"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actual_result}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:47.381" level="INFO">${actual_result} = 2</msg>
+<status status="PASS" starttime="20240516 19:35:47.352" endtime="20240516 19:35:47.381"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${actual_result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240516 19:35:47.382" level="INFO">2</msg>
+<status status="PASS" starttime="20240516 19:35:47.382" endtime="20240516 19:35:47.383"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${actual_result}</arg>
+<arg>${expec_qty}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240516 19:35:47.384" endtime="20240516 19:35:47.384"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:45.566" endtime="20240516 19:35:47.385"/>
+</kw>
+<kw name="กดไปยังหน้าตระกร้าสินค้าได้สำเร็จ" library="main_header_page">
+<arg>locator=${header.icon_cart_btn}</arg>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${header.locator_alert_add_to_cart_sucess}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20240516 19:35:47.387" endtime="20240516 19:35:47.404"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:47.404" endtime="20240516 19:35:47.436"/>
+</kw>
+<kw name="Click element when read" library="common">
+<arg>${locator}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:47.437" endtime="20240516 19:35:47.463"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:47.465" level="INFO">Clicking element 'xpath=//a[@href='https://www.nejavu.com/cart']//img[@class='lozad']'.</msg>
+<status status="PASS" starttime="20240516 19:35:47.464" endtime="20240516 19:35:48.650"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:47.436" endtime="20240516 19:35:48.651"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${shopping_cart_locator_page}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240516 19:35:48.686" level="INFO">Element 'xpath=//div[@class='mt-8 mb-4 df jcsb aic']//strong' is displayed.</msg>
+<status status="PASS" starttime="20240516 19:35:48.652" endtime="20240516 19:35:48.686"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text_page_cart}</var>
+<arg>${shopping_cart_locator_page}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:48.726" level="INFO">${text_page_cart} = ตะกร้าของฉัน</msg>
+<status status="PASS" starttime="20240516 19:35:48.686" endtime="20240516 19:35:48.726"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${text_page_cart}</arg>
+<arg>ตะกร้าของฉัน</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240516 19:35:48.726" endtime="20240516 19:35:48.727"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:47.385" endtime="20240516 19:35:48.727"/>
+</kw>
+<kw name="ตรวจสอบหน้าตระกร้าสินค้าว่าชื่อหนังสือถูกเพิ่มเข้ามาแล้ว" library="shopping_carts_page">
+<arg>book_name=${bookname_1}</arg>
+<kw name="Replace String" library="String">
+<var>${product_book_name}</var>
+<arg>${shopping_cart_locator.product_book_name}</arg>
+<arg>$book_name</arg>
+<arg>${book_name}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20240516 19:35:48.730" level="INFO">${product_book_name} = xpath=//*[contains(text(),'JOJO ล่าข้ามศตวรรษ เครซี่ ไดอมอนด์ ด้วยรักและใจสลาย เล่ม 2')]//ancestor::div[@class='cart-item-detail']//p//strong</msg>
+<status status="PASS" starttime="20240516 19:35:48.729" endtime="20240516 19:35:48.730"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${product_book_name}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:48.730" endtime="20240516 19:35:48.769"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>locator= ${product_book_name}</arg>
+<arg>expected=${book_name}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20240516 19:35:48.771" level="INFO">Verifying element ' xpath=//*[contains(text(),'JOJO ล่าข้ามศตวรรษ เครซี่ ไดอมอนด์ ด้วยรักและใจสลาย เล่ม 2')]//ancestor::div[@class='cart-item-detail']//p//strong' contains exact text 'JOJO ล่าข้ามศตวรรษ เครซี่ ไดอมอนด์ ด้วยรักและใจสลาย เล่ม 2'.</msg>
+<status status="PASS" starttime="20240516 19:35:48.769" endtime="20240516 19:35:48.799"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:48.728" endtime="20240516 19:35:48.799"/>
+</kw>
+<kw name="ตรวจสอบหน้าตระกร้าสินค้าว่าชื่อหนังสือถูกเพิ่มเข้ามาแล้ว" library="shopping_carts_page">
+<arg>book_name=${bookname_2}</arg>
+<kw name="Replace String" library="String">
+<var>${product_book_name}</var>
+<arg>${shopping_cart_locator.product_book_name}</arg>
+<arg>$book_name</arg>
+<arg>${book_name}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20240516 19:35:48.801" level="INFO">${product_book_name} = xpath=//*[contains(text(),'Jojo ล่าข้ามศตวรรษ ภาค 4 เพชรแท้ไม่มีวันสลาย เล่ม 4')]//ancestor::div[@class='cart-item-detail']//p//strong</msg>
+<status status="PASS" starttime="20240516 19:35:48.800" endtime="20240516 19:35:48.801"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${product_book_name}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:48.801" endtime="20240516 19:35:48.831"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>locator= ${product_book_name}</arg>
+<arg>expected=${book_name}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20240516 19:35:48.833" level="INFO">Verifying element ' xpath=//*[contains(text(),'Jojo ล่าข้ามศตวรรษ ภาค 4 เพชรแท้ไม่มีวันสลาย เล่ม 4')]//ancestor::div[@class='cart-item-detail']//p//strong' contains exact text 'Jojo ล่าข้ามศตวรรษ ภาค 4 เพชรแท้ไม่มีวันสลาย เล่ม 4'.</msg>
+<status status="PASS" starttime="20240516 19:35:48.832" endtime="20240516 19:35:48.868"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:48.799" endtime="20240516 19:35:48.868"/>
+</kw>
+<kw name="ตรวจสอบ value จำนวนหนังสือ" library="shopping_carts_page">
+<arg>book_name=${bookname_1}</arg>
+<arg>qty=${bookname_qty_1}</arg>
+<kw name="Replace String" library="String">
+<var>${product_book_name_qty}</var>
+<arg>${shopping_cart_locator.get_value_qty_book}</arg>
+<arg>$book_name</arg>
+<arg>${book_name}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20240516 19:35:48.870" level="INFO">${product_book_name_qty} = xpath=//strong[text()='JOJO ล่าข้ามศตวรรษ เครซี่ ไดอมอนด์ ด้วยรักและใจสลาย เล่ม 2']/../../../../..//input[@name='product_quantity']</msg>
+<status status="PASS" starttime="20240516 19:35:48.870" endtime="20240516 19:35:48.870"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${get_value_qty_book_name}</var>
+<arg>${product_book_name_qty}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:48.913" level="INFO">${get_value_qty_book_name} = 1</msg>
+<status status="PASS" starttime="20240516 19:35:48.871" endtime="20240516 19:35:48.913"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${product_book_name_qty}</var>
+<arg>${get_value_qty_book_name}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20240516 19:35:48.914" level="INFO">${product_book_name_qty} = 1</msg>
+<status status="PASS" starttime="20240516 19:35:48.913" endtime="20240516 19:35:48.914"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${product_book_name_qty}</arg>
+<arg>${qty}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20240516 19:35:48.915" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20240516 19:35:48.915" endtime="20240516 19:35:48.915"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:48.869" endtime="20240516 19:35:48.915"/>
+</kw>
+<kw name="ตรวจสอบ value จำนวนหนังสือ" library="shopping_carts_page">
+<arg>book_name=${bookname_2}</arg>
+<arg>qty=${bookname_qty_2}</arg>
+<kw name="Replace String" library="String">
+<var>${product_book_name_qty}</var>
+<arg>${shopping_cart_locator.get_value_qty_book}</arg>
+<arg>$book_name</arg>
+<arg>${book_name}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20240516 19:35:48.918" level="INFO">${product_book_name_qty} = xpath=//strong[text()='Jojo ล่าข้ามศตวรรษ ภาค 4 เพชรแท้ไม่มีวันสลาย เล่ม 4']/../../../../..//input[@name='product_quantity']</msg>
+<status status="PASS" starttime="20240516 19:35:48.917" endtime="20240516 19:35:48.918"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${get_value_qty_book_name}</var>
+<arg>${product_book_name_qty}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:48.949" level="INFO">${get_value_qty_book_name} = 1</msg>
+<status status="PASS" starttime="20240516 19:35:48.918" endtime="20240516 19:35:48.949"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${product_book_name_qty}</var>
+<arg>${get_value_qty_book_name}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20240516 19:35:48.951" level="INFO">${product_book_name_qty} = 1</msg>
+<status status="PASS" starttime="20240516 19:35:48.950" endtime="20240516 19:35:48.951"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${product_book_name_qty}</arg>
+<arg>${qty}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20240516 19:35:48.952" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20240516 19:35:48.951" endtime="20240516 19:35:48.952"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:48.916" endtime="20240516 19:35:48.952"/>
+</kw>
+<kw name="ลบหนังสือทั้งหมดออกจากกระตร้าได้สำเร็จ" library="shopping_carts_page">
+<arg>locator=${shopping_cart_locator.icon_delete_all_book_incart}</arg>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count_btn_delete}</var>
+<arg>${locator}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20240516 19:35:48.978" level="INFO">${count_btn_delete} = 2</msg>
+<status status="PASS" starttime="20240516 19:35:48.954" endtime="20240516 19:35:48.978"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${count_btn_delete}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240516 19:35:48.979" level="INFO">2</msg>
+<status status="PASS" starttime="20240516 19:35:48.979" endtime="20240516 19:35:48.979"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${count_btn_delete}</var>
+<value>0</value>
+<value>${count_btn_delete}</value>
+<iter>
+<var name="${count_btn_delete}">0</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:48.981" level="INFO">Clicking element 'xpath=//div//a[@class='delete-item']'.</msg>
+<status status="PASS" starttime="20240516 19:35:48.980" endtime="20240516 19:35:49.079"/>
+</kw>
+<kw name="กดลบหนังสือออกจากตระกร้าโดยกดปุ่มยืนยันลบรายการ" library="shopping_carts_page">
+<arg>${shopping_cart_locator.delete_confirm_btn}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${shopping_cart_locator._pop_delete}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:49.080" endtime="20240516 19:35:49.333"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:49.335" level="INFO">Clicking element 'xpath=//button[contains(text(),'ใช่ ลบรายการ')]'.</msg>
+<status status="PASS" starttime="20240516 19:35:49.334" endtime="20240516 19:35:49.483"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:49.079" endtime="20240516 19:35:49.484"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>xpath=//div[@class='swal2-container swal2-center swal2-backdrop-show']</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20240516 19:35:49.484" endtime="20240516 19:35:52.689"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:48.980" endtime="20240516 19:35:52.689"/>
+</iter>
+<iter>
+<var name="${count_btn_delete}">1</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:52.691" level="INFO">Clicking element 'xpath=//div//a[@class='delete-item']'.</msg>
+<status status="PASS" starttime="20240516 19:35:52.690" endtime="20240516 19:35:52.792"/>
+</kw>
+<kw name="กดลบหนังสือออกจากตระกร้าโดยกดปุ่มยืนยันลบรายการ" library="shopping_carts_page">
+<arg>${shopping_cart_locator.delete_confirm_btn}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${shopping_cart_locator._pop_delete}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:52.793" endtime="20240516 19:35:53.054"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:53.057" level="INFO">Clicking element 'xpath=//button[contains(text(),'ใช่ ลบรายการ')]'.</msg>
+<status status="PASS" starttime="20240516 19:35:53.055" endtime="20240516 19:35:53.170"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:52.792" endtime="20240516 19:35:53.171"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>xpath=//div[@class='swal2-container swal2-center swal2-backdrop-show']</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20240516 19:35:53.171" endtime="20240516 19:35:54.650"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:52.690" endtime="20240516 19:35:54.651"/>
+</iter>
+<status status="PASS" starttime="20240516 19:35:48.979" endtime="20240516 19:35:54.651"/>
+</for>
+<kw name="ตรวจสอบว่าหนังสือถูกลบและหายไปจากตระกร้า" library="shopping_carts_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${shopping_cart_locator.cart_empty}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240516 19:35:54.652" endtime="20240516 19:35:54.687"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actual_text_empty_cart}</var>
+<arg>${shopping_cart_locator.cart_empty}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240516 19:35:54.729" level="INFO">${actual_text_empty_cart} = ยังไม่มีรายการสินค้าในตะกร้า โปรดสั่งซื้อสินค้า</msg>
+<status status="PASS" starttime="20240516 19:35:54.688" endtime="20240516 19:35:54.729"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${actual_text_empty_cart}</arg>
+<arg>${shopping_cart_text.cart_empty}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240516 19:35:54.729" endtime="20240516 19:35:54.731"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:54.651" endtime="20240516 19:35:54.731"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:48.953" endtime="20240516 19:35:54.731"/>
+</kw>
+<kw name="Close Browser nejavu.com" library="common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240516 19:35:54.733" endtime="20240516 19:35:56.985"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:54.732" endtime="20240516 19:35:56.986"/>
+</kw>
+<kw name="Close Browser nejavu.com" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240516 19:35:56.987" endtime="20240516 19:35:56.988"/>
+</kw>
+<status status="PASS" starttime="20240516 19:35:56.987" endtime="20240516 19:35:56.988"/>
+</kw>
+<tag>SHP-0002 FE shopping car</tag>
+<status status="PASS" starttime="20240516 19:35:29.040" endtime="20240516 19:35:56.988"/>
+</test>
+<status status="PASS" starttime="20240516 19:35:01.152" endtime="20240516 19:35:56.990"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">SHP-0001 FE shopping car</stat>
+<stat pass="1" fail="0" skip="0">SHP-0002 FE shopping car</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Tc Shopping Carts Scripts">Tc Shopping Carts Scripts</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
