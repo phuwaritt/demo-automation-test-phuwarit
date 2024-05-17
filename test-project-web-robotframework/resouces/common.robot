@@ -61,3 +61,6 @@ When opening web first close popup automatically
 
 Close Browser nejavu.com
         SeleniumLibrary.Close Browser
+
+Go back to the page
+        SeleniumLibrary.Go Back

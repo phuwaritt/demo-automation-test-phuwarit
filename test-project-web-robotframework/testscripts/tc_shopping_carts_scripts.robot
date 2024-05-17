@@ -5,9 +5,9 @@ Test Teardown    common.Close Browser nejavu.com
 *** Test Cases ***
 SHP-0001 FE shopping car
         [Tags]    SHP-0001 FE shopping car
-        [Documentation]        
+        [Documentation]    เพิ่มหนังสือในตระกร้าสินค้าจากหน้าแรกโดยตรง (box card) และลบหน้งสือออกจากตระกร้า not login    
         #Test Data
-        ${tc_id}    ${td_id}    ${bookname_1}    ${bookname_qty_1}    ${bookname_2}    ${bookname_qty_2}=    common.ดึงข้อมูลที่ใช้ทดสอบจาก Excel (Test data)        row_index=5
+        ${tc_id}    ${td_id}    ${bookname_1}    ${bookname_qty_1}    ${bookname_2}    ${bookname_qty_2}=    common.ดึงข้อมูลที่ใช้ทดสอบจาก Excel (Test data)    row_index=5
         common.Open website nejavu.com
         main_header_page.Display logo home page (ควรเข้ามายังหน้า website ได้สำเร็จและแสดงผลหน้าแรกอย่างถูกต้อง)
         common.When opening web first close popup automatically           ${pop_frist_open_web.locator}
@@ -29,9 +29,9 @@ SHP-0001 FE shopping car
         
 SHP-0002 FE shopping car
         [Tags]    SHP-0002 FE shopping car
-        [Documentation]        
+        [Documentation]    เพิ่มหนังสือในตระกร้าสินค้าจากมุมมองด่วนของ (box card) และลบหน้งสือออกจากตระกร้า not login            
         #Test Data
-        ${tc_id}    ${td_id}    ${bookname_1}    ${bookname_qty_1}    ${bookname_2}    ${bookname_qty_2}=    common.ดึงข้อมูลที่ใช้ทดสอบจาก Excel (Test data)        row_index=6
+        ${tc_id}    ${td_id}    ${bookname_1}    ${bookname_qty_1}    ${bookname_2}    ${bookname_qty_2}=    common.ดึงข้อมูลที่ใช้ทดสอบจาก Excel (Test data)    row_index=6
         common.Open website nejavu.com
         main_header_page.Display logo home page (ควรเข้ามายังหน้า website ได้สำเร็จและแสดงผลหน้าแรกอย่างถูกต้อง)
         common.When opening web first close popup automatically           ${pop_frist_open_web.locator}
@@ -52,4 +52,25 @@ SHP-0002 FE shopping car
         shopping_carts_page.ลบหนังสือทั้งหมดออกจากกระตร้าได้สำเร็จ        locator=${shopping_cart_locator.icon_delete_all_book_incart}
         common.Close Browser nejavu.com
 
-        
+SHP-0003 FE shopping car
+        [Tags]    SHP-0003 FE shopping car
+        [Documentation]    เพิ่มหนังสือในตระกร้าสินค้าหน้าจากรายละเอียดของหนังสือ และลบหน้งสือออกจากตระกร้า not login        
+        #Test Data
+        ${tc_id}    ${td_id}    ${bookname_1}    ${bookname_qty_1}    ${bookname_2}    ${bookname_qty_2}=    common.ดึงข้อมูลที่ใช้ทดสอบจาก Excel (Test data)    row_index=6
+        common.Open website nejavu.com
+        main_header_page.Display logo home page (ควรเข้ามายังหน้า website ได้สำเร็จและแสดงผลหน้าแรกอย่างถูกต้อง)
+        common.When opening web first close popup automatically           ${pop_frist_open_web.locator}
+        common.Accept cokkie          locator=${test_cookie}            text_btn=${text_btn_box_cookie_01}
+        main_header_page.Enter the name of the book and press search (กรอกชื่อหนังสือและกดค้นหา)        book_name=${set_text_search_02}
+        book_cartoon_page.Book results page should be displayed (ควรแสดงหน้าผลลัพธ์หนังสือ)        book_name=${set_text_search_02}
+        book_cartoon_page.Cick book detail from book book_name         book_name=${bookname_1}
+        book_cartoon_detail_page.Check ว่ามายังหน้ารายละเอียดหนังสือของชื่อหนังสือที่เลือกได้สำเร็จ            book_name=${bookname_1}
+        book_cartoon_detail_page.กดปุ่มเพิ่มหนังสือเข้าสู่ตระกร้า
+        main_header_page.ตรวจสอบแสดง alert เมื่อเพิ่มสินค้าเข้าตะกร้าได้สำเร็จ        ${header.text_alert_add_to_cart_sucess}        ${header.locator_alert_add_to_cart_sucess}
+        main_header_page.ตรวจสอบจำนวนหนังสือบนไอคอนรถเข็น    expec_qty=${header.expect_qty_to_cart_t3}             locator=${header.qty_on_cart}  
+        main_header_page.กดไปยังหน้าตระกร้าสินค้าได้สำเร็จ        locator=${header.icon_cart_btn}
+        shopping_carts_page.ตรวจสอบหน้าตระกร้าสินค้าว่าชื่อหนังสือถูกเพิ่มเข้ามาแล้ว                 book_name=${bookname_1}
+        shopping_carts_page.ตรวจสอบ value จำนวนหนังสือ                book_name=${bookname_1}         qty=${bookname_qty_1}
+        shopping_carts_page.ตรวจสอบ value จำนวนหนังสือ                book_name=${bookname_1}         qty=${bookname_qty_1}
+        shopping_carts_page.ลบหนังสือทั้งหมดออกจากกระตร้าได้สำเร็จ        locator=${shopping_cart_locator.icon_delete_all_book_incart}
+        common.Close Browser nejavu.com

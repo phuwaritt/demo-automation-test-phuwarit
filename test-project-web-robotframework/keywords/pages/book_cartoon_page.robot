@@ -50,11 +50,8 @@ Quick_view action add book to cart V2
 
 #Role from book detail
 Cick book detail from book book_name
-        [Arguments]    ${bookn_name}    ${tomeout}=${GLOBAL_TIMEOUT}
-        ${book_detail_by_bookname}    String.Replace String           ${book_cartoon_locator.book_detail_from_bookname}        $book_name        ${bookn_name}
+        [Arguments]    ${book_name}    ${tomeout}=${GLOBAL_TIMEOUT}
+        ${book_detail_by_bookname}    String.Replace String           ${book_cartoon_locator.btn_go_book_detail_from_bookname}         $book_name        ${book_name}
         SeleniumLibrary.Wait Until Element Is Visible    ${book_detail_by_bookname}        ${tomeout}     
         SeleniumLibrary.Click Element        ${book_detail_by_bookname}
-        
-Check ว่ามายังหน้ารายละเอียดหนังสือได้สำเร็จ
-        [Arguments]        ${bookn_name}    ${tomeout}=${GLOBAL_TIMEOUT}
         

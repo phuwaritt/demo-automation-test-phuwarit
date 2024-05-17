@@ -11,5 +11,6 @@ ${header.icon_cart_btn}            xpath=//a[@href='https://www.nejavu.com/cart'
 ${header.text_alert_add_to_cart_sucess}               เพิ่มสินค้าในตระกร้าสำเร็จ
 ${header.locator_alert_add_to_cart_sucess}             //div[@class='toast-message']
 ${header.expect_qty_to_cart}                           2 
+${header.expect_qty_to_cart_t3}                        1
 ${set_text_search_01}        BLEACH เทพมรณะ
 ${set_text_search_02}        JOJO ล่าข้ามศตวรรษ
