@@ -13,8 +13,6 @@ Resource        ../../keywords/pages/import.robot
         ${product_book_name_qty}        String.Replace String            ${shopping_cart_locator.product_add_qty_book}        $book_name        ${book_name}
         SeleniumLibrary.Wait Until Element Is Visible            ${product_book_name_qty}        ${timeout}
         SeleniumLibrary.Click Element            ${product_book_name_qty} 
-            
-
 
 ตรวจสอบ value จำนวนหนังสือ
         [Arguments]        ${book_name}         ${qty}

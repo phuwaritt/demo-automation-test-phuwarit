@@ -14,11 +14,11 @@ SHP-0001 FE shopping car
         common.Accept cokkie          locator=${test_cookie}            text_btn=${text_btn_box_cookie_01}
         main_header_page.Enter the name of the book and press search (กรอกชื่อหนังสือและกดค้นหา)        book_name=${set_text_search_01}
         book_cartoon_page.Book results page should be displayed (ควรแสดงหน้าผลลัพธ์หนังสือ)        book_name=${set_text_search_01}
-        book_cartoon_page.กดเพิ่มหนังสือใส่ตระกร้าจากหน้า (box card) โดยตรง         book_name=${bookname_1}
-        book_cartoon_page.กดเพิ่มหนังสือใส่ตระกร้าจากหน้า (box card) โดยตรง         book_name=${bookname_2}
+        book_cartoon_page.Action กดเพิ่มหนังสือใส่ตระกร้าจากหน้า (box card) โดยตรง         book_name=${bookname_1}
+        book_cartoon_page.Action กดเพิ่มหนังสือใส่ตระกร้าจากหน้า (box card) โดยตรง         book_name=${bookname_2}
         main_header_page.ตรวจสอบแสดง alert เมื่อเพิ่มสินค้าเข้าตะกร้าได้สำเร็จ        ${header.text_alert_add_to_cart_sucess}        ${header.locator_alert_add_to_cart_sucess}
         main_header_page.ตรวจสอบจำนวนหนังสือบนไอคอนรถเข็น    expec_qty=${header.expect_qty_to_cart}             locator=${header.qty_on_cart}  
-        main_header_page.กดไปยังหน้าตระกร้าสินค้าได้สำเร็จ        locator=${header.icon_cart_btn}
+        main_header_page.Action กดไปยังหน้าตระกร้าสินค้าได้สำเร็จ        locator=${header.icon_cart_btn}
         shopping_carts_page.ตรวจสอบหน้าตระกร้าสินค้าว่าชื่อหนังสือถูกเพิ่มเข้ามาแล้ว                 book_name=${bookname_1}                                
         shopping_carts_page.ตรวจสอบหน้าตระกร้าสินค้าว่าชื่อหนังสือถูกเพิ่มเข้ามาแล้ว                 book_name=${bookname_2}
         shopping_carts_page.กดเพิ่มจำนวนหนังสือในตระกร้า                  book_name=${bookname_1}
@@ -38,13 +38,13 @@ SHP-0002 FE shopping car
         common.Accept cokkie          locator=${test_cookie}            text_btn=${text_btn_box_cookie_01}
         main_header_page.Enter the name of the book and press search (กรอกชื่อหนังสือและกดค้นหา)        book_name=${set_text_search_02}
         book_cartoon_page.Book results page should be displayed (ควรแสดงหน้าผลลัพธ์หนังสือ)        book_name=${set_text_search_02}
-        book_cartoon_page.กดหนังสือมุมมองด่วนของ (box card)         book_name=${bookname_1}
+        book_cartoon_page.Action กดหนังสือมุมมองด่วนของ (box card)         book_name=${bookname_1}
         book_cartoon_page.Quick_view action add book to cart            book_name=${bookname_1}
-        book_cartoon_page.กดหนังสือมุมมองด่วนของ (box card)         book_name=${bookname_2}
+        book_cartoon_page.Action กดหนังสือมุมมองด่วนของ (box card)         book_name=${bookname_2}
         book_cartoon_page.Quick_view action add book to cart         book_name=${bookname_2}
         main_header_page.ตรวจสอบแสดง alert เมื่อเพิ่มสินค้าเข้าตะกร้าได้สำเร็จ        ${header.text_alert_add_to_cart_sucess}        ${header.locator_alert_add_to_cart_sucess}
         main_header_page.ตรวจสอบจำนวนหนังสือบนไอคอนรถเข็น    expec_qty=${header.expect_qty_to_cart}             locator=${header.qty_on_cart}  
-        main_header_page.กดไปยังหน้าตระกร้าสินค้าได้สำเร็จ        locator=${header.icon_cart_btn}
+        main_header_page.Action กดไปยังหน้าตระกร้าสินค้าได้สำเร็จ        locator=${header.icon_cart_btn}
         shopping_carts_page.ตรวจสอบหน้าตระกร้าสินค้าว่าชื่อหนังสือถูกเพิ่มเข้ามาแล้ว                 book_name=${bookname_1}                                
         shopping_carts_page.ตรวจสอบหน้าตระกร้าสินค้าว่าชื่อหนังสือถูกเพิ่มเข้ามาแล้ว                 book_name=${bookname_2}
         shopping_carts_page.ตรวจสอบ value จำนวนหนังสือ                book_name=${bookname_1}         qty=${bookname_qty_1}

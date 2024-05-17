@@ -30,7 +30,7 @@ Enter the name of the book and press search (กรอกชื่อหนั�
         Builtin.Log    ${actual_result} 
         Builtin.Should Be Equal As Strings            ${actual_result}            ${expec_qty}
 
-กดไปยังหน้าตระกร้าสินค้าได้สำเร็จ
+Action กดไปยังหน้าตระกร้าสินค้าได้สำเร็จ
         [Arguments]    ${locator}        ${timeout}=${GLOBAL_TIMEOUT}
         SeleniumLibrary.Wait Until Element Is Not Visible    ${header.locator_alert_add_to_cart_sucess}
         SeleniumLibrary.Wait Until Element Is Visible            ${locator}        ${timeout}
