@@ -43,7 +43,7 @@ Quick_view action add book to cart V2
         Execute JavaScript    arguments[0].scrollIntoView(true);    ${element}
         
         ${button_xpath}=    Set Variable        ${book_cartoon_locator.quick_view_btn_add_cart}
-        SeleniumLibrary.Click Element        ${button_xpath}                ${timeout}
+        #SeleniumLibrary.Click Element        ${button_xpath}                ${timeout}
         
         ${button_element}=    Get WebElement    ${button_xpath}
         Execute JavaScript    arguments[0].click();    ${button_element}

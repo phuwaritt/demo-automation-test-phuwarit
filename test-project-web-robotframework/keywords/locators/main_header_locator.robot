@@ -14,4 +14,4 @@ ${header.expect_qty_to_cart}                           2
 ${header.expect_qty_to_cart_t3}                        1
 ${set_text_search_01}        BLEACH เทพมรณะ
 ${set_text_search_02}        JOJO ล่าข้ามศตวรรษ
-${set_text_search_03}        นินจาคาถา โอ้โฮเฮะ
+${set_text_search_03}        มหาศึกคนชนคน

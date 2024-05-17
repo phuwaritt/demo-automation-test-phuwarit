@@ -14,7 +14,7 @@ SHP-0001 FE shopping car
         common.Accept cokkie          locator=${test_cookie}            text_btn=${text_btn_box_cookie_01}
         main_header_page.Enter the name of the book and press search (กรอกชื่อหนังสือและกดค้นหา)        book_name=${set_text_search_01}
         book_cartoon_page.Book results page should be displayed (ควรแสดงหน้าผลลัพธ์หนังสือ)        book_name=${set_text_search_01}
-        book_cartoon_page.กดเพิ่มหนังสือใส่ตระกร้าจากหน้า (box card) โดยตรง         book_name=${bookname_1}
+        book_cartoon_page.กดเพิ่มหนังสือใส่ตระกร้าจากหน้า (box card) โดยตรง         book_name=${bookname_1}    
         book_cartoon_page.กดเพิ่มหนังสือใส่ตระกร้าจากหน้า (box card) โดยตรง         book_name=${bookname_2}
         main_header_page.ตรวจสอบแสดง alert เมื่อเพิ่มสินค้าเข้าตะกร้าได้สำเร็จ        ${header.text_alert_add_to_cart_sucess}        ${header.locator_alert_add_to_cart_sucess}
         main_header_page.ตรวจสอบจำนวนหนังสือบนไอคอนรถเข็น    expec_qty=${header.expect_qty_to_cart}             locator=${header.qty_on_cart}  

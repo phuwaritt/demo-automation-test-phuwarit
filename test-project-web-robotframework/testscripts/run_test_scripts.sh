@@ -4,3 +4,4 @@ robot --outputdir test-project-web-robotframework/testresults --log is_log.html 
 
 #How to run 
 #cd file project in Terminal and copy relative path ของไฟล์ run_test แล้วเอาไปรันใน Terminal
+
