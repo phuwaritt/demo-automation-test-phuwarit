@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        import.robot        
+Resource        ../../resouces/import.robot       
 
 *** Keywords ***
 Book results page should be displayed (ควรแสดงหน้าผลลัพธ์หนังสือ)
@@ -7,7 +7,7 @@ Book results page should be displayed (ควรแสดงหน้าผล�
         SeleniumLibrary.Wait Until Element Is Visible          xpath=//span[contains(text(),': ${book_name}')]         timeout=${timeout}
         Run Keyword And Continue On Failure    SeleniumLibrary.Page Should Contain Element            xpath=//span[contains(text(),': ${book_name}')]
 
-Action กดเพิ่มหนังสือใส่ตระกร้าจากหน้า (box card) โดยตรง 
+กดเพิ่มหนังสือใส่ตระกร้าจากหน้า (box card) โดยตรง 
         [Arguments]    ${book_name}    ${timeout}=${GLOBAL_TIMEOUT}
         #แทนที่ String ใน xpath locator $book_name ที่ประกาศใน variables ด้วย Arguments ${book_name}
         ${add_to_cart_btn}    String.Replace String              ${book_cartoon_locator.add_cart_btn}        $book_name            ${book_name}
@@ -15,7 +15,7 @@ Action กดเพิ่มหนังสือใส่ตระกร้า�
         common.Click element when read            ${add_to_cart_btn}
 
 #Role มุมมองด่วน
-Action กดหนังสือมุมมองด่วนของ (box card)
+กดหนังสือมุมมองด่วนของ (box card)
         [Arguments]    ${book_name}    ${timeout}=${GLOBAL_TIMEOUT}
              ${Clicky_bookname_quick_view_btn}    String.Replace String              ${book_cartoon_locator.quick_view_btn_v2}        $book_name            ${book_name}
              Sleep    time_=0.5s
@@ -49,5 +49,12 @@ Quick_view action add book to cart V2
         Execute JavaScript    arguments[0].click();    ${button_element}
 
 #Role from book detail
-Action Cick book detail from book book_name
-        [Arguments]    ${bookn_name}
+Cick book detail from book book_name
+        [Arguments]    ${bookn_name}    ${tomeout}=${GLOBAL_TIMEOUT}
+        ${book_detail_by_bookname}    String.Replace String           ${book_cartoon_locator.book_detail_from_bookname}        $book_name        ${bookn_name}
+        SeleniumLibrary.Wait Until Element Is Visible    ${book_detail_by_bookname}        ${tomeout}     
+        SeleniumLibrary.Click Element        ${book_detail_by_bookname}
+        
+Check ว่ามายังหน้ารายละเอียดหนังสือได้สำเร็จ
+        [Arguments]        ${bookn_name}    ${tomeout}=${GLOBAL_TIMEOUT}
+        

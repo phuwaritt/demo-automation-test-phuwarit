@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        ../../keywords/pages/import.robot
+Resource        ../../resouces/import.robot
 
 *** Keywords ***
 ตรวจสอบหน้าตระกร้าสินค้าว่าชื่อหนังสือถูกเพิ่มเข้ามาแล้ว 
