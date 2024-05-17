@@ -56,13 +56,13 @@ SHP-0003 FE shopping car
         [Tags]    SHP-0003 FE shopping car
         [Documentation]    เพิ่มหนังสือในตระกร้าสินค้าหน้าจากรายละเอียดของหนังสือ และลบหน้งสือออกจากตระกร้า not login        
         #Test Data
-        ${tc_id}    ${td_id}    ${bookname_1}    ${bookname_qty_1}    ${bookname_2}    ${bookname_qty_2}=    common.ดึงข้อมูลที่ใช้ทดสอบจาก Excel (Test data)    row_index=6
+        ${tc_id}    ${td_id}    ${bookname_1}    ${bookname_qty_1}    ${bookname_2}    ${bookname_qty_2}=    common.ดึงข้อมูลที่ใช้ทดสอบจาก Excel (Test data)    row_index=7
         common.Open website nejavu.com
         main_header_page.Display logo home page (ควรเข้ามายังหน้า website ได้สำเร็จและแสดงผลหน้าแรกอย่างถูกต้อง)
         common.When opening web first close popup automatically           ${pop_frist_open_web.locator}
         common.Accept cokkie          locator=${test_cookie}            text_btn=${text_btn_box_cookie_01}
-        main_header_page.Enter the name of the book and press search (กรอกชื่อหนังสือและกดค้นหา)        book_name=${set_text_search_02}
-        book_cartoon_page.Book results page should be displayed (ควรแสดงหน้าผลลัพธ์หนังสือ)        book_name=${set_text_search_02}
+        main_header_page.Enter the name of the book and press search (กรอกชื่อหนังสือและกดค้นหา)        book_name=${set_text_search_03}
+        book_cartoon_page.Book results page should be displayed (ควรแสดงหน้าผลลัพธ์หนังสือ)        book_name=${set_text_search_03}
         book_cartoon_page.Cick book detail from book book_name         book_name=${bookname_1}
         book_cartoon_detail_page.Check ว่ามายังหน้ารายละเอียดหนังสือของชื่อหนังสือที่เลือกได้สำเร็จ            book_name=${bookname_1}
         book_cartoon_detail_page.กดปุ่มเพิ่มหนังสือเข้าสู่ตระกร้า
