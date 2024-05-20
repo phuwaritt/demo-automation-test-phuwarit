@@ -68,9 +68,15 @@ SHP-0003 FE shopping car
         book_cartoon_detail_page.กดปุ่มเพิ่มหนังสือเข้าสู่ตระกร้า
         main_header_page.ตรวจสอบแสดง alert เมื่อเพิ่มสินค้าเข้าตะกร้าได้สำเร็จ        ${header.text_alert_add_to_cart_sucess}        ${header.locator_alert_add_to_cart_sucess}
         main_header_page.ตรวจสอบจำนวนหนังสือบนไอคอนรถเข็น    expec_qty=${header.expect_qty_to_cart_t3}             locator=${header.qty_on_cart}  
+        common.Go back to the page
+        book_cartoon_page.Cick book detail from book book_name         book_name=${bookname_2}
+        book_cartoon_detail_page.Check ว่ามายังหน้ารายละเอียดหนังสือของชื่อหนังสือที่เลือกได้สำเร็จ            book_name=${bookname_2}
+        book_cartoon_detail_page.กดปุ่มเพิ่มหนังสือเข้าสู่ตระกร้า
+        main_header_page.ตรวจสอบแสดง alert เมื่อเพิ่มสินค้าเข้าตะกร้าได้สำเร็จ        ${header.text_alert_add_to_cart_sucess}        ${header.locator_alert_add_to_cart_sucess}
+        main_header_page.ตรวจสอบจำนวนหนังสือบนไอคอนรถเข็น    expec_qty=${header.expect_qty_to_cart}             locator=${header.qty_on_cart}  
         main_header_page.กดไปยังหน้าตระกร้าสินค้าได้สำเร็จ        locator=${header.icon_cart_btn}
         shopping_carts_page.ตรวจสอบหน้าตระกร้าสินค้าว่าชื่อหนังสือถูกเพิ่มเข้ามาแล้ว                 book_name=${bookname_1}
         shopping_carts_page.ตรวจสอบ value จำนวนหนังสือ                book_name=${bookname_1}         qty=${bookname_qty_1}
-        shopping_carts_page.ตรวจสอบ value จำนวนหนังสือ                book_name=${bookname_1}         qty=${bookname_qty_1}
+        shopping_carts_page.ตรวจสอบ value จำนวนหนังสือ                book_name=${bookname_2}         qty=${bookname_qty_2}
         shopping_carts_page.ลบหนังสือทั้งหมดออกจากกระตร้าได้สำเร็จ        locator=${shopping_cart_locator.icon_delete_all_book_incart}
         common.Close Browser nejavu.com
