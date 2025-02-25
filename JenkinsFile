@@ -6,12 +6,12 @@ def notify_line(passed_count, failed_count, log_url, BRANCH_NAME){
 }
 
 pipeline {
-    agent { label 'BPY-pipeline-01'}
+    agent { label 'bpy-agent'}
     environment {
         BASE_URL = 'http://192.8.8.133:8080/'
     }
     stages {
-        stage('Assign BPY') {
+        stage('Assign BPY 01') {
             steps {
                 script{
                 sh(script: 'pabot --pabotlib --testlevelsplit --processes 3 test-project-web-robotframework/testscripts/tc_shopping_carts_scripts.robot', returnStatus: true)
