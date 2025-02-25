@@ -1,3 +1,3 @@
-Branch > BPY-Assment1 > Pipeline Web\
-Branch > BPY-Assment2 > Pipeline Android\
-Branch > BPY-Assment3 > Pipeline iOS
+Branch > BPY-Assment1 > Web Pipeline\
+Branch > BPY-Assment2 > Android Pipeline\
+Branch > BPY-Assment3 > iOS Pipeline
