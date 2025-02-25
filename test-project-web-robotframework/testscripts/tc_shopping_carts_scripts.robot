@@ -24,6 +24,7 @@ SHP-0001 FE shopping car
         shopping_carts_page.กดเพิ่มจำนวนหนังสือในตระกร้า                  book_name=${bookname_1}
         shopping_carts_page.ตรวจสอบ value จำนวนหนังสือ                book_name=${bookname_1}         qty=${bookname_qty_1}
         shopping_carts_page.ตรวจสอบ value จำนวนหนังสือ                book_name=${bookname_2}         qty=${bookname_qty_2}
+        SeleniumLibrary.Capture Page Screenshot
         shopping_carts_page.ลบหนังสือทั้งหมดออกจากกระตร้าได้สำเร็จ        locator=${shopping_cart_locator.icon_delete_all_book_incart}
         common.Close Browser nejavu.com
         
@@ -49,6 +50,7 @@ SHP-0002 FE shopping car
         shopping_carts_page.ตรวจสอบหน้าตระกร้าสินค้าว่าชื่อหนังสือถูกเพิ่มเข้ามาแล้ว                 book_name=${bookname_2}
         shopping_carts_page.ตรวจสอบ value จำนวนหนังสือ                book_name=${bookname_1}         qty=${bookname_qty_1}
         shopping_carts_page.ตรวจสอบ value จำนวนหนังสือ                book_name=${bookname_2}         qty=${bookname_qty_2}
+        SeleniumLibrary.Capture Page Screenshot
         shopping_carts_page.ลบหนังสือทั้งหมดออกจากกระตร้าได้สำเร็จ        locator=${shopping_cart_locator.icon_delete_all_book_incart}
         common.Close Browser nejavu.com
 
@@ -79,5 +81,6 @@ SHP-0003 FE shopping car
         shopping_carts_page.ตรวจสอบหน้าตระกร้าสินค้าว่าชื่อหนังสือถูกเพิ่มเข้ามาแล้ว                 book_name=${bookname_2}
         shopping_carts_page.ตรวจสอบ value จำนวนหนังสือ                book_name=${bookname_1}         qty=${bookname_qty_1}
         shopping_carts_page.ตรวจสอบ value จำนวนหนังสือ                book_name=${bookname_2}         qty=${bookname_qty_2}
+        SeleniumLibrary.Capture Page Screenshot
         shopping_carts_page.ลบหนังสือทั้งหมดออกจากกระตร้าได้สำเร็จ        locator=${shopping_cart_locator.icon_delete_all_book_incart}
         common.Close Browser nejavu.com
