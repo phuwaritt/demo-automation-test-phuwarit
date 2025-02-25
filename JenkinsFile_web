@@ -26,9 +26,9 @@ pipeline {
                     echo "Failed Tests: ${failed_count}"
 
                     IF (passed_count.toInteger()<0){
-                        ${message_eimoj} = :jenkins-masked:
+                        ${message_eimoj} = ":jenkins-masked:"
                     }else{
-                        ${message_eimoj} = :yuno:
+                        ${message_eimoj} = ":yuno:"
                     }
                     
                     def total_tests = passed_count.toInteger() + failed_count.toInteger()
