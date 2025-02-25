@@ -25,7 +25,7 @@ pipeline {
                     echo "Passed Tests: ${passed_count}"
                     echo "Failed Tests: ${failed_count}"
 
-                    IF (passed_count.toInteger()<0){
+                    IF (passed_count.toInteger()<0) {
                         ${message_eimoj} = ":jenkins-masked:"
                     }else{
                         ${message_eimoj} = ":yuno:"
