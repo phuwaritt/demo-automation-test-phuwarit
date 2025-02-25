@@ -34,7 +34,7 @@ pipeline {
 
                     def total_tests = passed_count.toInteger() + failed_count.toInteger()
                     def log_url = "${env.BASE_URL}/job/${JOB_NAME}/${env.BUILD_NUMBER}/"
-                    slackSend(channel:"#cicd_training_space",message: "BPY \n ${message_emoji} ${JOB_NAME} #${env.BUILD_NUMBER} \n *BRANCH:* ${BRANCH_NAME} \n Total Test Cases: ${total_tests} \n Passed : ${passed_count} :white_check_mark: \n Failed : ${failed_count} :face_vomiting: \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)")
+                    slackSend(channel:"#cicd_training_space",message: "BPY \n ${JOB_NAME} #${env.BUILD_NUMBER} ${message_emoji} \n *BRANCH:* ${BRANCH_NAME} \n Total Test Cases: ${total_tests} \n Passed : ${passed_count} :white_check_mark: \n Failed : ${failed_count} :face_vomiting: \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)")
                     notify_line(JOB_NAME, BRANCH_NAME, total_tests, passed_count, failed_count, log_url)
                 }
             }
