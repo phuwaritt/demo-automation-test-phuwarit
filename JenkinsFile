@@ -6,7 +6,7 @@ def notify_line(passed_count, failed_count, log_url, BRANCH_NAME){
 }
 
 pipeline {
-    agent { label 'Boss-agent'}
+    agent { label 'BPY-pipeline-01'}
     environment {
         BASE_URL = 'http://192.8.8.133:8080/'
     }
