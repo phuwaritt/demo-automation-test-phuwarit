@@ -25,7 +25,7 @@ pipeline {
                     
                     def total_tests = passed_count.toInteger() + failed_count.toInteger()
                     def log_url = "${env.BASE_URL}/job/${env.JOB_NAME}/${env.BUILD_NUMBER}/"
-                    slackSend(channel:"#cicd_training_space",message: "BPY :jenkins-masked: \n *Branch:* ${BRANCH_NAME} \n Build #${env.BUILD_NUMBER} \n Total Test Cases: ${total_tests} \n Passed : ${passed_count} :white_check_mark: \n Failed : ${failed_count} :face_vomiting: \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)")
+                    slackSend(channel:"#cicd_training_space",message: "BPY :jenkins-masked: ${env.JOB_NAME} #${env.BUILD_NUMBER} \n *BRANCH:* ${BRANCH_NAME} \n Total Test Cases: ${total_tests} \n Passed : ${passed_count} :white_check_mark: \n Failed : ${failed_count} :face_vomiting: \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)")
                     notify_line(total_tests, passed_count, failed_count, log_url, BRANCH_NAME)
                 }
             }
