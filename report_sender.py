@@ -50,7 +50,7 @@ def send_report():
     jenkins_data["type"] = type
     jenkins_data["build_type"] = build_type
     jenkins_data["report_filename"] = os.path.basename(report_path)
-    endpoint = "https://failure-declaration.doppio-tech.com/v1/companies/" + str(jenkins_data["jenkins_company_id"]) + "/projects/" + str(jenkins_data["jenkins_project_id"]) + "/builds"
+    endpoint = "https://grafana.doppio-tech.com/?orgId=1/" + str(jenkins_data["jenkins_company_id"]) + "/projects/" + str(jenkins_data["jenkins_project_id"]) + "/builds"
     resp = requests.post(
         endpoint,
         files=file,
