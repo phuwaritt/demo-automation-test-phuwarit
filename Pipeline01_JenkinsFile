@@ -23,7 +23,7 @@ pipeline {
                     echo "Passed Tests: ${passed_count}"
                     echo "Failed Tests: ${failed_count}"
 
-                    def log_url = "${env.BASE_URL}//job/${env.JOB_NAME}/${env.BUILD_NUMBER}//artifact/log.html"
+                    def log_url = "${env.BASE_URL}/job/${env.JOB_NAME}/${env.BUILD_NUMBER}/artifact/log.html"
                     slackSend(channel:"#cicd_training_space",message: "BPY :jenkins-masked: \n Branch: ${BRANCH_NAME} \n Build #${env.BUILD_NUMBER} \n Passed : ${passed_count} :white_check_mark: \n Failed : ${failed_count} :face_vomiting: \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)")
                     notify_line(passed_count, failed_count, log_url, BRANCH_NAME)
                 }

@@ -4,7 +4,7 @@ Resource      ../resouces/import.robot
 Test Teardown    common.Close Browser nejavu.com
 *** Test Cases ***
 SHP-0001 FE shopping car
-        [Tags]    SHP-0001 FE shopping car
+        [Tags]    SHP-0001 FE shopping cart
         [Documentation]    เพิ่มหนังสือในตระกร้าสินค้าจากหน้าแรกโดยตรง (box card) และลบหน้งสือออกจากตระกร้า not login    
         #Test Data
         ${tc_id}    ${td_id}    ${bookname_1}    ${bookname_qty_1}    ${bookname_2}    ${bookname_qty_2}=    common.ดึงข้อมูลที่ใช้ทดสอบจาก Excel (Test data)    row_index=5
@@ -28,7 +28,7 @@ SHP-0001 FE shopping car
         common.Close Browser nejavu.com
         
 SHP-0002 FE shopping car
-        [Tags]    SHP-0002 FE shopping car
+        [Tags]    SHP-0002 FE shopping cart
         [Documentation]    เพิ่มหนังสือในตระกร้าสินค้าจากมุมมองด่วนของ (box card) และลบหน้งสือออกจากตระกร้า not login            
         #Test Data
         ${tc_id}    ${td_id}    ${bookname_1}    ${bookname_qty_1}    ${bookname_2}    ${bookname_qty_2}=    common.ดึงข้อมูลที่ใช้ทดสอบจาก Excel (Test data)    row_index=6
@@ -53,7 +53,7 @@ SHP-0002 FE shopping car
         common.Close Browser nejavu.com
 
 SHP-0003 FE shopping car
-        [Tags]    SHP-0003 FE shopping car
+        [Tags]    SHP-0003 FE shopping cart
         [Documentation]    เพิ่มหนังสือในตระกร้าสินค้าหน้าจากรายละเอียดของหนังสือ และลบหน้งสือออกจากตระกร้า not login        
         #Test Data
         ${tc_id}    ${td_id}    ${bookname_1}    ${bookname_qty_1}    ${bookname_2}    ${bookname_qty_2}=    common.ดึงข้อมูลที่ใช้ทดสอบจาก Excel (Test data)    row_index=7
