@@ -1,0 +1,21 @@
+[set0]
+tags = set0
+automationName = UIAutomator2
+platformName = android
+platformVersion = 13
+deviceName = emulator-15552
+udid = emulator-15552
+remote_url = http://0.0.0.0:14723
+remote_url_op = NONE
+system_port = 18193
+
+[set1]
+tags = set1
+automationName = UIAutomator2
+platformName = android
+platformVersion = 13
+deviceName = emulator-15562
+udid = emulator-15562
+remote_url = http://0.0.0.0:13723
+remote_url_op = NONE
+system_port = 18173
