@@ -21,16 +21,16 @@ pipeline {
                     String failed_count = tm('${ROBOT_FAILED}')
                     String BRANCH_NAME = "${GIT_BRANCH}"
                     String JOB_NAME = "${env.JOB_NAME}"
-                    String message_eimoj = Null
                     echo "Passed Tests: ${passed_count}"
                     echo "Failed Tests: ${failed_count}"
 
-                    IF (passed_count.toInteger()<0) {
-                        ${message_eimoj} = ":jenkins-masked:"
-                    }else{
-                        ${message_eimoj} = ":yuno:"
+                    def message_eimoj = ""
+                    if (passed_count.toInteger() < 0) {
+                        message_emoji = ":jenkins-masked:"
+                    } else {
+                        message_emoji = ":yuno:"
                     }
-                    
+
                     def total_tests = passed_count.toInteger() + failed_count.toInteger()
                     def log_url = "${env.BASE_URL}/job/${JOB_NAME}/${env.BUILD_NUMBER}/"
                     slackSend(channel:"#cicd_training_space",message: "BPY ${message_eimoj} \n ${JOB_NAME} #${env.BUILD_NUMBER} \n *BRANCH:* ${BRANCH_NAME} \n Total Test Cases: ${total_tests} \n Passed : ${passed_count} :white_check_mark: \n Failed : ${failed_count} :face_vomiting: \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)")
