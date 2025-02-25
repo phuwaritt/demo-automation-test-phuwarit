@@ -1,7 +1,7 @@
 def notify_line(passed_count, failed_count, log_url, BRANCH_NAME){
     def token = "lWcrOHVVskzMYRXb7iB1e9xanhcvmC3Pu8Jz39Ozufh"
     def url = 'https://notify-api.line.me/api/notify'
-    def message = "BPY :jenkins-masked: Branch: ${BRANCH_NAME} Build ${env.BUILD_NUMBER} \n Passed : ${passed_count} :white_check_mark: \n Failed : ${failed_count} :face_vomiting: \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)"
+    def message = "BPY (smirk Moon) Branch: ${BRANCH_NAME} Build ${env.BUILD_NUMBER} \n Passed : ${passed_count} :white_check_mark: \n Failed : ${failed_count} :face_vomiting: \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)"
     sh "curl ${url} -H 'Authorization: Bearer ${token}' -F 'message=${message}'"
 }
 
