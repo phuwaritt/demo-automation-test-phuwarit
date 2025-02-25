@@ -1,0 +1,52 @@
+pipeline {
+    agent { label 'bank_macmini'}
+    stages {
+        stage('Hello') {
+            steps {
+                cleanWs()
+                checkout scm
+                echo 'Hello World'
+                echo 'test push'
+                // (<${env.BUILD_URL}|Open>)
+                // (<${BUILD_URL}|Open>)
+                // bat '''robot mytest.robot'''
+                sh 'robot mytest2.robot'
+                archiveArtifacts artifacts: '*.txt'
+                robot(
+            outputPath: './',
+            outputFileName: 'output.xml',
+            reportFileName: 'report.html',
+            logFileName: 'log.html',
+            disableArchiveOutput: false,
+            passThreshold: 100.0,
+            unstableThreshold: 100.0,
+            otherFiles: '*.png,*.jpg',
+            onlyCritical: false
+        )
+        // String check = ":white_check_mark:"
+        // String buildcolor = "good"
+        // String buildstatus = "SUCCESS"
+        // http://doppio-tech.com:8080/generic-webhook-trigger/invoke?token=banktest
+        script{
+        common = load "./common.groovy"
+        common.testFun()   
+        // String prefix = ":white_check_mark:"
+        String check = ":white_check_mark:"
+        String robotReportSummary = tm('passed: ${ROBOT_PASSED} | failed: ${ROBOT_FAILED}')
+        // String failed = tm('${ROBOT_FAILED}').toInteger()
+        // String passed = tm('${ROBOT_PASSED}').toInteger()
+        // slackSend(channel: "#bank_only", message:  "BBBBB: ${robotReportSummary} ${check} ")
+        // slackSend(channel: "#jenkins-from-zero-to-hero_1", message:  "BBBBB: ${robotReportSummary} ${check}  ")
+        slackSend(channel: "#bank_only", message:  "BBBBB: ${robotReportSummary} ${check}  (<${BUILD_URL}|Open>)")
+        }
+            }
+        }
+        // stage('part 2') {
+        //     steps {
+        //         echo 'Hello World'
+        //         // bat '''curl -X POST -H "Content-type: application/json" --data "{\"text\":\"Bank eiei 55+\"}" https://hooks.slack.com/services/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'''
+        //         sh '''curl -X POST -H "Content-type: application/json" --data "{\"text\":\"Bank eiei 55+\"}" https://hooks.slack.com/services/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'''
+        //     }
+        // }
+    }
+}

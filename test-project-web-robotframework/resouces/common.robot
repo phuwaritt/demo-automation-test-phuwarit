@@ -29,7 +29,7 @@ Input text element when read
 
 ดึงข้อมูลที่ใช้ทดสอบจาก Excel (Test data)
             [Arguments]            ${row_index}
-            ExcelLibrary.Open Excel Document    filename=${EXECDIR}\\Test-project-web-robotframework\\resouces\\testdata\\testdata_shp.xlsx       doc_id=td_shopping_cart
+            ExcelLibrary.Open Excel Document    filename=${EXECDIR}/Test-project-web-robotframework/resouces/testdata/testdata_shp.xlsx       doc_id=td_shopping_cart
 
             ${tc_id}                   ExcelLibrary.Read Excel Cell    row_num=${row_index}        col_num=1
             ${td_id}                   ExcelLibrary.Read Excel Cell    row_num=${row_index}        col_num=2

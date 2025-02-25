@@ -1,0 +1,40 @@
+def notify_line(passed_count, failed_count, log_url, BRANCH_NAME){
+    def token = "lWcrOHVVskzMYRXb7iB1e9xanhcvmC3Pu8Jz39Ozufh"
+    def url = 'https://notify-api.line.me/api/notify'
+    def message = "BPY :jenkins-masked: Branch: ${BRANCH_NAME} Build ${env.BUILD_NUMBER} \n Passed : ${passed_count} :white_check_mark: \n Failed : ${failed_count} :face_vomiting: \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)"
+    sh "curl ${url} -H 'Authorization: Bearer ${token}' -F 'message=${message}'"
+}
+
+pipeline {
+    agent { label 'Boss-agent'}
+    environment {
+        BASE_URL = 'http://192.8.8.133:8080/'
+    }
+    stages {
+        stage('Assign BPY') {
+            steps {
+                script{
+                sh(script: 'pabot --pabotlib --testlevelsplit --processes 3 test-project-web-robotframework/testscripts/tc_shopping_carts_scripts.robot', returnStatus: true)
+                archiveArtifacts artifacts: '*.html'
+                robot outputPath: './'
+                    String passed_count =  tm('${ROBOT_PASSED}')
+                    String failed_count = tm('${ROBOT_FAILED}')
+                    String BRANCH_NAME = "${GIT_BRANCH}"
+                    echo "Passed Tests: ${passed_count}"
+                    echo "Failed Tests: ${failed_count}"
+
+                    def log_url = "${env.BASE_URL}/job/${env.JOB_NAME}/${env.BUILD_NUMBER}/artifact/log.html"
+                    slackSend(channel:"#cicd_training_space",message: "BPY :jenkins-masked: Branch: ${BRANCH_NAME} Build ${env.BUILD_NUMBER} \n Passed : ${passed_count} :white_check_mark: \n Failed : ${failed_count} :face_vomiting: \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)")
+                    notify_line(passed_count, failed_count, log_url, BRANCH_NAME)
+                }
+            }
+        post{
+            always{
+                cleanWs()
+                echo "Clear"
+                }
+            }
+            
+            }
+        }
+    }
