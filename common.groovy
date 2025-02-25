@@ -18,7 +18,7 @@ def report_sender(){
 
 def stop_appium(){
     for(int i in APPIUM_PORT){
-        echo "STOP Appium Port ${i}"
+        echo "STOPPING Appium Port ${i}"
         try {
             sh "kill -9 \$(lsof -t -i :${i})"
         }
@@ -28,3 +28,15 @@ def stop_appium(){
     }
 }
 
+
+def start_appium(){
+    for(int i in APPIUM_PORT){
+        echo "STARTING Appium Port ${i}"
+        try {
+            sh "appium -p ${i} &"
+        }
+        catch(err) {
+            echo "appium ${i} is started"
+        }
+    }
+}
