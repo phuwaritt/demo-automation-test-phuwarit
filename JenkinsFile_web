@@ -1,7 +1,7 @@
 def notify_line(total_tests, passed_count, failed_count, log_url, BRANCH_NAME){
     def token = "lWcrOHVVskzMYRXb7iB1e9xanhcvmC3Pu8Jz39Ozufh"
     def url = 'https://notify-api.line.me/api/notify'
-    def message = "BPY 🔥 \n${JOB_NAME} #${env.BUILD_NUMBER}\nBranch: ${BRANCH_NAME} \nBuild #${env.BUILD_NUMBER}\nTotal Test Cases: ${total_tests}\nPassed : ${passed_count} ✅ \nFailed : ${failed_count} 🤮 \nAfter: ${currentBuild.durationString} \n\nReport: (${log_url})"
+    def message = "BPY 🔥 \n${env.JOB_NAME} #${env.BUILD_NUMBER}\nBranch: ${BRANCH_NAME} \nBuild #${env.BUILD_NUMBER}\nTotal Test Cases: ${total_tests}\nPassed : ${passed_count} ✅ \nFailed : ${failed_count} 🤮 \nAfter: ${currentBuild.durationString} \n\nReport: (${log_url})"
     sh "curl ${url} -H 'Authorization: Bearer ${token}' -F 'message=${message}'"
 }
 
@@ -20,14 +20,13 @@ pipeline {
                     String passed_count =  tm('${ROBOT_PASSED}')
                     String failed_count = tm('${ROBOT_FAILED}')
                     String BRANCH_NAME = "${GIT_BRANCH}"
-                    String JOB_NAME = "${env.JOB_NAME}"
                     echo "Passed Tests: ${passed_count}"
                     echo "Failed Tests: ${failed_count}"
                     
                     def total_tests = passed_count.toInteger() + failed_count.toInteger()
                     def log_url = "${env.BASE_URL}/job/${JOB_NAME}/${env.BUILD_NUMBER}/"
-                    slackSend(channel:"#cicd_training_space",message: "BPY :jenkins-masked: ${JOB_NAME} #${env.BUILD_NUMBER} \n *BRANCH:* ${BRANCH_NAME} \n Total Test Cases: ${total_tests} \n Passed : ${passed_count} :white_check_mark: \n Failed : ${failed_count} :face_vomiting: \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)")
-                    notify_line(JOB_NAME, BRANCH_NAME, total_tests, passed_count, failed_count, log_url)
+                    slackSend(channel:"#cicd_training_space",message: "BPY :jenkins-masked: ${env.JOB_NAME} #${env.BUILD_NUMBER} \n *BRANCH:* ${BRANCH_NAME} \n Total Test Cases: ${total_tests} \n Passed : ${passed_count} :white_check_mark: \n Failed : ${failed_count} :face_vomiting: \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)")
+                    notify_line(${env.JOB_NAME}, BRANCH_NAME, total_tests, passed_count, failed_count, log_url)
                 }
             }
         post{
