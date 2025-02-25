@@ -9,6 +9,7 @@ pipeline {
     agent { label 'bpy-agent'}
     environment {
         BASE_URL = 'http://192.8.8.133:8080/'
+        PROJECT_ID = '3f9c8c76-2ecf-4502-a1bf-449ff28ff740'
     }
     stages {
         stage('Assign BPY 01') {

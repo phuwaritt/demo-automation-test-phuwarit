@@ -18,7 +18,7 @@ jenkins_data = {
     "jenkins_branch" : os.environ.get('BRANCH') if os.environ.get('BRANCH') else "",
     "jenkins_GIT_BRANCH" : os.environ.get('GIT_BRANCH') if os.environ.get('GIT_BRANCH') else "",
     "jenkins_project_id" : os.environ.get('PROJECT_ID') if os.environ.get('PROJECT_ID') else "",
-    "jenkins_company_id" : os.environ.get('COMPANY_ID') if os.environ.get('COMPANY_ID') else "",
+    "jenkins_company_id" : os.environ.get('COMPANY_ID') if os.environ.get('COMPANY_ID') else "262338a2-2031-4ead-9311-08dd033466d9",
     "jenkins_automated_version" : os.environ.get('AUTOMATED_VERSION') if os.environ.get('AUTOMATED_VERSION') else 1,
     "jenkins_app_version" : os.environ.get('APP_VERSION') if os.environ.get('APP_VERSION') else 1,
 }
