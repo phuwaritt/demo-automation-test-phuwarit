@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script{
                 sh(script: 'pabot --pabotlib --testlevelsplit --processes 3 test-project-web-robotframework/testscripts/tc_shopping_carts_scripts.robot', returnStatus: true)
-                //archiveArtifacts artifacts: '**/robot/report/*.png'
+                archiveArtifacts artifacts: '*.html'
                 robot outputPath: './'
                     String passed_count =  tm('${ROBOT_PASSED}')
                     String failed_count = tm('${ROBOT_FAILED}')
