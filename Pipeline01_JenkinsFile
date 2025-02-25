@@ -31,8 +31,9 @@ pipeline {
             }
         post{
             always{
-                cleanWs()
-                echo "Clear"
+                    archiveArtifacts artifacts: 'results/log.html, results/report.html, results/*.png', fingerprint: true
+                    cleanWs()
+                    echo "Clear"
                 }
             }
             
