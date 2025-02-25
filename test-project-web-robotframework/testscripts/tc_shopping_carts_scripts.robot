@@ -69,7 +69,7 @@ SHP-0003 FE shopping car
         book_cartoon_detail_page.Check ว่ามายังหน้ารายละเอียดหนังสือของชื่อหนังสือที่เลือกได้สำเร็จ            book_name=${bookname_1}
         book_cartoon_detail_page.กดปุ่มเพิ่มหนังสือเข้าสู่ตระกร้า
         main_header_page.ตรวจสอบแสดง alert เมื่อเพิ่มสินค้าเข้าตะกร้าได้สำเร็จ        ${header.text_alert_add_to_cart_sucess}        ${header.locator_alert_add_to_cart_sucess}
-        main_header_page.ตรวจสอบจำนวนหนังสือบนไอคอนรถเข็น    expec_qty=${header.expect_qty_to_cart_t3}             locator=${header.qty_on_cart}
+        main_header_page.ตรวจสอบจำนวนหนังสือบนไอคอนรถเข็น    expec_qty=${header.expect_qty_to_cart_t3}             locator=toFail
         common.Go back to the page
         book_cartoon_page.Cick book detail from book book_name         book_name=${bookname_2}
         book_cartoon_detail_page.Check ว่ามายังหน้ารายละเอียดหนังสือของชื่อหนังสือที่เลือกได้สำเร็จ            book_name=${bookname_2}
