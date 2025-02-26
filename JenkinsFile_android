@@ -6,6 +6,15 @@ pipeline {
         REPORT_PATH = "./testResult/output.xml"
     }
     stages {
+        stage('Setup environment and devices'){
+            steps {
+                script{
+                    common = load "$WORKSPACE/common.groovy"
+                    common.stop_appium()
+                    common.start_appium()
+                }
+            }
+        }
         stage('Assign BPY 02') {
             steps {
                 script{
