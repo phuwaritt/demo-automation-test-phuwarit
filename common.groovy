@@ -1,16 +1,6 @@
 APPIUM_PORT= [4723, 4724]
 EMULATOR_PORT = [5554, 5556]
 
-def result_jenkins_emoji(String failed_count){
-    def message_emoji = ""
-    if (failed_count.toInteger() == 0) {
-        message_emoji = ":671ce8d3a35105bd5feefb5e006e749f:"
-    } else {
-        message_emoji = ":yuno:"
-    }
-    return "${message_emoji}"
-}
-
 
 def notify_line(passed_count, failed_count, log_url, BRANCH_NAME){
     def token = "lWcrOHVVskzMYRXb7iB1e9xanhcvmC3Pu8Jz39Ozufh"
@@ -54,5 +44,3 @@ def start_appium(){
         }
     }
 }
-
-return this
