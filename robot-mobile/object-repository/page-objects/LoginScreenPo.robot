@@ -8,8 +8,8 @@ Sign Up To The Application [Arguments] ${emailAddress} ${password} ${confirmPass
     Input Email Address [Arguments] ${emailAddress}
     Input Password [Arguments] ${password}
     Input Confirm Password [Arguments] ${confirmPassword}
-    Sleep   5s
     Click On The 'SIGN UP' Button
+    Sleep   5s
 
 
 Login To The Application [Arguments] ${emailAddress} ${password}
@@ -35,8 +35,8 @@ Input Confirm Password [Arguments] ${confirmPassword}
 
 
 Click On The 'SIGN UP' Button
-    Click Element [Arguments] ${signupButton} ${SMALL_RETRY_COUNT}
-
+    Run Keyword If    '${PLATFORM_NAME}' == 'android'   Click Element [Arguments]    xpath=//android.view.ViewGroup[@content-desc="button-SIGN UP"]/android.view.ViewGroup      ${SMALL_RETRY_COUNT}
+    Run Keyword If    '${PLATFORM_NAME}' == 'ios'   Click Element [Arguments]    xpath=//android.view.ViewGroup[@content-desc="button-SIGN UP"]/android.view.ViewGroup      ${SMALL_RETRY_COUNT}
 
 Click On The 'LOGIN' Button
     Click Element [Arguments] ${loginButton} ${SMALL_RETRY_COUNT}
