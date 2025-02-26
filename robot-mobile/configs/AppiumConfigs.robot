@@ -1,8 +1,4 @@
 *** Variables ***
-# Appium configs
-${APPIUM_SERVER_URL}          http://127.0.0.1:4723
-${PLATFORM_NAME}              ${ANDROID_PLATFORM_NAME}
-
 # Android configs
 ${ANDROID_APP}                 ./robot-mobile/apps/wdioNativeDemoApp.apk
 ${ANDROID_APP_PACKAGE}        com.wdiodemoapp

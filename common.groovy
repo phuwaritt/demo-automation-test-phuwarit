@@ -77,7 +77,7 @@ def kill_all_android_emu() {
             echo "emulator ${i} is stopped"
         }
     }
-    sleep 20
+    sleep 10
 }
 
 def start_all_android_emu() {
@@ -91,7 +91,7 @@ def start_all_android_emu() {
             echo "emulator ${i} is started"
         }
     }
-    sleep 15
+    sleep 30
     }
 
 
