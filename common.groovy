@@ -74,6 +74,8 @@ def start_all_android_emu() {
     for(int i=0; i<EMULATOR_PORT.size(); i++){
         echo "STOPPING EMULATOR Port ${i}"
         try {
+            echo "$ANDROID_AVD_HOME"
+            echo "$ANDROID_HOME"
             sh "emulator -avd ${emulator_name[i]} -port ${EMULATOR_PORT[i]} &"
             sh "sleep 5"
         }
