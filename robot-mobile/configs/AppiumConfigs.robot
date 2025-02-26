@@ -4,7 +4,7 @@ ${APPIUM_SERVER_URL}          http://127.0.0.1:4723
 ${PLATFORM_NAME}              ${ANDROID_PLATFORM_NAME}
 
 # Android configs
-${ANDROID_AUTOMATION_NAME}    UIAutomator2
+# ${ANDROID_AUTOMATION_NAME}    UIAutomator2
 ${ANDROID_APP}                /Users/phuwarit.t/Downloads/wdioNativeDemoApp.apk
 ${ANDROID_PLATFORM_NAME}      android
 ${ANDROID_PLATFORM_VERSION}   %{ANDROID_PLATFORM_VERSION=14}

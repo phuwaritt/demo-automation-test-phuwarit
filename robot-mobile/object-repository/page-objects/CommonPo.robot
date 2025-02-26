@@ -5,6 +5,7 @@ Resource    ../../configs/AppiumConfigs.robot
 Library    String
 Library    OperatingSystem
 Library    AppiumLibrary            timeout=30
+Library    pabot.PabotLib
 
 
 *** Keywords ***
@@ -18,7 +19,20 @@ Open Test Application
 Open Android Application
     [Documentation]    Open the Android application
 
-    Open Application    ${APPIUM_SERVER_URL}    automationName=${ANDROID_AUTOMATION_NAME}    platformName=${ANDROID_PLATFORM_NAME}    platformVersion=${ANDROID_PLATFORM_VERSION}    deviceName=${ANDROID_DEVICE_NAME}    app=${ANDROID_APP}    appPackage=${ANDROID_APP_PACKAGE}    appActivity=${ANDROID_APP_ACTIVITY}
+    Log To Console    ${PABOTEXECUTIONPOOLID}
+    Acquire Value Set    set${PABOTEXECUTIONPOOLID}
+
+    ${ANDROID_AUTOMATION_NAME}    Get Value From Set    automationName 
+    Log To Console    "This is working ${ANDROID_AUTOMATION_NAME}"
+
+    Open Application    ${APPIUM_SERVER_URL}    
+    ...    automationName=${ANDROID_AUTOMATION_NAME}    
+    ...    platformName=${ANDROID_PLATFORM_NAME}    
+    ...    platformVersion=${ANDROID_PLATFORM_VERSION}    
+    ...    deviceName=${ANDROID_DEVICE_NAME}    
+    ...    app=${ANDROID_APP}    
+    ...    appPackage=${ANDROID_APP_PACKAGE}    
+    ...    appActivity=${ANDROID_APP_ACTIVITY}
     Set Appium Timeout    ${TIMEOUT}
 
 
