@@ -23,6 +23,10 @@ Open Android Application
     Acquire Value Set    set${PABOTEXECUTIONPOOLID}
 
     ${ANDROID_AUTOMATION_NAME}    Get Value From Set    automationName 
+    ${ANDROID_PLATFORM_NAME}    Get Value From Set   platformName
+    ${ANDROID_PLATFORM_VERSION}  Get Value From Set    platformVersion
+    ${ANDROID_DEVICE_NAME}    Get Value From Set    deviceName
+
     Log To Console    "This is working ${ANDROID_AUTOMATION_NAME}"
 
     Open Application    ${APPIUM_SERVER_URL}    
