@@ -42,7 +42,7 @@ Open Android Application
     ...    udid=${ANDROID_UDID}
     Set Appium Timeout    ${TIMEOUT}
 
-    Capture Page Screenshot
+    #Capture Page Screenshot
 
 
 Open IOS Application
@@ -135,7 +135,7 @@ Alert Message Should Be
     [Documentation]    Validate the text of the alert message
 
     ${androidAlertMessageLocator}    Set Variable    id=android:id/message
-    ${iosAlertMessageLocator}    Set Variable    accessibility_id=mock
+    ${iosAlertMessageLocator}    Set Variable    accessibility_id=You successfully signed up!
     IF  '${PLATFORM_NAME}' == 'android'
         Wait Until Element Is Visible   ${androidAlertMessageLocator}
         Element Text Should Be          ${androidAlertMessageLocator}      ${EXPECTED}
