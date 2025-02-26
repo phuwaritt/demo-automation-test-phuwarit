@@ -1,7 +1,0 @@
-{
-  "platformName": "Android",
-  "deviceName": "Pixel 4 API 28",
-  "platformVersion": "9.0",
-  "appPackage": "com.ebay.mobile",
-  "appActivity": "com.ebay.mobile.home.impl.main.MainActivity"
-}
