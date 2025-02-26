@@ -1,0 +1,38 @@
+==============================================================================
+Test-Cases                                                                    
+==============================================================================
+Test-Cases.Signup-Test                                                        
+==============================================================================
+Verify That A New User Can Sign Up To The Application                   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/phuwarit.t/Documents/GitHub/demo-automation-test-phuwarit/robot-mobile/test-cases/signup-test.robot:12
+    T:  Verify That A New User Can Sign Up To The Application    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/phuwarit.t/Documents/GitHub/demo-automation-test-phuwarit/robot-mobile/test-cases/signup-test.robot:19
+      Alert Title Should Be [Arguments] ${SIGNED_UP_SUCCESS_ALERT_TITLE}    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/phuwarit.t/Documents/GitHub/demo-automation-test-phuwarit/robot-mobile/object-repository/page-objects/CommonPo.robot:103
+      Run Keyword If    '${PLATFORM_NAME}' == '${ANDROID_PLATFORM_NAME}'    Element Text Should Be [Arguments] ${androidAlertTitleLocator} ${alertTitle} ${SMALL_RETRY_COUNT}
+      |  '${PLATFORM_NAME}' == '${ANDROID_PLATFORM_NAME}' = 'android' == 'android' (str)
+      |  Element Text Should Be [Arguments] ${androidAlertTitleLocator} ${alertTitle} ${SMALL_RETRY_COUNT} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  None:0
+      Element Text Should Be [Arguments] id=android:id/alertTitle Signed Up! 2x    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/phuwarit.t/Documents/GitHub/demo-automation-test-phuwarit/robot-mobile/object-repository/page-objects/CommonPo.robot:88
+      Wait Until Keyword Succeeds    ${retryScale}    ${RETRY_DELAY}    Wait Until Element Is Visible    ${locator}
+      |  ${retryScale} = Up! 2x (str)
+      |  ${RETRY_DELAY} = 1 s (str)
+      |  ${locator} = id=android:id/alertTitle (str)
+______________________________________________________________________________
+| FAIL |
+'up!2' cannot be converted to an integer: ValueError: invalid literal for int() with base 10: 'up!2'
+------------------------------------------------------------------------------
+Test-Cases.Signup-Test                                                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Test-Cases                                                            | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  /Users/phuwarit.t/Documents/GitHub/demo-automation-test-phuwarit/pabot_results/1/output.xml

@@ -1,0 +1,6 @@
+datasources:be2dd4684b76d49afc9ecff50567a558fd5086f9
+commandlineoptions:65f95c924ba97541f47949701c4e3c51192a5b43
+suitesfrom:no-suites-from-option
+file:fa9c1bcff860b1b7ac0a2f7746f677ad7918d4c3
+--test Test-Cases.Login-Test.Verify That A User Can Login To The Application Using Valid Credentials
+--test Test-Cases.Signup-Test.Verify That A New User Can Sign Up To The Application
