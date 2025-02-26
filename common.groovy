@@ -1,6 +1,15 @@
 APPIUM_PORT= [4723, 4724]
 EMULATOR_PORT = [5554, 5556]
 
+def result_jenkins_emoji(String failed_count){
+    def message_emoji = ""
+    if (failed_count.toInteger() == 0) {
+        message_emoji = ":671ce8d3a35105bd5feefb5e006e749f:"
+    } else {
+        message_emoji = ":yuno:"
+    }
+    return "${message_emoji}"
+}
 
 def report_sender() {
     echo "=== Start notify to failure declaration ==="
