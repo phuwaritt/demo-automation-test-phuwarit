@@ -1,5 +1,5 @@
 APPIUM_PORT= [4723, 4724]
-
+EMULATOR_PORT = [5554, 5556]
 
 def result_jenkins_emoji(failed_count){
     def message_emoji = ""
