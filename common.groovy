@@ -71,7 +71,7 @@ def kill_all_android_emu() {
     for(int i in EMULATOR_PORT){
         echo "STOPPING EMULATOR Port ${i}"
         try {
-            sh "kill -9 \$(lsof -t -i :${i}"
+            sh "kill -9 \$(lsof -t -i :${i})"
         }
         catch(err) {
             echo "emulator ${i} is stopped"
