@@ -15,7 +15,7 @@ def result_jenkins_slack(send_to_channel){
     } else {
         message_emoji = ":bee-do-v2:"
     }
-    slackSend(channel:${send_to_channel},message: "BPY \n ${message_emoji} ${JOB_NAME} #${env.BUILD_NUMBER} \n *BRANCH:* ${BRANCH_NAME} \n Total Test Cases: ${total_tests} \n Passed : ${passed_count} \n Failed : ${failed_count} \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)")
+    slackSend(channel: "${send_to_channel}",message: "BPY \n ${message_emoji} ${JOB_NAME} #${env.BUILD_NUMBER} \n *BRANCH:* ${BRANCH_NAME} \n Total Test Cases: ${total_tests} \n Passed : ${passed_count} \n Failed : ${failed_count} \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)")
 }
 
 
