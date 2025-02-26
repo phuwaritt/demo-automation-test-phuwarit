@@ -36,7 +36,7 @@ pipeline {
                     def log_url = "${env.BASE_URL}/job/${JOB_NAME}/${env.BUILD_NUMBER}/"
                     def message_emoji = common.result_jenkins_emoji(failed_count)
                     
-                    slackSend(channel:"#cicd_training_space",message: "BPY \n ${JOB_NAME} #${env.BUILD_NUMBER} ${message_emoji} \n *BRANCH:* ${BRANCH_NAME} \n Total Test Cases: ${total_tests} \n Passed : ${passed_count} :white_check_mark: \n Failed : ${failed_count} :face_vomiting: \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)")
+                    slackSend(channel:"#cicd_training_space",message: "BPY [Android]\n ${JOB_NAME} #${env.BUILD_NUMBER} ${message_emoji} \n *BRANCH:* ${BRANCH_NAME} \n Total Test Cases: ${total_tests} \n Passed : ${passed_count} :white_check_mark: \n Failed : ${failed_count} :face_vomiting: \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)")
                     common.notify_line(passed_count, failed_count, log_url, BRANCH_NAME)
                     // common.report_sender()
                 }
