@@ -4,7 +4,7 @@ Resource    ../../configs/AppiumConfigs.robot
 
 Library    String
 Library    OperatingSystem
-Library    AppiumLibrary
+Library    AppiumLibrary            timeout=30
 
 
 *** Keywords ***
