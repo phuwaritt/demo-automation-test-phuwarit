@@ -35,8 +35,12 @@ Input Confirm Password [Arguments] ${confirmPassword}
 
 
 Click On The 'SIGN UP' Button
-    Run Keyword If    '${PLATFORM_NAME}' == 'android'   Click Element [Arguments]    xpath=//android.view.ViewGroup[@content-desc="button-SIGN UP"]/android.view.ViewGroup      ${SMALL_RETRY_COUNT}
-    Run Keyword If    '${PLATFORM_NAME}' == 'ios'   Click Element [Arguments]    xpath=//android.view.ViewGroup[@content-desc="button-SIGN UP"]/android.view.ViewGroup      ${SMALL_RETRY_COUNT}
+    [Arguments]      ${SMALL_RETRY_COUNT}
+    IF  '${PLATFORM_NAME}' == 'android'
+        Click Element        xpath=//android.view.ViewGroup[@content-desc="button-SIGN UP"]/android.view.ViewGroup      ${SMALL_RETRY_COUNT}
+    ELSE IF  '${PLATFORM_NAME}' == 'ios'
+        Click Element        xpath=//android.view.ViewGroup[@content-desc="button-SIGN UP"]/android.view.ViewGroup      ${SMALL_RETRY_COUNT}
+    END
 
 Click On The 'LOGIN' Button
     Click Element [Arguments] ${loginButton} ${SMALL_RETRY_COUNT}
