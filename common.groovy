@@ -2,7 +2,7 @@ APPIUM_PORT= [4723, 4724]
 EMULATOR_PORT = [5554, 5556]
 
 
-def notify_line(passed_count, failed_count, log_url, BRANCH_NAME){
+def send_noti_line(passed_count, failed_count, log_url, BRANCH_NAME) {
     echp "=== Start notify to LINE ==="
     def token = "lWcrOHVVskzMYRXb7iB1e9xanhcvmC3Pu8Jz39Ozufh"
     def url = 'https://notify-api.line.me/api/notify'
@@ -11,7 +11,7 @@ def notify_line(passed_count, failed_count, log_url, BRANCH_NAME){
 }
 
 
-def report_sender(){
+def report_sender() {
     echo "=== Start notify to failure declaration ==="
     sh '''
     ls -la
@@ -21,7 +21,7 @@ def report_sender(){
 }
 
 
-def stop_appium(){
+def stop_appium() {
     for(int i in APPIUM_PORT){
         echo "STOPPING Appium Port ${i}"
         try {
@@ -34,7 +34,7 @@ def stop_appium(){
 }
 
 
-def start_appium(){
+def start_appium() {
     for(int i in APPIUM_PORT){
         echo "STARTING Appium Port ${i}"
         try {
