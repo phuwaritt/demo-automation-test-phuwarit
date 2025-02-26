@@ -95,3 +95,7 @@ def start_all_android_emu() {
     }
 
 return this
+
+def log_report() {
+    def log_url = "${env.BASE_URL}/job/${JOB_NAME}/${env.BUILD_NUMBER}/robot/report/log.html"
+}
