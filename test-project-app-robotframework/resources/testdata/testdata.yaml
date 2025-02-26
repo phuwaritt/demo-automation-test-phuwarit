@@ -1,0 +1,4 @@
+keyword_search : Tesla
+
+#คาดหวังต้อง != 0
+expected_result : 0
