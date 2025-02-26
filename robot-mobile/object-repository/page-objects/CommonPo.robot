@@ -118,9 +118,9 @@ Alert Title Should Be [Arguments] ${alertTitle}
     [Documentation]    Validate the text of the alert title
 
     ${androidAlertTitleLocator}    Set Variable    id=android:id/alertTitle
-    Run Keyword If    '${PLATFORM_NAME}' == '${ANDROID_PLATFORM_NAME}'    Element Text Should Be [Arguments] ${androidAlertTitleLocator} ${alertTitle} ${SMALL_RETRY_COUNT}
+    Run Keyword If    '${PLATFORM_NAME}' == 'android'    Element Text Should Be [Arguments] ${androidAlertTitleLocator} ${alertTitle} ${SMALL_RETRY_COUNT}
     ${iosAlertTitleLocator}    Set Variable    accessibility_id=${alertTitle}
-    Run Keyword If    '${PLATFORM_NAME}' == '${IOS_PLATFORM_NAME}'    Element Should Be Visible [Arguments] ${iosAlertTitleLocator} ${SMALL_RETRY_COUNT}
+    Run Keyword If    '${PLATFORM_NAME}' == 'ios'    Element Should Be Visible [Arguments] ${iosAlertTitleLocator} ${SMALL_RETRY_COUNT}
 
 
 Alert Message Should Be [Arguments] ${alertMessage}
