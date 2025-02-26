@@ -5,7 +5,7 @@ ${PLATFORM_NAME}              ${ANDROID_PLATFORM_NAME}
 
 # Android configs
 # ${ANDROID_AUTOMATION_NAME}    UIAutomator2
-${ANDROID_APP}                 ./apps/robot-mobile/wdioNativeDemoApp.apk
+${ANDROID_APP}                 ./robot-mobile/apps/wdioNativeDemoApp.apk
 # ${ANDROID_PLATFORM_NAME}      android
 # ${ANDROID_PLATFORM_VERSION}   %{ANDROID_PLATFORM_VERSION=14}
 ${ANDROID_APP_PACKAGE}        com.wdiodemoapp
