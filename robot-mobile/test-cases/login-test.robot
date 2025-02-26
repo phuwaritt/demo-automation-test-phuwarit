@@ -15,4 +15,4 @@ Verify That A User Can Login To The Application Using Valid Credentials
     Navigate To Login Screen
     Login To The Application [Arguments] ${EMAIL_ADDRESS} ${PASSWORD}
     Alert Title Should Be [Arguments] ${LOGIN_SUCCESS_ALERT_TITLE}
-    Alert Message Should Be [Arguments] ${LOGIN_SUCCESS_ALERT_MESSAGE}
+    Alert Message Should Be     ${LOGIN_SUCCESS_ALERT_MESSAGE}
