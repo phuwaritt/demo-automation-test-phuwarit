@@ -19,16 +19,10 @@ pipeline {
                     echo "Passed Tests: ${passed_count}"
                     echo "Failed Tests: ${failed_count}"
 
-                    def message_emoji = ""
-                    if (failed_count.toInteger() == 0) {
-                        message_emoji = ":671ce8d3a35105bd5feefb5e006e749f:"
-                    } else {
-                        message_emoji = ":yuno:"
-                    }
-
+                    common = load "$WORKSPACE/common.groovy"
                     def total_tests = passed_count.toInteger() + failed_count.toInteger()
                     def log_url = "${env.BASE_URL}/job/${JOB_NAME}/${env.BUILD_NUMBER}/"
-                    common = load "$WORKSPACE/common.groovy"
+                    def message_emoji = common.result_jenkins_emoji(failed_count)
 
                     slackSend(channel:"#cicd_training_space",message: "BPY \n ${JOB_NAME} #${env.BUILD_NUMBER} ${message_emoji} \n *BRANCH:* ${BRANCH_NAME} \n Total Test Cases: ${total_tests} \n Passed : ${passed_count} :white_check_mark: \n Failed : ${failed_count} :face_vomiting: \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)")
                     common.notify_line(JOB_NAME, BRANCH_NAME, total_tests, passed_count, failed_count, log_url)
