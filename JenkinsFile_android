@@ -16,7 +16,7 @@ pipeline {
             }
         }
         stage('Assign BPY 02') {
-            // steps {
+            steps {
             //     script{
             //         sh(script: 'pabot --pabotlib --testlevelsplit --processes 3 test-project-web-robotframework/testscripts/tc_shopping_carts_scripts.robot', returnStatus: true)
             //         archiveArtifacts artifacts: '*.html, *.png, *.xml', fingerprint: true
@@ -35,7 +35,7 @@ pipeline {
             //         common.notify_line(passed_count, failed_count, log_url, BRANCH_NAME)
             //         common.report_sender()
             //     }
-            // }
+            }
         post{
             always{
                 cleanWs()
