@@ -1,6 +1,6 @@
 APPIUM_PORT= [4723, 4724]
 EMULATOR_PORT= [5554, 5556]
-emulator_name= "cardx"
+emulator_name= ["cardx", "cardx_II"]
 
 def result_jenkins_emoji(String failed_count){
     def message_emoji = ""
@@ -81,10 +81,10 @@ def kill_all_android_emu() {
 }
 
 def start_all_android_emu() {
-    for(String i in EMULATOR_PORT){
+    for(int i=0; i<EMULATOR_PORT.size(); i++){
         echo "STOPPING EMULATOR Port ${i}"
         try {
-            sh "emulator -avd ${emulator_name} -port ${i} &"
+            sh "emulator -avd ${emulator_name[i]} -port ${EMULATOR_PORT[i]} &"
             sh "sleep 5"
         }
         catch(err) {
@@ -92,6 +92,21 @@ def start_all_android_emu() {
         }
     }
     sleep 15
-}
+    }
+
+
+
+    // for(String i in EMULATOR_PORT){
+    //     echo "STOPPING EMULATOR Port ${i}"
+    //     try {
+    //         sh "emulator -avd ${emulator_name} -port ${i} &"
+    //         sh "sleep 5"
+    //     }
+    //     catch(err) {
+    //         echo "emulator ${i} is started"
+    //     }
+    // }
+    // sleep 15
+// }
 
 return this
