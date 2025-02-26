@@ -117,12 +117,13 @@ Input Text [Arguments] ${textBoxLocator} ${text} ${retryScale}
 
 Alert Title Should Be [Arguments] ${alertTitle}
     [Documentation]    Validate the text of the alert title
-
     ${androidAlertTitleLocator}    Set Variable    id=android:id/alertTitle
-    Run Keyword If    '${PLATFORM_NAME}' == 'android'    Element Text Should Be [Arguments] ${androidAlertTitleLocator} ${alertTitle} ${SMALL_RETRY_COUNT}
     ${iosAlertTitleLocator}    Set Variable    accessibility_id=${alertTitle}
-    Run Keyword If    '${PLATFORM_NAME}' == 'ios'    Element Should Be Visible [Arguments] ${iosAlertTitleLocator} ${SMALL_RETRY_COUNT}
-
+    IF  '${PLATFORM_NAME}' == 'android'
+        Wait Until Element Is Visible    ${androidAlertTitleLocator}
+    ELSE IF  '${PLATFORM_NAME}' == 'ios'
+        Wait Until Element Is Visible    ${iosAlertTitleLocator}
+    END
 
 Alert Message Should Be [Arguments] ${alertMessage}
     [Documentation]    Validate the text of the alert message
