@@ -20,7 +20,7 @@ pipeline {
                     echo "Failed Tests: ${failed_count}"
 
                     common = load "$WORKSPACE/common.groovy"
-                    echo ${common}
+                    echo common
                     // def total_tests = passed_count.toInteger() + failed_count.toInteger()
                     // def log_url = "${env.BASE_URL}/job/${JOB_NAME}/${env.BUILD_NUMBER}/"
                     // def message_emoji = common.result_jenkins_emoji(failed_count)
