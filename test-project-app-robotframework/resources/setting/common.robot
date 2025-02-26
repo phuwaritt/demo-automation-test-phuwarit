@@ -24,10 +24,13 @@ Open application
         ${capability}    BuiltIn.Create Dictionary    deviceName=${deviceName}    
         ...    platformName=${platformName}    
         ...    platformVersion=${platformVersion}    
-        ...    appPackage=${appPackage}    
-        ...    appActivity=${appActivity}    
-        ...    automationName=${automationName}        
-        ...    bundleId=${bundleId}    
+        #...    appActivity=${appActivity}    
+        ...    automationName=${automationName}    
+        ...    tags=${tags}  
+        ...    system_port=${system_port}
+        ...    udid=${udid}
+        ...    deviceName=${deviceName}
+        ...    app=${app}
         AppiumLibrary.Open Application    remote_url=${remote_url}    &{capability}    
 
 Close application
