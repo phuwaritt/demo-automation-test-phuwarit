@@ -9,36 +9,32 @@ def result_jenkins_slack(send_to_channel){
     String JOB_NAME = "${env.JOB_NAME}"
     def total_tests = passed_count.toInteger() + failed_count.toInteger()
     def log_url = "${env.BASE_URL}/job/${JOB_NAME}/${env.BUILD_NUMBER}/"
-
     def message_emoji = ""
     if (failed_count.toInteger() == 0) {
         message_emoji = ":white_check_mark:"
     } else {
         message_emoji = ":bee-do-v2:"
     }
-
     slackSend(channel:${send_to_channel},message: "BPY \n ${message_emoji} ${JOB_NAME} #${env.BUILD_NUMBER} \n *BRANCH:* ${BRANCH_NAME} \n Total Test Cases: ${total_tests} \n Passed : ${passed_count} \n Failed : ${failed_count} \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)")
 }
 
 
-def notify_line(){
-    String passed_count =  tm('${ROBOT_PASSED}')
-    String failed_count = tm('${ROBOT_FAILED}')
-    String BRANCH_NAME = "${GIT_BRANCH}"
-    String JOB_NAME = "${env.JOB_NAME}"
+def notify_line(passed_count,failed_count,BRANCH_NAME,JOB_NAME){
+    passed_count =  tm('${ROBOT_PASSED}')
+    failed_count = tm('${ROBOT_FAILED}')
+    BRANCH_NAME = "${GIT_BRANCH}"
+    JOB_NAME = "${env.JOB_NAME}"
     def total_tests = passed_count.toInteger() + failed_count.toInteger()
     def log_url = "${env.BASE_URL}/job/${JOB_NAME}/${env.BUILD_NUMBER}/"
-
     def message_emoji = ""
     if (failed_count.toInteger() == 0) {
         message_emoji = "✅"
     } else {
         message_emoji = "❌"
     }
-
     def token = "lWcrOHVVskzMYRXb7iB1e9xanhcvmC3Pu8Jz39Ozufh"
     def url = 'https://notify-api.line.me/api/notify'
-    String message = "BPY 🔥 \n${JOB_NAME} #${env.BUILD_NUMBER}\nBranch: ${BRANCH_NAME}\nPassed : ${passed_count}\nFailed : ${failed_count}\nAfter:${currentBuild.durationString} \n\n(${log_url})"
+    def message = "BPY 🔥 \n${JOB_NAME} #${env.BUILD_NUMBER}\nBranch: ${BRANCH_NAME}\nPassed : ${passed_count}\nFailed : ${failed_count}\nAfter:${currentBuild.durationString} \n\n(${log_url})"
     sh "curl ${url} -H 'Authorization: Bearer ${token}' -F 'message=${message}'"
 }
 
