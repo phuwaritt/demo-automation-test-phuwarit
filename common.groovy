@@ -8,7 +8,7 @@ def result_jenkins_emoji(failed_count){
     } else {
         message_emoji = ":yuno:"
     }
-    return message_emoji
+    return "${message_emoji}"
 }
 
 
