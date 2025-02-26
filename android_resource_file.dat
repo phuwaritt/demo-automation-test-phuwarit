@@ -8,7 +8,7 @@ udid = emulator-15552
 remote_url = http://0.0.0.0:14723
 remote_url_op = NONE
 system_port = 18193
-app = 
+app = /Users/supakorn.s/Documents/jinkins_bpy_grangster_space/app/wdioNativeDemoApp.apk
 
 [set1]
 tags = set1
@@ -20,4 +20,4 @@ udid = emulator-15562
 remote_url = http://0.0.0.0:13723
 remote_url_op = NONE
 system_port = 18173
-app = 
+app = /Users/supakorn.s/Documents/jinkins_bpy_grangster_space/app/wdioNativeDemoApp.apk
