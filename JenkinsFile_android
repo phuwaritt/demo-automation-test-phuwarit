@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script{
                     echo "Test"
-                    sh(script: 'pabot --pabotlib --resourcefile ./android_resource_file.dat --processes 1 -v PLATFORM_NAME:android robot-mobile/test-cases/.', returnStatus: true)
+                    sh(script: 'pabot --pabotlib --resourcefile ./android_resource_file.dat --processes 2 -v PLATFORM_NAME:android robot-mobile/test-cases/.', returnStatus: true)
                     archiveArtifacts artifacts: '*.html, *.png, *.xml', fingerprint: true
                     robot outputPath: './'
                     String passed_count =  tm('${ROBOT_PASSED}')
