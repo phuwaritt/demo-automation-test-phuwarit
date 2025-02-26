@@ -9,6 +9,15 @@ def result_jenkins_emoji(String failed_count){
     return "${message_emoji}"
 }
 
+def send_noti_line(passed_count, failed_count, log_url, BRANCH_NAME) {
+    echp "=== Start notify to LINE ==="
+    def token = "lWcrOHVVskzMYRXb7iB1e9xanhcvmC3Pu8Jz39Ozufh"
+    def url = 'https://notify-api.line.me/api/notify'
+    def message = "BPY 🔥 \nBranch: ${BRANCH_NAME} Build ${env.BUILD_NUMBER} \nPassed : ${passed_count} ✅ \nFailed : ${failed_count} 🤮 \nAfter:${currentBuild.durationString} \n\n(${log_url})"
+    sh "curl ${url} -H 'Authorization: Bearer ${token}' -F 'message=${message}'"
+}
+
+
 pipeline {
     agent { label 'bpy-agent'}
     environment {
@@ -36,7 +45,7 @@ pipeline {
 
                     // slackSend(channel:"#cicd_training_space",message: "BPY \n ${JOB_NAME} #${env.BUILD_NUMBER} ${message_emoji} \n *BRANCH:* ${BRANCH_NAME} \n Total Test Cases: ${total_tests} \n Passed : ${passed_count} :white_check_mark: \n Failed : ${failed_count} :face_vomiting: \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)")
                     def common = load "$WORKSPACE/common.groovy"
-                    common.send_noti_line(JOB_NAME, BRANCH_NAME, total_tests, passed_count, failed_count, log_url)
+                    send_noti_line(JOB_NAME, BRANCH_NAME, total_tests, passed_count, failed_count, log_url)
                     common.report_sender()
                 }
             }

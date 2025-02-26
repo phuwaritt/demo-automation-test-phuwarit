@@ -2,15 +2,6 @@ APPIUM_PORT= [4723, 4724]
 EMULATOR_PORT = [5554, 5556]
 
 
-def send_noti_line(passed_count, failed_count, log_url, BRANCH_NAME) {
-    echp "=== Start notify to LINE ==="
-    def token = "lWcrOHVVskzMYRXb7iB1e9xanhcvmC3Pu8Jz39Ozufh"
-    def url = 'https://notify-api.line.me/api/notify'
-    def message = "BPY 🔥 \nBranch: ${BRANCH_NAME} Build ${env.BUILD_NUMBER} \nPassed : ${passed_count} ✅ \nFailed : ${failed_count} 🤮 \nAfter:${currentBuild.durationString} \n\n(${log_url})"
-    sh "curl ${url} -H 'Authorization: Bearer ${token}' -F 'message=${message}'"
-}
-
-
 def report_sender() {
     echo "=== Start notify to failure declaration ==="
     sh '''
