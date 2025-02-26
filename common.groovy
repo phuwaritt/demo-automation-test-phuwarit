@@ -3,8 +3,8 @@ EMULATOR_PORT= [5554, 5556]
 emulator_name= ["cardx", "cardx_II"]
 
 def result_jenkins_slack(send_to_channel){
-    String passed_count =  env.ROBOT_PASSED
-    String failed_count = env.ROBOT_FAILED
+    String passed_count =  tm('${ROBOT_PASSED}')
+    String failed_count = tm('${ROBOT_FAILED}')
     String BRANCH_NAME = "${GIT_BRANCH}"
     String JOB_NAME = "${env.JOB_NAME}"
     def total_tests = passed_count.toInteger() + failed_count.toInteger()
@@ -20,10 +20,10 @@ def result_jenkins_slack(send_to_channel){
 
 
 def notify_line(){
-    String passed_count =  env.ROBOT_PASSED
-    String failed_count = env.ROBOT_FAILED
+    String passed_count =  tm('${ROBOT_PASSED}')
+    String failed_count = tm('${ROBOT_FAILED}')
     String BRANCH_NAME = "${GIT_BRANCH}"
-    String JOB_NAME = "${env.JOB_NAME}"
+    JOB_NAME = "${env.JOB_NAME}"
     def total_tests = passed_count.toInteger() + failed_count.toInteger()
     def log_url = "${env.BASE_URL}/job/${JOB_NAME}/${env.BUILD_NUMBER}/"
     def message_emoji = ""
