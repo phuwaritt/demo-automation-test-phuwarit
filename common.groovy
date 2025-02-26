@@ -51,6 +51,7 @@ def stop_appium() {
             echo "appium ${i} is stopped"
         }
     }
+    sleep 5
 }
 
 
@@ -64,6 +65,7 @@ def start_appium() {
             echo "appium ${i} is started"
         }
     }
+    sleep 10
 }
 
 
@@ -77,6 +79,7 @@ def kill_all_android_emu() {
             echo "emulator ${i} is stopped"
         }
     }
+    sleep 15
 }
 
 def start_all_android_emu() {
@@ -89,6 +92,7 @@ def start_all_android_emu() {
             echo "emulator ${i} is started"
         }
     }
+    sleep 15
 }
 
 return this
