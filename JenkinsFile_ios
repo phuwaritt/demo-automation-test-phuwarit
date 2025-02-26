@@ -6,7 +6,7 @@ pipeline {
         REPORT_PATH = "./testResult/output.xml"
     }
     stages {
-        stage('Assign BPY 01') {
+        stage('Assign BPY 03') {
             steps {
                 script{
                 sh(script: 'pabot --pabotlib --testlevelsplit --processes 3 test-project-web-robotframework/testscripts/tc_shopping_carts_scripts.robot', returnStatus: true)
