@@ -44,3 +44,5 @@ def start_appium(){
         }
     }
 }
+
+return this
