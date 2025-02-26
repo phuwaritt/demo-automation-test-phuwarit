@@ -5,6 +5,8 @@ platformName = android
 platformVersion = 15
 deviceName = emulator-5554
 remote_url = http://127.0.0.1:4723
+systemPort = 5554
+udid = emulator-5554
 app = /Users/supakorn.s/Documents/jinkins_bpy_grangster_space/app/wdioNativeDemoApp.apk
 
 [set1]
@@ -14,4 +16,6 @@ platformName = android
 platformVersion = 15
 deviceName = emulator-5556
 remote_url = http://127.0.0.1:4724
+systemPort = 5556
+udid = emulator-5556
 app = /Users/supakorn.s/Documents/jinkins_bpy_grangster_space/app/wdioNativeDemoApp.apk

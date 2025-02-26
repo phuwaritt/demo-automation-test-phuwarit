@@ -27,6 +27,8 @@ Open Android Application
     ${ANDROID_PLATFORM_NAME}    Get Value From Set   platformName
     ${ANDROID_PLATFORM_VERSION}  Get Value From Set    platformVersion
     ${ANDROID_DEVICE_NAME}    Get Value From Set    deviceName
+    ${ANDROID_SYSTEM_PORT}    Get Value From Set    systemPort
+    ${ANDROID_UDID}    Get Value From Set    udid
 
     Open Application    ${APPIUM_SERVER_URL}    
     ...    automationName=${ANDROID_AUTOMATION_NAME}    
@@ -36,6 +38,8 @@ Open Android Application
     ...    app=${ANDROID_APP}    
     ...    appPackage=${ANDROID_APP_PACKAGE}    
     ...    appActivity=${ANDROID_APP_ACTIVITY}
+    ...    systemPort=${ANDROID_SYSTEM_PORT} 
+    ...    udid=${ANDROID_UDID}
     Set Appium Timeout    ${TIMEOUT}
 
     Capture Page Screenshot
