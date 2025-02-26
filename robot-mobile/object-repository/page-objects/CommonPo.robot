@@ -41,7 +41,7 @@ Open Android Application
     ...    systemPort=${ANDROID_SYSTEM_PORT} 
     ...    udid=${ANDROID_UDID}
     Set Appium Timeout    ${TIMEOUT}
-
+    Sleep   10
     Capture Page Screenshot
 
 
@@ -121,6 +121,7 @@ Input Text [Arguments] ${textBoxLocator} ${text} ${retryScale}
 
 Alert Title Should Be [Arguments] ${alertTitle}
     [Documentation]    Validate the text of the alert title
+
     ${androidAlertTitleLocator}    Set Variable    id=android:id/alertTitle
     ${iosAlertTitleLocator}    Set Variable    accessibility_id=${alertTitle}
     IF  '${PLATFORM_NAME}' == 'android'
@@ -129,10 +130,15 @@ Alert Title Should Be [Arguments] ${alertTitle}
         Wait Until Element Is Visible    ${iosAlertTitleLocator}
     END
 
-Alert Message Should Be [Arguments] ${alertMessage}
+Alert Message Should Be
+    [Arguments]        ${EXPECTED}
     [Documentation]    Validate the text of the alert message
 
     ${androidAlertMessageLocator}    Set Variable    id=android:id/message
-    #Run Keyword If    '${PLATFORM_NAME}' == '${ANDROID_PLATFORM_NAME}'    Element Text Should Be [Arguments] ${androidAlertMessageLocator} ${LITLE_RETRY_COUNT}
-    ${iosAlertMessageLocator}    Set Variable    accessibility_id=${alertMessage}
-    #Run Keyword If    '${PLATFORM_NAME}' == '${IOS_PLATFORM_NAME}'    Element Should Be Visible [Arguments] ${iosAlertMessageLocator} ${LITLE_RETRY_COUNT}
+    ${iosAlertMessageLocator}    Set Variable    accessibility_id=You successfully signed up!
+    IF  '${PLATFORM_NAME}' == 'android'
+        Wait Until Element Is Visible   ${androidAlertMessageLocator}
+        Element Text Should Be          ${androidAlertMessageLocator}      ${EXPECTED}
+    ELSE IF  '${PLATFORM_NAME}' == 'ios'
+        Wait Until Element Is Visible    ${iosAlertMessageLocator}
+    END

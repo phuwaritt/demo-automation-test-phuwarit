@@ -17,4 +17,4 @@ Verify That A New User Can Sign Up To The Application
     ${emailAddress}    Get Random Email Address
     Sign Up To The Application [Arguments] ${emailAddress} ${PASSWORD} ${PASSWORD}
     Alert Title Should Be [Arguments] ${SIGNED_UP_SUCCESS_ALERT_TITLE}
-    Alert Message Should Be [Arguments] ${SIGNED_UP_SUCCESS_ALERT_MESSAGE}
+    Alert Message Should Be     ${SIGNED_UP_SUCCESS_ALERT_MESSAGE}
