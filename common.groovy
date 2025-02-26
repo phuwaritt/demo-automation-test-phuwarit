@@ -20,8 +20,8 @@ def result_jenkins_slack(send_to_channel){
 
 
 def notify_line(passed_count,failed_count,BRANCH_NAME,JOB_NAME){
-    passed_count =  tm('${ROBOT_PASSED}')
-    failed_count = tm('${ROBOT_FAILED}')
+    passed_count =  env.ROBOT_PASSED
+    failed_count = env.ROBOT_FAILED
     BRANCH_NAME = "${GIT_BRANCH}"
     JOB_NAME = "${env.JOB_NAME}"
     def total_tests = passed_count.toInteger() + failed_count.toInteger()
