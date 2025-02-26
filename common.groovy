@@ -19,7 +19,7 @@ def result_jenkins_slack(send_to_channel){
 }
 
 
-def notify_line(){
+def result_jenkins_line(){
     String passed_count =  tm('${ROBOT_PASSED}')
     String failed_count = tm('${ROBOT_FAILED}')
     String BRANCH_NAME = "${GIT_BRANCH}"
