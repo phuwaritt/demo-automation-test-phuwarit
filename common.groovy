@@ -8,7 +8,7 @@ def result_jenkins_slack(send_to_channel,platform){
     String BRANCH_NAME = "${GIT_BRANCH}"
     String JOB_NAME = "${env.JOB_NAME}"
     def total_tests = passed_count.toInteger() + failed_count.toInteger()
-    def log_url = "${env.BASE_URL}/job/${JOB_NAME}/${env.BUILD_NUMBER}/"
+    def log_url = "${env.BASE_URL}/job/${JOB_NAME}/${env.BUILD_NUMBER}/artifact/testResult/report.html"
     def message_emoji = ""
     if (failed_count.toInteger() == 0) {
         message_emoji = ":white_check_mark:"
@@ -25,7 +25,7 @@ def result_jenkins_line(){
     String BRANCH_NAME = "${GIT_BRANCH}"
     JOB_NAME = "${env.JOB_NAME}"
     def total_tests = passed_count.toInteger() + failed_count.toInteger()
-    def log_url = "${env.BASE_URL}/job/${JOB_NAME}/${env.BUILD_NUMBER}/"
+    def log_url = "${env.BASE_URL}/job/${JOB_NAME}/${env.BUILD_NUMBER}/artifact/testResult/report.html"
     def message_emoji = ""
     if (failed_count.toInteger() == 0) {
         message_emoji = "✅"
