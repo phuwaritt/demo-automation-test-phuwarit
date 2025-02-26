@@ -8,6 +8,7 @@ Sign Up To The Application [Arguments] ${emailAddress} ${password} ${confirmPass
     Input Email Address [Arguments] ${emailAddress}
     Input Password [Arguments] ${password}
     Input Confirm Password [Arguments] ${confirmPassword}
+    Sleep   5s
     Click On The 'SIGN UP' Button
 
 

@@ -5,6 +5,7 @@ Resource    ../../configs/AppiumConfigs.robot
 Library    String
 Library    OperatingSystem
 Library    AppiumLibrary            timeout=30
+Library    DebugLibrary
 Library    pabot.PabotLib
 
 
@@ -127,6 +128,6 @@ Alert Message Should Be [Arguments] ${alertMessage}
     [Documentation]    Validate the text of the alert message
 
     ${androidAlertMessageLocator}    Set Variable    id=android:id/message
-    #Run Keyword If    '${PLATFORM_NAME}' == '${ANDROID_PLATFORM_NAME}'    Element Text Should Be [Arguments] ${androidAlertMessageLocator} ${alertMessage}
+    Run Keyword If    '${PLATFORM_NAME}' == '${ANDROID_PLATFORM_NAME}'    Element Text Should Be [Arguments] ${androidAlertMessageLocator} ${LITLE_RETRY_COUNT}
     ${iosAlertMessageLocator}    Set Variable    accessibility_id=${alertMessage}
-    #Run Keyword If    '${PLATFORM_NAME}' == '${IOS_PLATFORM_NAME}'    Element Should Be Visible [Arguments] ${iosAlertMessageLocator} ${SMALL_RETRY_COUNT}
+    Run Keyword If    '${PLATFORM_NAME}' == '${IOS_PLATFORM_NAME}'    Element Should Be Visible [Arguments] ${iosAlertMessageLocator} ${LITLE_RETRY_COUNT}
