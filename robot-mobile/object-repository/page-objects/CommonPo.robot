@@ -130,7 +130,7 @@ Alert Title Should Be [Arguments] ${alertTitle}
         Wait Until Element Is Visible    ${iosAlertTitleLocator}
     END
 
-Alert Message Should Be [Arguments] ${alertMessage}
+Alert Message Should Be
     [Arguments]        ${EXPECTED}
     [Documentation]    Validate the text of the alert message
 
