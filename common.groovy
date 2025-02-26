@@ -81,7 +81,4 @@ def start_all_android_emu() {
     }
 }
 
-
-
-
 return this
