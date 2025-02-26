@@ -41,7 +41,7 @@ Open Android Application
     ...    systemPort=${ANDROID_SYSTEM_PORT} 
     ...    udid=${ANDROID_UDID}
     Set Appium Timeout    ${TIMEOUT}
-
+    Sleep   10
     Capture Page Screenshot
 
 
