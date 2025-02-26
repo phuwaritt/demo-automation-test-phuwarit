@@ -14,8 +14,8 @@ pipeline {
                     robot outputPath: './testResult', otherFiles: '*.png,*.jpg', logFileName: 'log.html', outputFileName: 'output.xml', reportFileName: 'report.html'
 
                     common = load "$WORKSPACE/common.groovy"
-                    common.result_jenkins_slack("#cicd_training_space")
-                    common.result_jenkins_line()
+                    //common.result_jenkins_slack("#cicd_training_space", "[Web]")
+                    //common.result_jenkins_line()
                     common.report_sender()
                 }
             }

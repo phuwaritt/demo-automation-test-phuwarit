@@ -2,7 +2,7 @@ APPIUM_PORT= [4723, 4724]
 EMULATOR_PORT= [5554, 5556]
 emulator_name= ["cardx", "cardx_II"]
 
-def result_jenkins_slack(send_to_channel){
+def result_jenkins_slack(send_to_channel,platform){
     String passed_count =  tm('${ROBOT_PASSED}')
     String failed_count = tm('${ROBOT_FAILED}')
     String BRANCH_NAME = "${GIT_BRANCH}"
@@ -15,7 +15,7 @@ def result_jenkins_slack(send_to_channel){
     } else {
         message_emoji = ":bee-do-v2:"
     }
-    slackSend(channel: "${send_to_channel}",message: "BPY \n ${message_emoji} ${JOB_NAME} #${env.BUILD_NUMBER} \n *BRANCH:* ${BRANCH_NAME} \n Total Test Cases: ${total_tests} \n Passed : ${passed_count} \n Failed : ${failed_count} \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)")
+    slackSend(channel: "${send_to_channel}",message: "BPY ${platform}\n ${message_emoji} ${JOB_NAME} #${env.BUILD_NUMBER} \n *BRANCH:* ${BRANCH_NAME} \n Total Test Cases: ${total_tests} \n Passed : ${passed_count} \n Failed : ${failed_count} \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)")
 }
 
 
