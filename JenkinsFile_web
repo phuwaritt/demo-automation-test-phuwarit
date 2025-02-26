@@ -21,8 +21,7 @@ pipeline {
 
                     common = load "$WORKSPACE/common.groovy"
                     def total_tests = passed_count.toInteger() + failed_count.toInteger()
-                    //def log_url = "${env.BASE_URL}/job/${JOB_NAME}/${env.BUILD_NUMBER}/robot/"
-                    common.log_report
+                    def log_url = "${env.BASE_URL}/job/${JOB_NAME}/${env.BUILD_NUMBER}/robot/report/log.html"
                     def message_emoji = common.result_jenkins_emoji(failed_count)
 
                     slackSend(channel:"#cicd_training_space",message: "BPY [Web]\n ${JOB_NAME} #${env.BUILD_NUMBER} ${message_emoji} \n *BRANCH:* ${BRANCH_NAME} \n Total Test Cases: ${total_tests} \n Passed : ${passed_count} :white_check_mark: \n Failed : ${failed_count} :face_vomiting: \n After: ${currentBuild.durationString} \n (<${log_url}|Report>)")
