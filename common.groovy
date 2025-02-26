@@ -94,19 +94,4 @@ def start_all_android_emu() {
     sleep 30
     }
 
-
-
-    // for(String i in EMULATOR_PORT){
-    //     echo "STOPPING EMULATOR Port ${i}"
-    //     try {
-    //         sh "emulator -avd ${emulator_name} -port ${i} &"
-    //         sh "sleep 5"
-    //     }
-    //     catch(err) {
-    //         echo "emulator ${i} is started"
-    //     }
-    // }
-    // sleep 15
-// }
-
 return this
