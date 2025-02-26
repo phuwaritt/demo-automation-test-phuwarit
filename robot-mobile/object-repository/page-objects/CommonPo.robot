@@ -12,8 +12,8 @@ Library    pabot.PabotLib
 Open Test Application
     [Documentation]    Open the testing application
     
-    Run Keyword If    '${PLATFORM_NAME}' == '${ANDROID_PLATFORM_NAME}'    Open Android Application
-    Run Keyword If    '${PLATFORM_NAME}' == '${IOS_PLATFORM_NAME}'    Open IOS Application
+    Run Keyword If    '${PLATFORM_NAME}' == 'android'    Open Android Application
+    Run Keyword If    '${PLATFORM_NAME}' == 'ios'    Open IOS Application
 
 
 Open Android Application
