@@ -19,17 +19,13 @@ Open Test Application
 Open Android Application
     [Documentation]    Open the Android application
 
-    Log To Console    ${PABOTEXECUTIONPOOLID}
     Acquire Value Set    set${PABOTEXECUTIONPOOLID}
 
     ${APPIUM_SERVER_URL}     Get Value From Set    remote_url
-    Log To Console    "xxxxxxxxxxxxxxxxxxx  ${APPIUM_SERVER_URL}"
     ${ANDROID_AUTOMATION_NAME}    Get Value From Set    automationName 
     ${ANDROID_PLATFORM_NAME}    Get Value From Set   platformName
     ${ANDROID_PLATFORM_VERSION}  Get Value From Set    platformVersion
     ${ANDROID_DEVICE_NAME}    Get Value From Set    deviceName
-
-    Log To Console    "This is working ${ANDROID_AUTOMATION_NAME}"
 
     Open Application    ${APPIUM_SERVER_URL}    
     ...    automationName=${ANDROID_AUTOMATION_NAME}    
@@ -40,6 +36,8 @@ Open Android Application
     ...    appPackage=${ANDROID_APP_PACKAGE}    
     ...    appActivity=${ANDROID_APP_ACTIVITY}
     Set Appium Timeout    ${TIMEOUT}
+
+    Capture Page Screenshot
 
 
 Open IOS Application
