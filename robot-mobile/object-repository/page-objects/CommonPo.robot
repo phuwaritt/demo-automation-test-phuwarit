@@ -131,13 +131,14 @@ Alert Title Should Be [Arguments] ${alertTitle}
     END
 
 Alert Message Should Be [Arguments] ${alertMessage}
+    [Arguments]        ${EXPECTED}
     [Documentation]    Validate the text of the alert message
 
     ${androidAlertMessageLocator}    Set Variable    id=android:id/message
     ${iosAlertMessageLocator}    Set Variable    accessibility_id=${alertMessage}
     IF  '${PLATFORM_NAME}' == 'android'
         Wait Until Element Is Visible   ${androidAlertMessageLocator}
-        Element Text Should Be          ${androidAlertMessageLocator}    ${LOGIN_SUCCESS_ALERT_MESSAGE} 
+        Element Text Should Be          ${androidAlertMessageLocator}      ${EXPECTED}
     ELSE IF  '${PLATFORM_NAME}' == 'ios'
         Wait Until Element Is Visible    ${iosAlertMessageLocator}
     END
