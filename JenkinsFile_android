@@ -12,6 +12,9 @@ pipeline {
                     common = load "$WORKSPACE/common.groovy"
                     common.stop_appium()
                     common.start_appium()
+
+                    common.kill_all_android_emu()
+                    common.start_all_android_emu()
                 }
             }
         }

@@ -1,5 +1,6 @@
 APPIUM_PORT= [4723, 4724]
-EMULATOR_PORT = [5554, 5556]
+EMULATOR_PORT= [5554, 5556]
+emulator_name= "cardx"
 
 def result_jenkins_emoji(String failed_count){
     def message_emoji = ""
@@ -11,12 +12,14 @@ def result_jenkins_emoji(String failed_count){
     return "${message_emoji}"
 }
 
+
 def notify_line(passed_count, failed_count, log_url, BRANCH_NAME){
     def token = "lWcrOHVVskzMYRXb7iB1e9xanhcvmC3Pu8Jz39Ozufh"
     def url = 'https://notify-api.line.me/api/notify'
     def message = "BPY 🔥 \nBranch: ${BRANCH_NAME} Build ${env.BUILD_NUMBER} \nPassed : ${passed_count} ✅ \nFailed : ${failed_count} 🤮 \nAfter:${currentBuild.durationString} \n\n(${log_url})"
     sh "curl ${url} -H 'Authorization: Bearer ${token}' -F 'message=${message}'"
 }
+
 
 def report_sender() {
     echo "=== Start notify to failure declaration ==="
@@ -52,4 +55,33 @@ def start_appium() {
         }
     }
 }
+
+
+def kill_all_android_emu() {
+    for(int i in EMULATOR_PORT){
+        echo "STOPPING EMULATOR Port ${i}"
+        try {
+            sh "kill -9 \$(lsof -t -i :${i}"
+        }
+        catch(err) {
+            echo "emulator ${i} is stopped"
+        }
+    }
+}
+
+def start_all_android_emu() {
+    for(int i in EMULATOR_PORT){
+        echo "STOPPING EMULATOR Port ${i}"
+        try {
+            sh "emulator -avd ${emulator_name} -port ${i} &"
+        }
+        catch(err) {
+            echo "emulator ${i} is started"
+        }
+    }
+}
+
+
+
+
 return this
