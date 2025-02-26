@@ -38,7 +38,7 @@ def notify_line(){
 
     def token = "lWcrOHVVskzMYRXb7iB1e9xanhcvmC3Pu8Jz39Ozufh"
     def url = 'https://notify-api.line.me/api/notify'
-    def message = "BPY 🔥 \n${JOB_NAME} #${env.BUILD_NUMBER}\nBranch: ${BRANCH_NAME}\nPassed : ${passed_count}\nFailed : ${failed_count}\nAfter:${currentBuild.durationString} \n\n(${log_url})"
+    String message = "BPY 🔥 \n${JOB_NAME} #${env.BUILD_NUMBER}\nBranch: ${BRANCH_NAME}\nPassed : ${passed_count}\nFailed : ${failed_count}\nAfter:${currentBuild.durationString} \n\n(${log_url})"
     sh "curl ${url} -H 'Authorization: Bearer ${token}' -F 'message=${message}'"
 }
 
