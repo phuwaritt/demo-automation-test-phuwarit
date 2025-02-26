@@ -135,7 +135,7 @@ Alert Message Should Be
     [Documentation]    Validate the text of the alert message
 
     ${androidAlertMessageLocator}    Set Variable    id=android:id/message
-    ${iosAlertMessageLocator}    Set Variable    accessibility_id=${alertMessage}
+    ${iosAlertMessageLocator}    Set Variable    accessibility_id=mock
     IF  '${PLATFORM_NAME}' == 'android'
         Wait Until Element Is Visible   ${androidAlertMessageLocator}
         Element Text Should Be          ${androidAlertMessageLocator}      ${EXPECTED}
