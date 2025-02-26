@@ -15,7 +15,7 @@ pipeline {
 
                     common = load "$WORKSPACE/common.groovy"
                     common.result_jenkins_slack("#cicd_training_space")
-                    common.notify_line(passed_count, failed_count, BRANCH_NAME, JOB_NAME)
+                    common.notify_line()
                     common.report_sender()
                 }
             }
