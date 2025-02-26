@@ -10,7 +10,6 @@ def result_jenkins_emoji(String failed_count){
     }
     return "${message_emoji}"
 }
-return this
 
 
 def notify_line(passed_count, failed_count, log_url, BRANCH_NAME){
@@ -55,3 +54,4 @@ def start_appium(){
         }
     }
 }
+return this
