@@ -51,7 +51,6 @@ def stop_appium() {
             echo "appium ${i} is stopped"
         }
     }
-    sleep 5
 }
 
 
@@ -65,7 +64,6 @@ def start_appium() {
             echo "appium ${i} is started"
         }
     }
-    sleep 10
 }
 
 
@@ -79,14 +77,15 @@ def kill_all_android_emu() {
             echo "emulator ${i} is stopped"
         }
     }
-    sleep 15
+    sleep 20
 }
 
 def start_all_android_emu() {
-    for(int i in EMULATOR_PORT){
+    for(String i in EMULATOR_PORT){
         echo "STOPPING EMULATOR Port ${i}"
         try {
             sh "emulator -avd ${emulator_name} -port ${i} &"
+            sh "sleep 5"
         }
         catch(err) {
             echo "emulator ${i} is started"
