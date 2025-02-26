@@ -35,7 +35,6 @@ Input Confirm Password [Arguments] ${confirmPassword}
 
 
 Click On The 'SIGN UP' Button
-    [Arguments]      ${SMALL_RETRY_COUNT}
     IF  '${PLATFORM_NAME}' == 'android'
         Click Element        xpath=//android.view.ViewGroup[@content-desc="button-SIGN UP"]/android.view.ViewGroup      ${SMALL_RETRY_COUNT}
     ELSE IF  '${PLATFORM_NAME}' == 'ios'
