@@ -42,7 +42,7 @@ Open Android Application
     ...    udid=${ANDROID_UDID}
     Set Appium Timeout    ${TIMEOUT}
 
-    #Capture Page Screenshot
+    Capture Page Screenshot
 
 
 Open IOS Application
