@@ -36,9 +36,9 @@ Input Confirm Password [Arguments] ${confirmPassword}
 
 Click On The 'SIGN UP' Button
     IF  '${PLATFORM_NAME}' == 'android'
-        Click Element        xpath=//android.view.ViewGroup[@content-desc="button-SIGN UP"]/android.view.ViewGroup      ${SMALL_RETRY_COUNT}
+        AppiumLibrary.Click Element        xpath=//android.view.ViewGroup[@content-desc="button-SIGN UP"]/android.view.ViewGroup      #${SMALL_RETRY_COUNT}
     ELSE IF  '${PLATFORM_NAME}' == 'ios'
-        Click Element        xpath=//android.view.ViewGroup[@content-desc="button-SIGN UP"]/android.view.ViewGroup      ${SMALL_RETRY_COUNT}
+        AppiumLibrary.Click Element        xpath=//android.view.ViewGroup[@content-desc="button-SIGN UP"]/android.view.ViewGroup      #${SMALL_RETRY_COUNT}
     END
 
 Click On The 'LOGIN' Button
