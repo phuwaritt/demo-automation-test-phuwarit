@@ -16,7 +16,17 @@ def result_jenkins_emoji(String failed_count){
 def notify_line(passed_count, failed_count, log_url, BRANCH_NAME){
     def token = "lWcrOHVVskzMYRXb7iB1e9xanhcvmC3Pu8Jz39Ozufh"
     def url = 'https://notify-api.line.me/api/notify'
-    def message = "BPY 🔥 \nBranch: ${BRANCH_NAME} Build ${env.BUILD_NUMBER} \nPassed : ${passed_count} ✅ \nFailed : ${failed_count} 🤮 \nAfter:${currentBuild.durationString} \n\n(${log_url})"
+
+    def scriptPath = currentBuild.rawBuild.getParent().getDefinition().getScriptPath()
+    echo "Jenkinsfile Path: ${scriptPath}"
+    def platform_display = ""
+    if ("${scriptPath}" == "JenkinsFile_web") {
+        platform_display = "Web"
+    } else if ("${scriptPath}" == "JenkinsFile_android"){
+        platform_display = "Android"
+    }
+    
+    def message = "BPY 🔥 [${platform_display}]\nBranch: ${BRANCH_NAME} Build #${env.BUILD_NUMBER} \nPassed : ${passed_count} ✅ \nFailed : ${failed_count} 🤮 \nAfter:${currentBuild.durationString} \n\n(${log_url})"
     sh "curl ${url} -H 'Authorization: Bearer ${token}' -F 'message=${message}'"
 }
 
