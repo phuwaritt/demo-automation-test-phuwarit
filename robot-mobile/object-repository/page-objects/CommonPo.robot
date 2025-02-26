@@ -22,6 +22,8 @@ Open Android Application
     Log To Console    ${PABOTEXECUTIONPOOLID}
     Acquire Value Set    set${PABOTEXECUTIONPOOLID}
 
+    ${APPIUM_SERVER_URL}     Get Value From Set    remote_url
+    Log To Console    "xxxxxxxxxxxxxxxxxxx  ${APPIUM_SERVER_URL}"
     ${ANDROID_AUTOMATION_NAME}    Get Value From Set    automationName 
     ${ANDROID_PLATFORM_NAME}    Get Value From Set   platformName
     ${ANDROID_PLATFORM_VERSION}  Get Value From Set    platformVersion
