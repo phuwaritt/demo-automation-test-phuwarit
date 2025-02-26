@@ -34,8 +34,8 @@ Open Android Application
     ...    platformVersion=${ANDROID_PLATFORM_VERSION}    
     ...    deviceName=${ANDROID_DEVICE_NAME}    
     ...    app=${ANDROID_APP}    
-    ...    appPackage=${ANDROID_APP_PACKAGE}    
-    ...    appActivity=${ANDROID_APP_ACTIVITY}
+    # ...    appPackage=${ANDROID_APP_PACKAGE}    
+    # ...    appActivity=${ANDROID_APP_ACTIVITY}
     Set Appium Timeout    ${TIMEOUT}
 
     Capture Page Screenshot
