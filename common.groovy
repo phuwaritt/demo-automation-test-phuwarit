@@ -7,7 +7,7 @@ def result_jenkins_emoji(String failed_count){
     if (failed_count.toInteger() == 0) {
         message_emoji = ":white_check_mark:"
     } else {
-        message_emoji = ":801545411739385916:"
+        message_emoji = ":x:"
     }
     return "${message_emoji}"
 }
