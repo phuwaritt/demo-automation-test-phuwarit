@@ -21,8 +21,8 @@ pipeline {
             }
         post{
             always{
-                cleanWs()
-                echo "Clear"
+                    cleanWs()
+                    echo "Clear"
                 }
             }
             
