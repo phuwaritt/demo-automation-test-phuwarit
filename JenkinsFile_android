@@ -21,7 +21,7 @@ pipeline {
         stage('Assign BPY 02') {
             steps {
                 script{
-                    echo "Test"
+                    echo "Test Android"
                     sh(script: 'pabot --pabotlib --resourcefile ./android_resource_file.dat --processes 2 -d testResult -v PLATFORM_NAME:android robot-mobile/test-cases/.', returnStatus: true)
                     robot outputPath: './testResult', otherFiles: '*.png,*.jpg', logFileName: 'log.html', outputFileName: 'output.xml', reportFileName: 'report.html'
                     archiveArtifacts artifacts: 'testResult/*.html, testResult/*.jpg, testResult/*.png, testResult/*.xml', fingerprint: true, onlyIfSuccessful: false
