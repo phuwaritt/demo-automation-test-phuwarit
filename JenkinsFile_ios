@@ -17,6 +17,7 @@ pipeline {
                     common.kill_all_ios_simu()
                     common.start_all_ios_simu()
 
+                    sh "git clone https://github.com/facebookarchive/WebDriverAgent.git"
                     sh "ls -l"
                     sh '''
                         cd WebDriverAgent
