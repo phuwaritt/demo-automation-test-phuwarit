@@ -16,8 +16,7 @@ pipeline {
 
                     common.kill_all_ios_simu()
                     common.start_all_ios_simu()
-
-                    sh "git clone https://github.com/facebookarchive/WebDriverAgent.git"
+                    
                     sh "cd WebDriverAgent"
                     sh "open WebDriverAgent/WebDriverAgent.xcodeproj"
                     sh "WebDriverAgent/xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=633E791C-56CC-4246-9F2F-6C67AF0FC7FE' test &"
