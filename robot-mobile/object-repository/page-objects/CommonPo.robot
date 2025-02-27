@@ -69,7 +69,6 @@ Open IOS Application
     ...    app=${IOS_APP}    
     ...    systemPort=${IOS_SYSTEM_PORT} 
     ...    udid=${IOS_UDID}
-    Sleep  90
     Set Appium Timeout    ${TIMEOUT}
     Sleep   10
     Capture Page Screenshot
