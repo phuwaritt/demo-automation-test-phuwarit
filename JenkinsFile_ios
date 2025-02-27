@@ -22,8 +22,8 @@ pipeline {
                         cd WebDriverAgent
                         ls -l
                         open WebDriverAgent.xcodeproj
-                        xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=633E791C-56CC-4246-9F2F-6C67AF0FC7FE' test &
-                        xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=94573E3B-11EB-4D9B-BCD8-0BD96E98BCF6' test &
+                        xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=633E791C-56CC-4246-9F2F-6C67AF0FC7FE' -allowProvisioningUpdates test &
+                        xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=94573E3B-11EB-4D9B-BCD8-0BD96E98BCF6' -allowProvisioningUpdates test &
                     '''
                 }
             }
