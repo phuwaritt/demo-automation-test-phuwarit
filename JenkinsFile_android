@@ -24,8 +24,7 @@ pipeline {
                     echo "Test Android"
                     sh(script: 'pabot --pabotlib --resourcefile ./android_resource_file.dat --processes 2 -d testResult -v PLATFORM_NAME:android robot-mobile/test-cases/.', returnStatus: true)
                     robot outputPath: './testResult', otherFiles: '*.png,*.jpg', logFileName: 'log.html', outputFileName: 'output.xml', reportFileName: 'report.html'
-                    //robot outputPath: './'
-                    //archiveArtifacts artifacts: 'testResult/*.html, testResult/*.jpg, testResult/*.png, testResult/*.xml', fingerprint: true, onlyIfSuccessful: false
+                    archiveArtifacts artifacts: 'testResult/*.html, testResult/*.jpg, testResult/*.png, testResult/*.xml', fingerprint: true, onlyIfSuccessful: false
 
                     common = load "$WORKSPACE/common.groovy"
                     common.result_jenkins_slack("#cicd_training_space", "[Android]")
