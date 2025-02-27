@@ -58,7 +58,7 @@ Open IOS Application
     ${IOS_PLATFORM_NAME}    Get Value From Set   platformName
     ${IOS_PLATFORM_VERSION}  Get Value From Set    platformVersion
     ${IOS_DEVICE_NAME}    Get Value From Set    deviceName
-    ${IOS_SYSTEM_PORT}    Get Value From Set    systemPort
+    ${IOS_SYSTEM_PORT}    Get Value From Set    system_port
     ${IOS_UDID}    Get Value From Set    udid
 
     Open Application    ${APPIUM_SERVER_URL}    
