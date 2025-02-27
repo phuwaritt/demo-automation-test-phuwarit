@@ -23,7 +23,7 @@ pipeline {
             steps {
                 script{
                     echo "Test iOS"
-                    sh(script: 'pabot --pabotlib --resourcefile ./android_resource_file.dat --processes 2 -d testResult -v PLATFORM_NAME:ios robot-mobile/test-cases/.', returnStatus: true)
+                    sh(script: 'pabot --pabotlib --resourcefile ./ios_resource_file.dat --processes 2 -d testResult -v PLATFORM_NAME:ios robot-mobile/test-cases/.', returnStatus: true)
                     robot outputPath: './testResult', otherFiles: '*.png,*.jpg', logFileName: 'log.html', outputFileName: 'output.xml', reportFileName: 'report.html'
                     //robot outputPath: './'
                     //archiveArtifacts artifacts: '*.html, *.png, *.xml', fingerprint: true
