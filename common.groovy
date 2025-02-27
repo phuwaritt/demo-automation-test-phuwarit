@@ -126,7 +126,7 @@ def start_all_ios_simu() {
             echo "simulator ${i} is started"
         }
     }
-    sleep 10
+    sleep 30
     }
 
 return this
