@@ -14,7 +14,7 @@ pipeline {
                     archiveArtifacts artifacts: 'testResult/*.html, testResult/*.jpg, testResult/*.png, testResult/*.xml', fingerprint: true, onlyIfSuccessful: false
 
                     common = load "$WORKSPACE/common.groovy"
-                    common.result_jenkins_slack("#cicd_training_space", "[]")
+                    common.result_jenkins_slack("#cicd_training_space", "[Web]")
                     common.result_jenkins_line()
                     common.report_sender()
                 }
