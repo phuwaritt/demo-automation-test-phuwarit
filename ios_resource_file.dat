@@ -1,0 +1,21 @@
+[set0]
+tags = set0
+automationName = XCUITest
+platformName = ios
+platformVersion = 18.1
+deviceName = iPhone 15 Pro Max
+udid = 0AAFB0E9-F413-44EF-A46A-F36227AF7616
+remote_url = http://127.0.0.1:11723
+system_port = 18121
+app = /Users/phuwarit.t/Desktop/wdioNativeDemoApp.app
+
+[set1]
+tags = set1
+automationName = XCUITest
+platformName = ios
+platformVersion = 18.1
+deviceName = iPhone 15 Pro Max
+udid = A42A70D6-75FC-43DC-B276-CA41F89AFCAC
+remote_url = http://127.0.0.1:12723
+system_port = 18123
+app = /Users/phuwarit.t/Desktop/wdioNativeDemoApp.app

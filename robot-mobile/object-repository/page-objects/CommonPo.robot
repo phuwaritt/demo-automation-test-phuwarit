@@ -48,8 +48,28 @@ Open Android Application
 Open IOS Application
     [Documentation]    Open the iOS application
 
-    Open Application    ${APPIUM_SERVER_URL}    automationName=${IOS_AUTOMATION_NAME}    platformName=${IOS_PLATFORM_NAME}    platformVersion=${IOS_PLATFORM_VERSION}    deviceName=${IOS_DEVICE_NAME}    app=${IOS_APP}
+    Acquire Value Set    set${PABOTEXECUTIONPOOLID}
+
+    ${APPIUM_SERVER_URL}     Get Value From Set    remote_url
+    ${IOS_AUTOMATION_NAME}    Get Value From Set    automationName 
+    ${IOS_PLATFORM_NAME}    Get Value From Set   platformName
+    ${IOS_PLATFORM_VERSION}  Get Value From Set    platformVersion
+    ${IOS_DEVICE_NAME}    Get Value From Set    deviceName
+    ${IOS_SYSTEM_PORT}    Get Value From Set    systemPort
+    ${IOS_UDID}    Get Value From Set    udid
+
+    Open Application    ${APPIUM_SERVER_URL}    
+    ...    automationName=${IOS_AUTOMATION_NAME}    
+    ...    platformName=${IOS_PLATFORM_NAME}    
+    ...    platformVersion=${IOS_PLATFORM_VERSION}    
+    ...    deviceName=${IOS_DEVICE_NAME}    
+    ...    app=${IOS_APP}    
+    ...    systemPort=${IOS_SYSTEM_PORT} 
+    ...    udid=${IOS_UDID}
+   ...     app=${IOS_APP}
     Set Appium Timeout    ${TIMEOUT}
+    Sleep   10
+    Capture Page Screenshot
 
 
 Get Random Email Address
