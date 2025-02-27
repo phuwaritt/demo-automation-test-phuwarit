@@ -1,9 +1,4 @@
 *** Variables ***
-# Android configs
-${ANDROID_APP}                 ./robot-mobile/apps/wdioNativeDemoApp.apk
-${ANDROID_APP_PACKAGE}        com.wdiodemoapp
-${ANDROID_APP_ACTIVITY}       .MainActivity
-
 # iOS configs
 ${IOS_AUTOMATION_NAME}        XCUITest
 ${IOS_APP}                    ./robot-mobile/apps/wdioNativeDemoApp.app
