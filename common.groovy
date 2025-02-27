@@ -1,5 +1,6 @@
 APPIUM_PORT= [4723, 4724]
 EMULATOR_PORT= [5554, 5556]
+IOS_EMULATOR_PORT= [8101, 8202]
 android_emulator_name= ["cardx", "cardx_II"]
 ios_emulator_uuid= ["633E791C-56CC-4246-9F2F-6C67AF0FC7FE", "94573E3B-11EB-4D9B-BCD8-0BD96E98BCF6"]
 
@@ -106,10 +107,10 @@ def start_all_android_emu() {
     }
 
 def start_all_ios_emu() {
-    for(int i=0; i<ios_emulator_uuid.size(); i++){
+    for(int i=0; i<IOS_EMULATOR_PORT.size(); i++){
         echo "STOPPING EMULATOR Port ${i}"
         try {
-            sh "xcrun simctl boot ${ios_emulator_uuid[i]} &"
+            sh "xcrun simctl boot ${ios_emulator_uuid[i]} -port ${IOS_EMULATOR_PORT[i]} &"
             sh "sleep 5"
         }
         catch(err) {
