@@ -16,7 +16,8 @@ pipeline {
 
                     common.kill_all_ios_simu()
                     common.start_all_ios_simu()
-                    
+
+                    sh "ls -l"
                     sh '''
                         cd WebDriverAgent
                         open WebDriverAgent.xcodeproj
