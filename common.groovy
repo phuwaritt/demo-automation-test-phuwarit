@@ -1,7 +1,7 @@
 APPIUM_PORT= [4723, 4724]
 EMULATOR_PORT= [5554, 5556]
 android_emulator_name= ["cardx", "cardx_II"]
-ios_emulator_uuid= ["633E791C-56CC-4246-9F2F-6C67AF0FC7FE", "94573E3B-11EB-4D9B-BCD8-0BD96E98BCF6"]
+simulator_udid= ["633E791C-56CC-4246-9F2F-6C67AF0FC7FE", "94573E3B-11EB-4D9B-BCD8-0BD96E98BCF6"]
 
 def result_jenkins_slack(send_to_channel,platform){
     String passed_count =  tm('${ROBOT_PASSED}')
@@ -91,7 +91,7 @@ def kill_all_android_emu() {
 
 def start_all_android_emu() {
     for(int i=0; i<EMULATOR_PORT.size(); i++){
-        echo "STOPPING EMULATOR Port ${i}"
+        echo "STARTING EMULATOR Port ${i}"
         try {
             sh "emulator -avd ${android_emulator_name[i]} -port ${EMULATOR_PORT[i]} &"
             sh "sleep 5"
@@ -103,15 +103,27 @@ def start_all_android_emu() {
     sleep 30
     }
 
-def start_all_ios_emu() {
-    for(int i=0; i<ios_emulator_uuid.size(); i++){
-        echo "STOPPING EMULATOR Port ${i}"
+
+def kill_all_ios_simu() {
+    try {
+        sh "xcrun simctl shutdown all"
+        sh "sleep 5"
+    }
+    catch(err) {
+        echo "simulators are stopped"
+    }
+}
+
+
+def start_all_ios_simu() {
+    for(int i=0; i<simulator_udid.size(); i++){
+        echo "STARTING SIMULATOR Port ${i}"
         try {
-            sh "xcrun simctl boot ${ios_emulator_uuid[i]} &"
+            sh "xcrun simctl boot ${simulator_udid[i]} &"
             sh "sleep 5"
         }
         catch(err) {
-            echo "emulator ${i} is started"
+            echo "simulator ${i} is started"
         }
     }
     sleep 30
