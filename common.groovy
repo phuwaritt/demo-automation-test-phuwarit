@@ -100,7 +100,7 @@ def start_all_android_emu() {
             echo "emulator ${i} is started"
         }
     }
-    sleep 30
+    sleep 20
     }
 
 
@@ -126,7 +126,7 @@ def start_all_ios_simu() {
             echo "simulator ${i} is started"
         }
     }
-    sleep 30
+    sleep 20
     }
 
 return this
