@@ -106,10 +106,10 @@ def start_all_android_emu() {
     }
 
 def start_all_ios_emu() {
-    for(int i=0; i<EMULATOR_PORT.size(); i++){
+    for(int i=0; i<ios_emulator_uuid.size(); i++){
         echo "STOPPING EMULATOR Port ${i}"
         try {
-            sh "xcrun simctl boot 633E791C-56CC-4246-9F2F-6C67AF0FC7FE &"
+            sh "xcrun simctl boot ${ios_emulator_uuid[i]} &"
             sh "sleep 5"
         }
         catch(err) {
