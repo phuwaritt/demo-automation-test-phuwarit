@@ -67,7 +67,7 @@ def start_appium() {
     for(int i=0; i<APPIUM_PORT.size(); i++){
         echo "STARTING Appium Port ${APPIUM_PORT[i]}"
         try {
-            sh "appium -p ${APPIUM_PORT[i]} --driver-xcuitest-webdriveragent-port 8102 &"
+            sh "appium -p ${APPIUM_PORT[i]} --driver-xcuitest-webdriveragent-port ${WDA_PORT[i]} &"
         }
         catch(err) {
             echo "appium ${APPIUM_PORT[i]} is started"
