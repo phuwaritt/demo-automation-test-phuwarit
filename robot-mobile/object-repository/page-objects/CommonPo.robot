@@ -76,7 +76,7 @@ Open IOS Application
     ...    appium:usePrebuiltWDA=${TRUE}
     ...    appium:wdaLocalPort=${IOS_wda_port}
     ...    appium:showXcodeLog=${TRUE}
-    ...    appium:noReset=${TRUE}
+    ...    appium:noReset=${FALSE}
 
 
     
