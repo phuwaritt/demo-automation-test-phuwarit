@@ -59,7 +59,7 @@ Open IOS Application
     ${IOS_PLATFORM_NAME}    Get Value From Set   platformName
     ${IOS_PLATFORM_VERSION}  Get Value From Set    platformVersion
     ${IOS_DEVICE_NAME}    Get Value From Set    deviceName
-    #${IOS_SYSTEM_PORT}    Get Value From Set    system_port
+    ${IOS_SYSTEM_PORT}    Get Value From Set    system_port
     ${IOS_UDID}    Get Value From Set    udid
     ${IOS_APP_APP}  Get Value From Set    app
     ${IOS_wda_port}  Get Value From Set    wdaLocalPort
@@ -70,11 +70,11 @@ Open IOS Application
     ...    platformVersion=${IOS_PLATFORM_VERSION}    
     ...    deviceName=${IOS_DEVICE_NAME}    
     ...    app=${IOS_APP_APP}    
-    ##...    systemPort=${IOS_SYSTEM_PORT} 
+    ...    systemPort=${IOS_SYSTEM_PORT} 
     ...    udid=${IOS_UDID}
-    ##...    appium:fullReset=${TRUE}
+    # ...    appium:fullReset=${TRUE}
     ...    appium:usePrebuiltWDA=${TRUE}
-    ...    appium:wdaLocalPort=${IOS_wda_port} 
+    ...    appium:wdaLocalPort=${IOS_SYSTEM_PORT} 
     ...    appium:showXcodeLog=${TRUE}
 
 
