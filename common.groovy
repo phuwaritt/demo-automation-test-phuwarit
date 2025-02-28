@@ -1,7 +1,7 @@
 APPIUM_PORT= [4723, 4724]
 EMULATOR_PORT= [5554, 5556]
 android_emulator_name= ["cardx", "cardx_II"]
-simulator_udid= ["633E791C-56CC-4246-9F2F-6C67AF0FC7FE"]
+simulator_udid= ["633E791C-56CC-4246-9F2F-6C67AF0FC7FE", "94573E3B-11EB-4D9B-BCD8-0BD96E98BCF6"]
 
 def result_jenkins_slack(send_to_channel,platform){
     String passed_count =  tm('${ROBOT_PASSED}')

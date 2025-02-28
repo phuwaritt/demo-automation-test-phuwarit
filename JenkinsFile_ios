@@ -18,7 +18,7 @@ pipeline {
                         cd ~/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent/
                         xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=633E791C-56CC-4246-9F2F-6C67AF0FC7FE' -allowProvisioningUpdates test &
                         xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=94573E3B-11EB-4D9B-BCD8-0BD96E98BCF6' -allowProvisioningUpdates test &
-                        sleep 30
+                        sleep 60
                     '''
                     common.start_appium()
                     common.start_all_ios_simu()
