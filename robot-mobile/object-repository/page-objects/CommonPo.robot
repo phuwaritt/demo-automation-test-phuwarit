@@ -72,7 +72,6 @@ Open IOS Application
     ...    app=${IOS_APP_APP}    
     ...    systemPort=${IOS_SYSTEM_PORT}
     ...    udid=${IOS_UDID}
-    ##...    appium:fullReset=${TRUE}
     ...    appium:usePrebuiltWDA=${FALSE}
     ...    appium:wdaLocalPort=${IOS_wda_port}
     ...    appium:showXcodeLog=${TRUE}
