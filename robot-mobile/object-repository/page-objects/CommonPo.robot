@@ -46,7 +46,7 @@ Open Android Application
     ...    udid=${ANDROID_UDID}
     Set Appium Timeout    ${TIMEOUT}
     Sleep   10
-    Capture Page Screenshot
+    SeleniumLibrary.Capture Page Screenshot
 
 
 Open IOS Application
@@ -71,13 +71,13 @@ Open IOS Application
     ...    app=${IOS_APP}    
     ## ...    systemPort=${IOS_SYSTEM_PORT} 
     ...    udid=${IOS_UDID}
-    ## ...    appium:wdaLocalPort=${IOS_WDA_PORT}
+    ...    appium:fullReset=${TRUE}
     ...    appium:usePrebuiltWDA=${TRUE}
     ...    appium:wdaLocalPort=${IOS_SYSTEM_PORT}
     ...    appium:showXcodeLog=${TRUE}
     Set Appium Timeout    ${TIMEOUT}
     Sleep   10
-    Capture Page Screenshot
+    AppiumLibrary.Capture Page Screenshot
 
 
 Get Random Email Address
