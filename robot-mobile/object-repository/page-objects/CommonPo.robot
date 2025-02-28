@@ -70,11 +70,11 @@ Open IOS Application
     ...    platformVersion=${IOS_PLATFORM_VERSION}    
     ...    deviceName=${IOS_DEVICE_NAME}    
     ...    app=${IOS_APP_APP}    
-    ...    systemPort=18121
+    ...    systemPort=${IOS_SYSTEM_PORT}
     ...    udid=${IOS_UDID}
     ##...    appium:fullReset=${TRUE}
     ...    appium:usePrebuiltWDA=${TRUE}
-    ...    appium:wdaLocalPort=18121
+    ...    appium:wdaLocalPort=${IOS_wda_port}
     ...    appium:showXcodeLog=${TRUE}
     ...    appium:noReset=${TRUE}
 
