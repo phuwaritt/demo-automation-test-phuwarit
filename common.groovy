@@ -68,7 +68,7 @@ def start_appium() {
     for(int i=0; i<APPIUM_PORT.size(); i++){
         echo "STARTING Appium Port ${APPIUM_PORT[i]}"
         try {
-            if (${PLATFORM_NAME} == 'ios'){
+            if ("${PLATFORM_NAME}" == 'ios'){
                 sh "appium -p ${APPIUM_PORT[i]} --driver-xcuitest-webdriveragent-port ${WDA_PORT[i]} &"
             } else {
                 sh "appium -p ${APPIUM_PORT[i]} &"
