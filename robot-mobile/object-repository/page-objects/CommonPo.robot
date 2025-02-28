@@ -109,46 +109,46 @@ Get Current Epoch Time
 Element Should Be Contained In The Page [Arguments] ${locator} ${retryScale}
     [Documentation]    Verify that the element should be contained in the page
 
-    Wait Until Keyword Succeeds    ${retryScale}     ${RETRY_DELAY}    Wait Until Page Contains Element    ${locator}
+    Wait Until Keyword Succeeds    ${retryScale}     ${RETRY_DELAY}    AppiumLibrary.Wait Until Page Contains Element    ${locator}
     
 
 Element Should Not Be Contained In The Page [Arguments] ${locator} ${retryScale}
     [Documentation]    Verify that the element should not be contained in the page
 
-    Wait Until Keyword Succeeds    ${retryScale}     ${RETRY_DELAY}    Wait Until Page Does Not Contain Element   ${locator}
+    Wait Until Keyword Succeeds    ${retryScale}     ${RETRY_DELAY}    AppiumLibrary.Wait Until Page Does Not Contain Element   ${locator}
 
 
 Element Should Be Visible [Arguments] ${locator} ${retryScale}
     [Documentation]    Verify that the element should be visible
 
-    Wait Until Keyword Succeeds    ${retryScale}     ${RETRY_DELAY}    Wait Until Element Is Visible    ${locator}
+    Wait Until Keyword Succeeds    ${retryScale}     ${RETRY_DELAY}    AppiumLibrary.Wait Until Element Is Visible    ${locator}
 
 
 Element Should Not Be Visible [Arguments] ${locator} ${retryScale}
     [Documentation]    Verify that the element should not be visible
 
-    Wait Until Keyword Succeeds    ${retryScale}     ${RETRY_DELAY}    Wait Until Page Does Not Contain Element   ${locator}
+    Wait Until Keyword Succeeds    ${retryScale}     ${RETRY_DELAY}    AppiumLibrary.Wait Until Page Does Not Contain Element   ${locator}
 
 
 Click Element [Arguments] ${locator} ${retryScale}
     [Documentation]    Click on a given button
 
-    Wait Until Keyword Succeeds    ${retryScale}     ${RETRY_DELAY}    Wait Until Element Is Visible    ${locator}
-    Wait Until Keyword Succeeds    ${retryScale}     ${RETRY_DELAY}    Click Element  ${locator}
+    Wait Until Keyword Succeeds    ${retryScale}     ${RETRY_DELAY}    AppiumLibrary.Wait Until Element Is Visible    ${locator}
+    Wait Until Keyword Succeeds    ${retryScale}     ${RETRY_DELAY}    AppiumLibrary.Click Element  ${locator}
     
     
 Element Text Should Be [Arguments] ${locator} ${text} ${retryScale}
     [Documentation]    Validate the text of an element
 
-    Wait Until Keyword Succeeds    ${retryScale}     ${RETRY_DELAY}    Wait Until Element Is Visible    ${locator}
-    Wait Until Keyword Succeeds    ${retryScale}     ${RETRY_DELAY}    Element Text Should Be    ${locator}    ${text}    
+    Wait Until Keyword Succeeds    ${retryScale}     ${RETRY_DELAY}    AppiumLibrary.Wait Until Element Is Visible    ${locator}
+    Wait Until Keyword Succeeds    ${retryScale}     ${RETRY_DELAY}    AppiumLibrary.Element Text Should Be    ${locator}    ${text}    
 
 
 Input Text [Arguments] ${textBoxLocator} ${text} ${retryScale}
     [Documentation]    Input text into a text box
 
-    Wait Until Keyword Succeeds    ${retryScale}     ${RETRY_DELAY}    Wait Until Element Is Visible    ${textBoxLocator}
-    Wait Until Keyword Succeeds    ${retryScale}     ${RETRY_DELAY}    Input Text    ${textBoxLocator}    ${text}
+    Wait Until Keyword Succeeds    ${retryScale}     ${RETRY_DELAY}    AppiumLibrary.Wait Until Element Is Visible    ${textBoxLocator}
+    Wait Until Keyword Succeeds    ${retryScale}     ${RETRY_DELAY}    AppiumLibrary.Input Text    ${textBoxLocator}    ${text}
 
 
 Alert Title Should Be [Arguments] ${alertTitle}
