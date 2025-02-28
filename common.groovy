@@ -65,13 +65,13 @@ def stop_appium() {
 }
 
 def start_appium() {
-    def platformName = System.getenv("PLATFORM_NAME")
+    //def platformName = System.getenv("PLATFORM_NAME")
     for(int i=0; i<APPIUM_PORT.size(); i++){
         echo "STARTING Appium Port ${APPIUM_PORT[i]}"
         try {
-            if ("${platformName}" == "android") {
+            if ("${PLATFORM_NAME}" == "android") {
                 sh "appium -p ${APPIUM_PORT[i]} &"
-            } else if ("${platformName}" == "ios") {
+            } else if ("${PLATFORM_NAME}" == "ios") {
                 sh "appium -p ${APPIUM_PORT[i]} -allow-cors --driver-xcuitest-webdriveragent-port ${WDA_PORT[i]} &"
             }
         }
