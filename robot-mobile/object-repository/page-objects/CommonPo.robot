@@ -75,8 +75,6 @@ Open IOS Application
     ...    appium:usePrebuiltWDA=${TRUE}
     ...    appium:wdaLocalPort=${IOS_wda_port}
     ...    appium:showXcodeLog=${TRUE}
-    ...    noReset=${TRUE}
-    ...    fullReset=${FALSE}
 
     # Set Appium Timeout    ${TIMEOUT}
     Sleep   10
