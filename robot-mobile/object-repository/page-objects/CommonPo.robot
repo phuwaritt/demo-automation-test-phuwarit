@@ -70,7 +70,7 @@ Open IOS Application
     ...    platformVersion=${IOS_PLATFORM_VERSION}    
     ...    deviceName=${IOS_DEVICE_NAME}    
     ...    app=${IOS_APP_APP}    
-    ...    systemPort=${IOS_SYSTEM_PORT} 
+    ##...    systemPort=${IOS_SYSTEM_PORT} 
     ...    udid=${IOS_UDID}
     ...    appium:fullReset=${TRUE}
     ...    appium:usePrebuiltWDA=${TRUE}
