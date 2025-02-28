@@ -7,6 +7,7 @@ Library    OperatingSystem
 Library    AppiumLibrary            timeout=30
 Library    DebugLibrary
 Library    pabot.PabotLib
+Library    SeleniumLibrary
 
 
 *** Keywords ***
@@ -60,6 +61,7 @@ Open IOS Application
     ${IOS_DEVICE_NAME}    Get Value From Set    deviceName
     ${IOS_SYSTEM_PORT}    Get Value From Set    system_port
     ${IOS_UDID}    Get Value From Set    udid
+    ${IOS_WDA_PORT}    Get Value From Set    wda_port
 
     Open Application    ${APPIUM_SERVER_URL}    
     ...    automationName=${IOS_AUTOMATION_NAME}    
@@ -69,7 +71,7 @@ Open IOS Application
     ...    app=${IOS_APP}    
     ...    systemPort=${IOS_SYSTEM_PORT} 
     ...    udid=${IOS_UDID}
-    ...    appium:wdaLocalPort=${IOS_SYSTEM_PORT}
+    ...    appium:wdaLocalPort=${IOS_WDA_PORT}
     ...    appium:usePrebuiltWDA=${TRUE}
     Set Appium Timeout    ${TIMEOUT}
     Sleep   10
