@@ -3,6 +3,7 @@ WDA_PORT= [8201, 8203]
 EMULATOR_PORT= [5554, 5556]
 android_emulator_name= ["cardx", "cardx_II"]
 simulator_udid= ["DF56FB4B-F02F-4E10-8592-7BE929F8E5D0", "FD450AFC-56FD-4969-A338-D5446C350FEE"]
+WDA_BUNDLE_ID= "com.facebook.WebDriverAgentRunner.xctrunner"
 
 def result_jenkins_slack(send_to_channel,platform){
     String passed_count =  tm('${ROBOT_PASSED}')
@@ -127,5 +128,18 @@ def start_all_ios_simu() {
     }
     sleep 30
     }
+
+
+def lanuch_wda() {
+    for(int i in simulator_udid){
+        try {
+            sh "xcrun simctl launch ${i} ${WDA_BUNDLE_ID} &"
+            sh "sleep 5"
+        }
+        catch(err) {
+            echo "wda at ${i} is launched"
+        }
+    }
+} 
 
 return this
