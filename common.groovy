@@ -1,4 +1,5 @@
 APPIUM_PORT= [4723, 4724]
+WDA_PORT= [18121, 18122]
 EMULATOR_PORT= [5554, 5556]
 android_emulator_name= ["cardx", "cardx_II"]
 simulator_udid= ["633E791C-56CC-4246-9F2F-6C67AF0FC7FE"]
@@ -64,10 +65,14 @@ def stop_appium() {
 
 
 def start_appium() {
-    for(int i in APPIUM_PORT){
+    for(int i=0; i<APPIUM_PORT.size(); i++){
         echo "STARTING Appium Port ${i}"
         try {
-            sh "appium -p ${i} &"
+            if (${PLATFORM_NAME} == 'ios'){
+                sh "appium -p ${APPIUM_PORT[i]} --driver-xcuitest-webdriveragent-port ${WDA_PORT[i]} &"
+            } else {
+                sh "appium -p ${APPIUM_PORT[i]} &"
+            }
         }
         catch(err) {
             echo "appium ${i} is started"
