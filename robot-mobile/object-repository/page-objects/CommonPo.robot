@@ -62,6 +62,7 @@ Open IOS Application
     ${IOS_SYSTEM_PORT}    Get Value From Set    system_port
     ${IOS_UDID}    Get Value From Set    udid
     ${IOS_APP_APP}  Get Value From Set    app
+    ${IOS_wda_port}  Get Value From Set    wdaLocalPort
 
     Open Application    ${APPIUM_SERVER_URL}    
     ...    automationName=${IOS_AUTOMATION_NAME}    
@@ -73,7 +74,7 @@ Open IOS Application
     ...    udid=${IOS_UDID}
     ##...    appium:fullReset=${FALSE}
     ...    appium:usePrebuiltWDA=${TRUE}
-    ##...    appium:wdaLocalPort=${IOS_SYSTEM_PORT}
+    ...    appium:wdaLocalPort=${IOS_wda_port}
     ...    appium:showXcodeLog=${TRUE}
     Set Appium Timeout    ${TIMEOUT}
     Sleep   10
