@@ -12,6 +12,7 @@ pipeline {
                 script{
                     common = load "$WORKSPACE/common.groovy"
                     common.stop_appium()
+                    common.start_appium()
                     common.kill_all_ios_simu()
                     common.start_all_ios_simu()
 
@@ -20,8 +21,6 @@ pipeline {
                     //     xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=DF56FB4B-F02F-4E10-8592-7BE929F8E5D0' -allowProvisioningUpdates test &
                     //     sleep 10
                     // '''
-
-                    common.start_appium()
                     
                 }
             }
