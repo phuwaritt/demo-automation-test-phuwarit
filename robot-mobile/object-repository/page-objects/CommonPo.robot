@@ -59,7 +59,7 @@ Open IOS Application
     ${IOS_PLATFORM_NAME}    Get Value From Set   platformName
     ${IOS_PLATFORM_VERSION}  Get Value From Set    platformVersion
     ${IOS_DEVICE_NAME}    Get Value From Set    deviceName
-    ${IOS_SYSTEM_PORT}    Get Value From Set    system_port
+    ## ${IOS_SYSTEM_PORT}    Get Value From Set    system_port
     ${IOS_UDID}    Get Value From Set    udid
     ${IOS_WDA_PORT}    Get Value From Set    wda_port
 
@@ -69,10 +69,11 @@ Open IOS Application
     ...    platformVersion=${IOS_PLATFORM_VERSION}    
     ...    deviceName=${IOS_DEVICE_NAME}    
     ...    app=${IOS_APP}    
-    ...    systemPort=${IOS_SYSTEM_PORT} 
+    ## ...    systemPort=${IOS_SYSTEM_PORT} 
     ...    udid=${IOS_UDID}
-    ...    appium:wdaLocalPort=${IOS_WDA_PORT}
+    ## ...    appium:wdaLocalPort=${IOS_WDA_PORT}
     ...    appium:usePrebuiltWDA=${TRUE}
+    ...    appium:wdaLocalPort=${IOS_SYSTEM_PORT}
     Set Appium Timeout    ${TIMEOUT}
     Sleep   10
     Capture Page Screenshot
