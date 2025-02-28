@@ -12,7 +12,7 @@ pipeline {
                 script{
                     common = load "$WORKSPACE/common.groovy"
                     common.stop_appium()
-                    // common.start_appium()
+                    common.start_appium()
                     common.kill_all_ios_simu()
                     common.start_all_ios_simu()
 
