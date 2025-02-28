@@ -118,7 +118,7 @@ def start_all_ios_simu() {
     for(int i=0; i<simulator_udid.size(); i++){
         echo "STARTING SIMULATOR Port ${i}"
         try {
-            sh "xcrun simctl boot ${simulator_udid[i]} &"
+            sh "xcrun simctl boot ${simulator_udid[i]} --driver-xcuitest-webdriveragent-port ${WDA_PORT[i]} &"
             sh "sleep 5"
         }
         catch(err) {

@@ -70,13 +70,13 @@ Open IOS Application
     ...    platformVersion=${IOS_PLATFORM_VERSION}    
     ...    deviceName=${IOS_DEVICE_NAME}    
     ...    app=${IOS_APP_APP}    
-    ...    systemPort=${IOS_SYSTEM_PORT}
+    # ...    systemPort=${IOS_SYSTEM_PORT}
     ...    udid=${IOS_UDID}
     ...    appium:usePrebuiltWDA=${TRUE}
     ...    appium:wdaLocalPort=${IOS_wda_port}
     ...    appium:showXcodeLog=${TRUE}
-    ...    noReset=${TRUE}
-    ...    fullReset=${FALSE}
+    # ...    noReset=${TRUE}
+    # ...    fullReset=${FALSE}
 
     # Set Appium Timeout    ${TIMEOUT}
     Sleep   10
