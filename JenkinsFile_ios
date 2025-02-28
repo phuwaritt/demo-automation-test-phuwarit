@@ -12,18 +12,19 @@ pipeline {
                 script{
                     common = load "$WORKSPACE/common.groovy"
                     common.stop_appium()
+                    common.start_appium()
                     common.kill_all_ios_simu()
                     common.start_all_ios_simu()
 
-                    sh '''
-                        cd ~/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent/
-                        rm -rf DerivedData
-                        xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=633E791C-56CC-4246-9F2F-6C67AF0FC7FE' -allowProvisioningUpdates test &
-                        xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=94573E3B-11EB-4D9B-BCD8-0BD96E98BCF6' -allowProvisioningUpdates test &
-                        sleep 60
-                    '''
+                    // sh '''
+                    //     cd ~/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent/
+                    //     rm -rf DerivedData
+                    //     xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=633E791C-56CC-4246-9F2F-6C67AF0FC7FE' -allowProvisioningUpdates test &
+                    //     xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=94573E3B-11EB-4D9B-BCD8-0BD96E98BCF6' -allowProvisioningUpdates test &
+                    //     sleep 60
+                    // '''
                     
-                    common.start_appium()
+                    // common.start_appium()
                 }
             }
         }
