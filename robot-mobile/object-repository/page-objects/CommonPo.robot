@@ -46,7 +46,7 @@ Open Android Application
     ...    udid=${ANDROID_UDID}
     Set Appium Timeout    ${TIMEOUT}
     Sleep   10
-    SeleniumLibrary.Capture Page Screenshot
+    AppiumLibrary.Capture Page Screenshot
 
 
 Open IOS Application
@@ -157,9 +157,9 @@ Alert Title Should Be [Arguments] ${alertTitle}
     ${androidAlertTitleLocator}    Set Variable    id=android:id/alertTitle
     ${iosAlertTitleLocator}    Set Variable    accessibility_id=${alertTitle}
     IF  '${PLATFORM_NAME}' == 'android'
-        Wait Until Element Is Visible    ${androidAlertTitleLocator}
+        AppiumLibrary.Wait Until Element Is Visible    ${androidAlertTitleLocator}
     ELSE IF  '${PLATFORM_NAME}' == 'ios'
-        Wait Until Element Is Visible    ${iosAlertTitleLocator}
+        AppiumLibrary.Wait Until Element Is Visible    ${iosAlertTitleLocator}
     END
 
 Alert Message Should Be
@@ -169,8 +169,8 @@ Alert Message Should Be
     ${androidAlertMessageLocator}    Set Variable    id=android:id/message
     ${iosAlertMessageLocator}    Set Variable    accessibility_id=You successfully signed up!
     IF  '${PLATFORM_NAME}' == 'android'
-        Wait Until Element Is Visible   ${androidAlertMessageLocator}
-        Element Text Should Be          ${androidAlertMessageLocator}      ${EXPECTED}
+        AppiumLibrary.Wait Until Element Is Visible   ${androidAlertMessageLocator}
+        AppiumLibrary.Element Text Should Be          ${androidAlertMessageLocator}      ${EXPECTED}
     ELSE IF  '${PLATFORM_NAME}' == 'ios'
-        Wait Until Element Is Visible    ${iosAlertMessageLocator}
+        AppiumLibrary.Wait Until Element Is Visible    ${iosAlertMessageLocator}
     END

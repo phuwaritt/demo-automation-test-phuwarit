@@ -92,7 +92,6 @@ def start_appium() {
     }
 }
 
-
 def kill_all_android_emu() {
     for(int i in EMULATOR_PORT){
         echo "STOPPING EMULATOR Port ${i}"
