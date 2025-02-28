@@ -77,9 +77,7 @@ Open IOS Application
     ...    appium:showXcodeLog=${TRUE}
     ...    appium:noReset=${FALSE}
 
-
-    
-    Set Appium Timeout    ${TIMEOUT}
+    # Set Appium Timeout    ${TIMEOUT}
     Sleep   10
     ##AppiumLibrary.Capture Page Screenshot
 
