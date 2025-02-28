@@ -61,7 +61,6 @@ Open IOS Application
     ${IOS_DEVICE_NAME}    Get Value From Set    deviceName
     ${IOS_SYSTEM_PORT}    Get Value From Set    system_port
     ${IOS_UDID}    Get Value From Set    udid
-    ${IOS_WDA_PORT}    Get Value From Set    wda_port
 
     Open Application    ${APPIUM_SERVER_URL}    
     ...    automationName=${IOS_AUTOMATION_NAME}    
