@@ -65,6 +65,7 @@ def stop_appium() {
 }
 
 def start_appium() {
+    //def platformName = System.getenv("PLATFORM_NAME")
     for(int i=0; i<APPIUM_PORT.size(); i++){
         echo "STARTING Appium Port ${APPIUM_PORT[i]}"
         try {
