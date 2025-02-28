@@ -61,13 +61,14 @@ Open IOS Application
     ${IOS_DEVICE_NAME}    Get Value From Set    deviceName
     ${IOS_SYSTEM_PORT}    Get Value From Set    system_port
     ${IOS_UDID}    Get Value From Set    udid
+    ${IOS_APP_APP}  Get Value From Set    app
 
     Open Application    ${APPIUM_SERVER_URL}    
     ...    automationName=${IOS_AUTOMATION_NAME}    
     ...    platformName=${IOS_PLATFORM_NAME}    
     ...    platformVersion=${IOS_PLATFORM_VERSION}    
     ...    deviceName=${IOS_DEVICE_NAME}    
-    ...    app=${IOS_APP}    
+    ...    app=${IOS_APP_APP}    
     ...    systemPort=${IOS_SYSTEM_PORT} 
     ...    udid=${IOS_UDID}
     ##...    appium:fullReset=${FALSE}
