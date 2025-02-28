@@ -78,7 +78,7 @@ Open IOS Application
     ...    appium:showXcodeLog=${TRUE}
     Set Appium Timeout    ${TIMEOUT}
     Sleep   10
-    AppiumLibrary.Capture Page Screenshot
+    ##AppiumLibrary.Capture Page Screenshot
 
 
 Get Random Email Address
