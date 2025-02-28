@@ -6,7 +6,7 @@ platformVersion = 17.5
 deviceName = iPhone 15 Pro Max I
 udid = 633E791C-56CC-4246-9F2F-6C67AF0FC7FE
 remote_url = http://127.0.0.1:4723
-system_port = 11000
+system_port = 18121
 wda_port = 11500
 app = /Users/supakorn.s/Documents/jinkins_bpy_grangster_space/app/wdioNativeDemoApp.app
 
@@ -18,6 +18,6 @@ platformVersion = 17.5
 deviceName = iPhone 15 Pro Max II
 udid = 94573E3B-11EB-4D9B-BCD8-0BD96E98BCF6
 remote_url = http://127.0.0.1:4724
-system_port = 12000
+system_port = 18123
 wda_port = 12500
 app = /Users/supakorn.s/Documents/jinkins_bpy_grangster_space/app/wdioNativeDemoApp.app
