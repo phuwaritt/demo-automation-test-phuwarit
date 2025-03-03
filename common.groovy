@@ -45,7 +45,8 @@ def result_jenkins_line(){
 def report_sender() {
     echo "=== Start notify to failure declaration ==="
     sh '''
-    ls -la
+    conda init
+    conda activate cardx
     python3 ./report_sender.py
     '''
     echo "report_sender done"
