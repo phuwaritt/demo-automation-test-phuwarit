@@ -65,20 +65,19 @@ Open IOS Application
     ${IOS_wda_port}  Get Value From Set    wdaLocalPort
 
     Open Application    ${APPIUM_SERVER_URL}    
-    ...    automationName=${IOS_AUTOMATION_NAME}    
-    ...    platformName=${IOS_PLATFORM_NAME}    
-    ...    platformVersion=${IOS_PLATFORM_VERSION}    
-    ...    deviceName=${IOS_DEVICE_NAME}    
-    ...    app=${IOS_APP_APP}    
+    ...    appium"automationName=${IOS_AUTOMATION_NAME}    
+    ...    appium:platformName=${IOS_PLATFORM_NAME}    
+    ...    appium:platformVersion=${IOS_PLATFORM_VERSION}    
+    ...    appium:deviceName=${IOS_DEVICE_NAME}    
+    ...    appium:app=${IOS_APP_APP}    
     # ...    systemPort=${IOS_SYSTEM_PORT}
-    ...    udid=${IOS_UDID}
+    ...    appium:udid=${IOS_UDID}
     ...    appium:usePrebuiltWDA=${TRUE}
     ...    appium:wdaLocalPort=${IOS_SYSTEM_PORT}
-    ...    appium:useNewWDA=${FALSE}
+    ...    appium:useNewWDA=${TRUE}
     ...    appium:showXcodeLog=${TRUE}
-    ...    noReset=${TRUE}
-    #...    fullReset=${FALSE}
-    ...    appium:useNewWDA=true
+    ...    noReset=${FALSE}
+    ...    fullReset=${FALSE}
     ...    appium:waitForQuietness=false
     ...    appium:iosInstallPause=2000
 
