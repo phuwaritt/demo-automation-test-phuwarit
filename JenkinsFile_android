@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'bpy-agent'}
+    agent { label 'yun-agent'}
     environment {
         BASE_URL = 'http://192.8.8.133:8080/'
         PROJECT_ID = 'da0da8be-dc08-4d88-8ed4-97057bfd87f9'

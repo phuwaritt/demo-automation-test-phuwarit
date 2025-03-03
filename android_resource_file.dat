@@ -2,7 +2,7 @@
 tags = set0
 automationName = UIAutomator2
 platformName = android
-platformVersion = 15
+platformVersion = 13
 deviceName = emulator-5554
 remoteUrl = http://127.0.0.1:4723
 systemPort = 8201
@@ -15,7 +15,7 @@ appActivity = .MainActivity
 tags = set1
 automationName = UIAutomator2
 platformName = android
-platformVersion = 15
+platformVersion = 13
 deviceName = emulator-5556
 remoteUrl = http://127.0.0.1:4724
 systemPort = 8211
