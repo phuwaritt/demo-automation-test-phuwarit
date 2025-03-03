@@ -16,7 +16,7 @@ pipeline {
                     common.kill_all_ios_simu()
                     common.start_all_ios_simu()
 
-                    // common.lanuch_wda()
+                    common.lanuch_wda()
                     // sh '''
                     //     cd ~/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent/
                     //     xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=DF56FB4B-F02F-4E10-8592-7BE929F8E5D0' -allowProvisioningUpdates test &
