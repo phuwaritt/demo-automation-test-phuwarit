@@ -14,6 +14,7 @@ Verify That A New User Can Sign Up To The Application
 
     Navigate To Login Screen
     Click On The 'Sign up' Container
+    AppiumLibrary.Capture Page Screenshot
     ${emailAddress}    Get Random Email Address
     Sign Up To The Application [Arguments] ${emailAddress} ${PASSWORD} ${PASSWORD}
     Alert Title Should Be [Arguments] ${SIGNED_UP_SUCCESS_ALERT_TITLE}
