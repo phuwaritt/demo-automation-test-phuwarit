@@ -45,6 +45,7 @@ def result_jenkins_line(){
 def report_sender() {
     echo "=== Start notify to failure declaration ==="
     sh '''
+    source /Users/vittavas.t/miniconda3/etc/profile.d/conda.sh
     conda init
     conda activate cardx
     python3 ./report_sender.py
