@@ -78,8 +78,8 @@ Open IOS Application
     ...    appium:showXcodeLog=${TRUE}
     #...    noReset=${FALSE}
     ...    fullReset=${TRUE}
-    ...    appium:waitForQuietness=false
-    ...    appium:iosInstallPause=2000
+    # ...    appium:waitForQuietness=false
+    # ...    appium:iosInstallPause=2000
 
     # Set Appium Timeout    ${TIMEOUT}
     Sleep   10
