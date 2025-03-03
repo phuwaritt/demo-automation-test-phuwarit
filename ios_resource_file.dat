@@ -2,22 +2,20 @@
 tags = set0
 automationName = XCUITest
 platformName = ios
-platformVersion = 17.5
-deviceName = iPhone SE 2nd
-udid = DF56FB4B-F02F-4E10-8592-7BE929F8E5D0
+platformVersion = 17.2
+deviceName = cardx ver2
+udid = 4C017971-A737-4A62-A92D-4F94CC28E8E4
 remote_url = http://127.0.0.1:4723
-system_port = 8200
-wdaLocalPort = 8200
-app = /Users/supakorn.s/Documents/jinkins_bpy_grangster_space/app/wdioNativeDemoApp.app
+system_port = 8201
+app = ./robot-mobile/apps/wdioNativeDemoApp.app
 
 [set1]
 tags = set1
 automationName = XCUITest
 platformName = ios
-platformVersion = 17.5
-deviceName = iPhone SE 3rd
-udid = FD450AFC-56FD-4969-A338-D5446C350FEE
+platformVersion = 17.2
+deviceName = cardx ver 3
+udid = AAEE851A-2A41-465A-8C74-67C3EA50584E
 remote_url = http://127.0.0.1:4724
-system_port = 8202
-wdaLocalPort = 8202
-app = /Users/supakorn.s/Documents/jinkins_bpy_grangster_space/app/wdioNativeDemoApp.app
+system_port = 8301
+app = ./robot-mobile/apps/wdioNativeDemoApp.app

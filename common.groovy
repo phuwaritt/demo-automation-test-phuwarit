@@ -2,7 +2,7 @@ APPIUM_PORT= [4723, 4724]
 WDA_PORT= [8200, 8202]
 EMULATOR_PORT= [5554, 5556]
 android_emulator_name= ["Pixel_8_API_33_2", "Pixel_8_API_33"]
-simulator_udid= ["DF56FB4B-F02F-4E10-8592-7BE929F8E5D0", "FD450AFC-56FD-4969-A338-D5446C350FEE"]
+simulator_udid= ["4C017971-A737-4A62-A92D-4F94CC28E8E4", "AAEE851A-2A41-465A-8C74-67C3EA50584E"]
 WDA_BUNDLE_ID= "com.facebook.WebDriverAgentRunner.xctrunner"
 
 def result_jenkins_slack(send_to_channel,platform){
@@ -101,7 +101,7 @@ def start_all_android_emu() {
             echo "emulator ${i} is started"
         }
     }
-    sleep 20
+    sleep 30
     }
 
 
