@@ -1,7 +1,7 @@
 APPIUM_PORT= [4723, 4724]
 WDA_PORT= [8200, 8202]
 EMULATOR_PORT= [5554, 5556]
-android_emulator_name= ["Copy_of_Pixel_8_API_33", "Pixel_8_API_33"]
+android_emulator_name= ["Pixel_8_API_33_2", "Pixel_8_API_33"]
 simulator_udid= ["DF56FB4B-F02F-4E10-8592-7BE929F8E5D0", "FD450AFC-56FD-4969-A338-D5446C350FEE"]
 WDA_BUNDLE_ID= "com.facebook.WebDriverAgentRunner.xctrunner"
 
