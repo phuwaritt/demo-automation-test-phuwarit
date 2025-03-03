@@ -77,7 +77,10 @@ Open IOS Application
     ...    appium:useNewWDA=${FALSE}
     ...    appium:showXcodeLog=${TRUE}
     ...    noReset=${TRUE}
-    ...    fullReset=${FALSE}
+    #...    fullReset=${FALSE}
+    ...    appium:useNewWDA=true
+    ...    appium:waitForQuietness=false
+    ...    appium:iosInstallPause=2000
 
     # Set Appium Timeout    ${TIMEOUT}
     Sleep   10
