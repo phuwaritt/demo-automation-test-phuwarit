@@ -76,8 +76,8 @@ Open IOS Application
     ...    appium:wdaLocalPort=${IOS_SYSTEM_PORT}
     ...    appium:useNewWDA=${TRUE}
     ...    appium:showXcodeLog=${TRUE}
-    ...    noReset=${FALSE}
-    ...    fullReset=${FALSE}
+    #...    noReset=${FALSE}
+    ...    fullReset=${TRUE}
     ...    appium:waitForQuietness=false
     ...    appium:iosInstallPause=2000
 
