@@ -65,7 +65,7 @@ Open IOS Application
     ${IOS_wda_port}  Get Value From Set    wdaLocalPort
 
     Open Application    ${APPIUM_SERVER_URL}    
-    ...    appium"automationName=${IOS_AUTOMATION_NAME}    
+    ...    appium:automationName=${IOS_AUTOMATION_NAME}    
     ...    appium:platformName=${IOS_PLATFORM_NAME}    
     ...    appium:platformVersion=${IOS_PLATFORM_VERSION}    
     ...    appium:deviceName=${IOS_DEVICE_NAME}    
