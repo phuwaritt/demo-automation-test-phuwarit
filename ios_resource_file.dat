@@ -8,7 +8,7 @@ udid = DF56FB4B-F02F-4E10-8592-7BE929F8E5D0
 remote_url = http://127.0.0.1:4723
 system_port = 18121
 wdaLocalPort = 8200
-app = /Users/supakorn.s/Documents/jinkins_bpy_grangster_space/app/wdioNativeDemoApp.app
+app = ../robot-mobile/apps/wdioNativeDemoApp.apk
 
 [set1]
 tags = set1
@@ -20,4 +20,4 @@ udid = FD450AFC-56FD-4969-A338-D5446C350FEE
 remote_url = http://127.0.0.1:4724
 system_port = 18123
 wdaLocalPort = 8202
-app = /Users/supakorn.s/Documents/jinkins_bpy_grangster_space/app/wdioNativeDemoApp.app
+app = ../robot-mobile/apps/wdioNativeDemoApp.apk
