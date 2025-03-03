@@ -38,7 +38,7 @@ Click On The 'SIGN UP' Button
     IF  '${PLATFORM_NAME}' == 'android'
         AppiumLibrary.Click Element        xpath=//android.view.ViewGroup[@content-desc="button-SIGN UP"]/android.view.ViewGroup      #${SMALL_RETRY_COUNT}
     ELSE IF  '${PLATFORM_NAME}' == 'ios'
-        AppiumLibrary.Click Element        xpath=//android.view.ViewGroup[@content-desc="button-SIGN UP"]/android.view.ViewGroup      #${SMALL_RETRY_COUNT}
+        AppiumLibrary.Click Element        xpath=//*[@id="screenshotContainer"]/div[2]/div/div/div/div/div[59]      #${SMALL_RETRY_COUNT}
     END
 
 Click On The 'LOGIN' Button
