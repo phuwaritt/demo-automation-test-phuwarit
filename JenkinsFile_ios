@@ -16,6 +16,8 @@ pipeline {
                     common.kill_all_ios_simu()
                     common.start_all_ios_simu()
 
+                    common.lanuch_wda()
+
                     // common.lanuch_wda()
                     // sh '''
                     //     cd ~/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent/
