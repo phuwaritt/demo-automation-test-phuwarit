@@ -75,10 +75,9 @@ Open IOS Application
     ...    appium:wdaLocalPort=${IOS_SYSTEM_PORT}
     ...    appium:useNewWDA=${FALSE}
     ...    appium:showXcodeLog=${TRUE}
-
-    # Set Appium Timeout    ${TIMEOUT}
+    Set Appium Timeout    ${TIMEOUT}
     Sleep   10
-    ##AppiumLibrary.Capture Page Screenshot
+    AppiumLibrary.Capture Page Screenshot
 
 
 Get Random Email Address
